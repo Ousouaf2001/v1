@@ -1,0 +1,217 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-full">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="glyphicon glyphicon-search" style="font-size:15px;"></span>
+      </button>
+      <a class="navbar-brand" href="#" onclick="history.back()"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling  style="display:none;"-->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="container-full">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div>
+                      <ul class="nav nav-tabs menu-ho" role="tablist" style="border-bottom:0px;">
+                        <li role="recherche" class="active text-center" style="width:33.33333333333333%"><a href="#recherche_players" aria-controls="recherche_players" role="tab" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;Recherche Players</a></li>
+                        <li role="recherche" class="text-center" style="width:33.33333333333333%"><a href="#recherche_events" aria-controls="recherche_events" role="tab" class="text-center" data-toggle="tab"><i class="fa fa-trophy"></i>&nbsp;Recherche Events</a></li>
+                        <li role="recherche"class="text-center"  style="width:33.33333333333333%"><a href="#recherche_place" aria-controls="recherche_place" role="tab" data-toggle="tab"><i class="fa fa-map-marker"></i>&nbsp;Recherche Place</a></li>
+                      </ul>
+                      <div class="tab-content" style="padding-top:20px;padding-bottom:20px;">
+                        <div role="tabpanel" class="tab-pane active" id="recherche_players">
+                           <input type="text" id="getlat" style="color:black;">
+                           <input type="text" id="getlong" style="color:black;">
+                            <table>
+                                <tr>             
+                                  <th class="table_distance"><h5><b style="color:#582D1C;font-size:10px;">Distance :</h5></th>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance" value="1" />
+                                      <font style="color:black;"> -1km </font>
+                                  </td>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance" value="5" />
+                                      <font style="color:black;"> -5km</font>
+                                  </td>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance" value="10" />
+                                      <font style="color:black;"> -10km</font>
+                                  </td>
+                                  <td>
+                                      <input type="radio" name="distance" value="15" />
+                                      <font style="color:black;"> -15km </font>
+                                  </td>
+                                </tr>
+                            </table>
+                            <table>
+                              <tr>
+                                <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Meeting location:</h5></th>
+                                <td>
+                                  <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
+                                      <option value="all_events">Federation</option>
+                                      <option value="all_events">All Events</option>
+                                      <option value="all_events">All Events</option>
+                                      <option value="all_events">All Events</option>
+                                      <option value="all_events">All Events</option>
+                                  </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Age:</h5></th>
+                                <td>
+                                  From
+                                  <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
+                                      <option value="all_events">20</option>
+                                      <option value="all_events">21</option>
+                                      <option value="all_events">22</option>
+                                      <option value="all_events">23</option>
+                                      <option value="all_events">24</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  To
+                                  <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
+                                      <option value="all_events">30</option>
+                                      <option value="all_events">31</option>
+                                      <option value="all_events">32</option>
+                                      <option value="all_events">33</option>
+                                      <option value="all_events">34</option>
+                                  </select>
+                                </td>
+                              </tr>
+                            </table>
+                            <table>
+                              <tr>
+                                  <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;">Gender :</h5></th>
+                                  <td class="table_distance"  style="font-size: 10px;">
+                                      <input type="radio" checked="checked" name="gender"/>
+                                      <font style="color:black;"> All</font>
+                                  </td>
+                                  <td class="table_distance"  style="font-size: 10px;">
+                                      <input type="radio" name="gender"/>
+                                      <font style="color:black;"> Femele</font>
+                                  </td>
+                                  <td class="table_distance"  style="font-size: 10px;">
+                                      <input type="radio" name="gender"/>
+                                      <font style="color:black;"> Male</font>
+                                  </td>
+                              </tr>
+                            </table>
+                            <table>
+                              <tr>
+                                  <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;">Profile :</h5></th>
+                                  <td class="table_distance"  style="font-size: 10px;">
+                                      <input type="radio" checked="checked" name="profile"/>
+                                      <font style="color:black;"> All</font>
+                                  </td>
+                                  <td class="table_distance"  style="font-size: 10px;">
+                                      <input type="radio" name="profile"/>
+                                      <font style="color:black;"> Player</font>
+                                  </td>
+                                  <td class="table_distance"  style="font-size: 10px;">
+                                      <input type="radio" name="profile"/>
+                                      <font style="color:black;"> Arbiter</font>
+                                  </td>
+                                  <td class="table_distance"  style="font-size: 10px;">
+                                      <input type="radio" name="profile"/>
+                                      <font style="color:black;"> Trainer</font>
+                                  </td>
+                                  <td class="table_distance"  style="font-size: 10px;">
+                                      <input type="radio" name="profile"/>
+                                      <font style="color:black;"> Organizer</font>
+                                  </td>
+                              </tr>
+                            </table>
+                            <button class="btn btn-sm center-block button_event" onclick="memberFind()"><b>SEARCH MEMBERS</b></button>
+                            
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="recherche_events">
+                          
+                          <table>
+                                <tr>             
+                                  <th class="table_distance"><h5><b style="color:#582D1C;font-size:10px;">Distance :</h5></th>
+                                  <td class="table_distance"><input type="radio" name="distance" /><font style="color:black;"> -5km </font></td>
+                                  <td class="table_distance"><input type="radio" name="distance" checked="" /><font style="color:black;"> -10km</font></td>
+                                  <td class="table_distance"> <input type="radio" name="distance" /><font style="color:black;"> -50km</font></td>
+                                  <td><input type="radio" name="distance" /><font style="color:black;"> -300km </font></td>
+                                </tr>
+                            </table>
+                            <table>
+                              <tr>
+                                <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Event Type:</h5></th>
+                                <td>
+                                  <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
+                                      <option value="all_events">All Events</option>
+                                      <option value="all_events">All Events</option>
+                                      <option value="all_events">All Events</option>
+                                      <option value="all_events">All Events</option>
+                                      <option value="all_events">All Events</option>
+                                  </select>
+                                </td>
+                              </tr>
+                            </table>
+                            <table>
+                              <tr><th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;">Activity:</h5></th>
+                              <td class="table_distance"  style="font-size: 10px;"><input type="radio" checked="" name="activity"/><font style="color:black;"> Taking Place Today</font> </td>
+                              <td style="font-size: 10px;"><input type="radio" name="activity"/> <font style="color:black;">Taking Place in max <b class="x">x</b> days</font></td></tr>
+                            </table>
+                            <button class="btn btn-sm center-block button_event"><b>SEARCH EVENTS</b></button>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="recherche_place">
+                          
+                          <table>
+                                <tr>             
+                                  <th class="table_distance"><h5><b style="color:#582D1C;font-size:10px;">Distance :</h5></th>
+                                  <td class="table_distance"><input type="radio" name="distance" /><font style="color:black;"> -1km </font></td>
+                                  <td class="table_distance"><input type="radio" name="distance" checked="" /><font style="color:black;"> -5km</font></td>
+                                  <td class="table_distance"> <input type="radio" name="distance" /><font style="color:black;"> -10km</font></td>
+                                  <td><input type="radio" name="distance" /><font style="color:black;"> -15km </font></td>
+                                </tr>
+                            </table>
+                            <table>
+                              <tr>
+                                <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Meeting location :</h5></th>
+                                <td>
+                                  <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
+                                      <option value="all_events">Federation</option>
+                                      <option value="all_events">All Events</option>
+                                      <option value="all_events">All Events</option>
+                                      <option value="all_events">All Events</option>
+                                      <option value="all_events">All Events</option>
+                                  </select>
+                                </td>
+                              </tr>
+                            </table>
+                            <table>
+                              <tr>
+                                  <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;">Activity now :</h5></th>
+                                  <td class="table_distance"  style="font-size: 10px;">
+                                      <input type="radio" checked="" name="activity_now"/>
+                                      <font style="color:black;"> All</font>
+                                  </td>
+                                  <td class="table_distance"  style="font-size: 10px;">
+                                      <input type="radio" checked="" name="activity_now"/>
+                                      <font style="color:black;"> Only Opened Now</font>
+                                  </td>
+                              </tr>
+                            </table>
+                            <button class="btn btn-sm center-block button_event"><b>SEARCH PLACE</b></button>
+
+                        </div>
+                        
+                        
+                        
+                        
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script type="text/javascript" src="scripts/MemberScript/MemberGetLocation.js"></script>
