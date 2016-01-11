@@ -9,8 +9,9 @@ lotfi
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    
-<script src="Langues/fr.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
   </head>
   <body style="padding-bottom:0px;padding-top:0px;">
 
@@ -21,6 +22,10 @@ lotfi
                 <div class="logo text-center">
                     <img src="image/logo.jpg" class="img-responsive center-block" width="150">
                     <b class="texte_logo text-uppercase text-center">chess family</b>
+                </div>
+                <div class="lang_switcher">
+                    <button id="en" class="lang">EN</button>
+                    <button id="fr" class="lang">FR</button>
                 </div>
             </div>
             <div class="col-md-12">
@@ -56,7 +61,7 @@ lotfi
                         <div class="form-group">
                             <button class="btn btn-md btn-block btn_index">
                             <i class="glyphicon glyphicon-envelope pull-left"></i>
-                            <span class="LoginWithLang">Log in with </span> <b>Email</b></button>
+                            <span class="LoginWithLang ">Log in with </span> <b key="Email" class="ok">Email</b></button>
                         </div>
                         <div class="text-center text-uppercase ORLang" style="margin-top:-5px;margin-bottom:10px;font-size:10px;color:#978E7A;">-</div>
                         </form>
@@ -72,7 +77,7 @@ lotfi
                         </div>
                         <button class="btn btn-md btn-block btn_index" onclick="getInfo()">
                               <i class="fa fa-facebook pull-left"></i>
-                              Get info
+                              <b key="Get info" class="ok">Get info</b>
                             </button>
                         <!-- ajout user s'il est connecté avec facebook et s'il n'est pas existant -->
                         <div style="display:none">
@@ -87,8 +92,8 @@ lotfi
                             <input type="password" name="password_conf" id="password_conf" /><br />
                             <input type="date" name="birthday" id="birthday" /><br />                            
                             <input type="text" name="genre" id="genre" />
-                            <input type="text" name="image" id="image" />
-                           <!--<input type="button" id="submit" onclick="myFunction()" value="Submit" />--></br>
+                            <input type="text" name="image" id="image" /> -->
+                           <!-- <input type="button" id="submit" onclick="myFunction()" value="Submit" />--></br>
                     </form>
                     </div>
                         
@@ -104,7 +109,8 @@ lotfi
 
 
     <script src="js/jquery-2.1.1.min.js"></script>
-	<script src="js/openfb.js"></script>
+
+	  <script src="js/openfb.js"></script>
     <script src="js/loginfacebook.js"></script>
     <script src="js/logingoogle.js"></script>
     
@@ -130,54 +136,7 @@ function checkConnectivity(){
 	alert("Please activate the connectivity");
 }
 
-$(document).ready(function(){
-	
-	
-	
-	/*
-	function IdToTranslatedText(IdDivContainer, WordID){
-		var language = 'en';
-		var ch = '';
-		$.ajax({
-			url: 'langues/'+language+'.xml',
-			dataType:"xml",
-			success: function(xml) {
-				$(xml).find('word').each(function(){
-					var id = $(this).attr('id');
-					if(id==WordID){
-						ch = $(this).text();
-						$("."+IdDivContainer).html(ch);
-					}
-				});
-			},
-			error: function(e){
-				alert(e.toSource());
-			}
-		});
-		
-		
-	}
-	
-	IdToTranslatedText('LoginWithLang','loginWith');
-	IdToTranslatedText('NewSignupLang','NewSignup');
-	IdToTranslatedText('ORLang','OR');
-	*/
-	
-	
-	//alert(LangueBib['OR']);
-	function getTranstation (IdDivContainer, ChToTranslate){
-			var ch = LangueBib[ChToTranslate];
-			$("."+IdDivContainer).html(ch);
-		}
-		getTranstation ('LoginWithLang','loginWith');
-		getTranstation ('NewSignupLang','NewSignup');
-		getTranstation ('ORLang','OR');
-		getTranstation ('HERELang','HERE');
-		
-	});
 
-
-</script>
      
   </body>
 </html>
