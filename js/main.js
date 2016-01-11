@@ -18,12 +18,25 @@ $(document).ready(function() {
     // onclick behavior
     $('.lang').click( function() {
         var lang = $(this).attr('id'); // obtain language id
+        sessionStorage.setItem("lang", lang);
+        
+
 
         // translate all translatable elements
         $('.ok').each(function(i){
-          $(this).text(aLangKeys[lang][ $(this).attr('key') ]);
+          lang1 = sessionStorage.getItem("lang");
+          $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
         });
 
     } );
+
+});
+
+
+$(function(){
+		$('.ok').each(function(i){
+          lang1 = sessionStorage.getItem("lang");
+          $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
+        });
 
 });
