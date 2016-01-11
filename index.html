@@ -74,27 +74,15 @@ lotfi
                               <i class="fa fa-google-plus pull-left"></i>
                               <span class="LoginWithLang">Log in with </span> <b>Google Plus</b>
                             </button>
-                        </div>
-                        <button class="btn btn-md btn-block btn_index" onclick="getInfo()">
-                              <i class="fa fa-facebook pull-left"></i>
-                              <b key="Get info" class="ok">Get info</b>
+                            <button class="btn btn-block btn_index" onclick="getInfo()">
+                            	<b key="Get info" class="ok">Get info</b>
                             </button>
                         <!-- ajout user s'il est connecté avec facebook et s'il n'est pas existant -->
                         <div style="display:none">
                           <form  id="member_add" action="#">
                             <input type="hidden" id="detect_os" /><br />
-                            <input type="hidden" id="detect_UUID" /><br />
-                            
-                           <!-- <input type="text" name="name" id="name" /><br />
-                            <input type="text" name="last_name" id="last_name" /><br />
-                            <input type="email" name="email" id="email" /><br />
-                            <input type="password" name="password" id="password" /><br />
-                            <input type="password" name="password_conf" id="password_conf" /><br />
-                            <input type="date" name="birthday" id="birthday" /><br />                            
-                            <input type="text" name="genre" id="genre" />
-                            <input type="text" name="image" id="image" /> -->
-                           <!-- <input type="button" id="submit" onclick="myFunction()" value="Submit" />--></br>
-                    </form>
+                            <input type="hidden" id="detect_UUID" />
+                    	</form>
                     </div>
                         
                         
@@ -136,7 +124,7 @@ function checkConnectivity(){
 	alert("Please activate the connectivity");
 }
 
-
+</script>
      
   </body>
 </html>
