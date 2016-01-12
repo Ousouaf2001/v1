@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     function memberFriendFind() {
         //variable host declarer dans templateGenerator.js
-		alert("a");
+		//alert("a");
 		var urlWS = "http://api.chessfamily.net/api/query";
         var id_utilisateur = 5;//sessionStorage.getItem("identifiant");
         $.ajax({
@@ -25,12 +25,12 @@ $(document).ready(function(){
               $('.load_friends').show();
           },
           success:function(result){
-			  alert(result.toSource());
+			  //alert(result.toSource());
 			  if(result.success==1){
 				$.each(result.friends, function (index, item) { 
-				  var li = +
-					  "<div class='col-xs-6 item' id='"+ item.friend_id +"'>"+
-						"<div class='panel panel-default' style='background:#E5E5E5'>"+
+					//alert(item.toSource());
+				  var li = "<div class='col-xs-6 item' id='"+ item.friend_id +"'>"+
+				  		"<div class='panel panel-default' style='background:#E5E5E5'>"+
 							"<div class='panel-heading' style='background:#965A36;color:white;font-size:15px;'>"+
 								"<b>" + item.name +" "+ item.last_name + "</b>"+
 								"<font> "+ item.last_name + " </font>"+
@@ -64,6 +64,7 @@ $(document).ready(function(){
 
 
     $(document).on('click','.item', function(){
+		alert($(this).attr('id'));
         document.location.href = 'profile.html?id_member=' + $(this).attr('id'); 
     });
 });
