@@ -42,11 +42,11 @@
                     <form name="connexionForm" id="connexionForm" action="#">
                         <div class="input-group">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                          <input type="text" class="form-control input_class input-md" id="login" aria-describedby="inputGroupSuccess1Status" placeholder="EMAIL" />
+                          <input type="text" class="form-control input_class input-md TranslationDiv" id="login" aria-describedby="inputGroupSuccess1Status" placeholder="EMAIL" />
                         </div>
                         <div class="input-group">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                          <input type="password" class="form-control input_class input-md" id="pass" aria-describedby="inputGroupSuccess1Status" placeholder="PASSWORD" />
+                          <input type="password" class="form-control input_class input-md TranslationDiv" id="pass" aria-describedby="inputGroupSuccess1Status" placeholder="PASSWORD" />
                         </div>
                         <!--<div class="checkbox">
                           <label class="pull-left">
@@ -60,35 +60,55 @@
                         <div class="form-group">
                             <button class="btn btn-md btn-block btn_index">
                             <i class="glyphicon glyphicon-envelope pull-left"></i>
-                            <span class="LoginWithLang ">Log in with </span> <b key="Email" class="ok">Email</b></button>
+                            <span class="TranslationDiv" key="Login_with">Log in with </span> <b key="Email" class="ok">Email</b></button>
                         </div>
-                        <div class="text-center text-uppercase ORLang" style="margin-top:-5px;margin-bottom:10px;font-size:10px;color:#978E7A;">-</div>
+                        <div class="text-center text-uppercase TranslationDiv" key="OR" style="margin-top:-5px;margin-bottom:10px;font-size:10px;color:#978E7A;">OR</div>
                         </form>
                         <div class="form-group">
                             <button class="btn btn-md btn-block btn_index" onclick="login()">
                               <i class="fa fa-facebook pull-left"></i>
-                              <span class="LoginWithLang">Log in with </span> <b>Facebook</b>
+                              <span class="TranslationDiv" key="Login_with">Log in with </span> <b>Facebook</b>
                             </button>
                             <button class="btn btn-md btn-block btn_index" onclick="callGoogle()">
                               <i class="fa fa-google-plus pull-left"></i>
-                              <span class="LoginWithLang">Log in with </span> <b>Google Plus</b>
+                              <span class="TranslationDiv" key="Login_with">Log in with </span> <b>Google Plus</b>
                             </button>
-                            <button class="btn btn-block btn_index" onclick="getInfo()">
-                            	<b key="Get info" class="ok">Get info</b>
-                            </button>
-                        <!-- ajout user s'il est connecté avec facebook et s'il n'est pas existant -->
+                            
+                        <!--    ajout user s'il est connecté avec facebook et s'il n'est pas existant -->
                         <div style="display:none">
                           <form  id="member_add" action="#">
-                            <input type="hidden" id="detect_os" /><br />
-                            <input type="hidden" id="detect_UUID" />
+                            <input type="text" id="detect_os" /><br />
+                            <input type="text" id="detect_UUID" />
+                            <input type="text" id="FacebookID" />
+                            <input type="text" id="GooglePlusID" />
+                            <input type="text" id="name" />
+                            <input type="text" id="last_name" />
+                            <input type="text" id="email" />
+                            <input type="text" id="birthday" />
+                            <input type="text" id="genre" />
+                            
+                            
+                            <input type="text" id="password" />
+                            <input type="text" id="password_conf" />
+                            
+                            
+                            
+                            
+                            <img id="ImgMember" src="" width="200px" />
+                            
+                            
                     	</form>
                     </div>
                         
                         
                         
-                        <div class="text-center text-uppercase" style="margin-top:10px;margin-bottom:10px;font-size:10px;color:#978E7A;"><span class="NewSignupLang">-</span> <a href="register.html"><b><span class="HERELang">here</b></a></div>
-                        
-                    <div id="testLang"></div>
+                        <div class="text-center text-uppercase" style="margin-top:10px;margin-bottom:10px;font-size:10px;color:#978E7A;">
+                        	<span key="New_Sign_up" class="TranslationDiv">New ? Sign up</span>
+                            <a href="register.html">
+                            	<b><span key="HERE" class="TranslationDiv">here</span></b>
+                            </a>
+                         </div>
+
                 </div>
             </div>
         </div>
@@ -96,27 +116,27 @@
 
 
     <script src="js/jquery-2.1.1.min.js"></script>
-
-	  <script src="js/openfb.js"></script>
+	<script src="cordova.js"></script>
+	<script src="js/openfb.js"></script>
     <script src="js/loginfacebook.js"></script>
     <script src="js/logingoogle.js"></script>
     
-    
+    <script src="scripts/MemberScript/MemberAdd.js"></script>
      <script src="scripts/MemberScript/MemberConnect.js"></script>
      
      
+     
      <script type="text/javascript" language="javascript">
-//document.addEventListener("deviceready", onDeviceReady, false);
-
     // device APIs are available
     //
+/*
 document.addEventListener('deviceready', SplashScreen, true);
 function SplashScreen() {
 	navigator.splashscreen.show();
 	setTimeout(function() {
 	 navigator.splashscreen.hide();
 	 }, 5000);
-}
+}*/
 				
 document.addEventListener("offline", checkConnectivity, true);
 function checkConnectivity(){
@@ -125,7 +145,7 @@ function checkConnectivity(){
 
 
 </script>
-<script src="js/main.js"></script>
+<script src="js/Languages.js"></script>
 
   </body>
 </html>

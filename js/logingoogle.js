@@ -70,14 +70,11 @@ var googleapi = {
         googleapi.authorize({
                             client_id: '387553600554-qpbocolfq58h5rqifrgs9lel0bc0hhi0.apps.googleusercontent.com',
                             client_secret: 'xGMpbaUsJ-5DGSmSB2zMi-mP',
-                            redirect_uri: 'http://localhost/ChessFamily/www/home.html',
+                            redirect_uri: 'http://localhost/frontfinal/www/home.html',
                             scope: 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
                             }).done(function(data) {
                                     accessToken=data.access_token;
-                                   // alert(accessToken);
-                                    // $loginStatus.html('Access Token: ' + data.access_token);
-                                    console.log(data.access_token);
-                                    console.log(JSON.stringify(data));
+                                   
                                     getDataProfile();
 
 
@@ -99,17 +96,27 @@ var googleapi = {
                },
                success:function(data)
                {
-               var item;
+               //var item;
 
-               console.log(JSON.stringify(data));
-// Save the userprofile data in your localStorage.
-               localStorage.gmailLogin="true";
+               alert(JSON.stringify(data));
+				// Save the userprofile data in your localStorage.
+				document.getElementById("GooglePlusID").value = data.id;
+				  document.getElementById("name").value = data.given_name;
+                  document.getElementById("last_name").value = data.family_name;
+				  document.getElementById("ImgMember").src = data.picture;//'http://graph.facebook.com/' + data.id + '/picture?type=small';
+                  //document.getElementById("id").innerHTML = data.id;
+                  document.getElementById("email").value = data.email;
+                  //document.getElementById("birthday").value = data.birthday;
+                  document.getElementById("genre").value = data.gender;
+				
+				ConnectMember(2);
+               /*localStorage.gmailLogin="true";
                localStorage.gmailID=data.id;
                localStorage.gmailEmail=data.email;
                localStorage.gmailFirstName=data.given_name;
                localStorage.gmailLastName=data.family_name;
                localStorage.gmailProfilePicture=data.picture;
-               localStorage.gmailGender=data.gender;
+               localStorage.gmailGender=data.gender;*/
                }
                });
     disconnectUser();

@@ -22,11 +22,10 @@ $(document).ready(function(){
      });
 	 
 	 
-	 navigator.geolocation.getCurrentPosition(onSuccess, onError);
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
 function onSuccess(position) {
 	alert('Latitude: '           + position.coords.latitude              + '<br />' +
-						'Longitude: '          + position.coords.longitude             + '<br />');
-						
+			'Longitude: '          + position.coords.longitude             + '<br />');
 }
 
 // onError Callback receives a PositionError object

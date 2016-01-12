@@ -33,6 +33,7 @@ function AddMember() {
 					device_token:device_token},
 				dataType:"json",
 				success:function(data){
+					
 					if(data.success == 1){
 						  //$('.testlogin').html(' success connexion');
 						  $('.info_requis').fadeOut();

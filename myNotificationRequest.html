@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Notifications</title>
+    <title>Notifications</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -17,29 +17,28 @@
   </head>
   <body style="background:#E9E9E9">
   <div id="header"></div>
-  <div class="container-full">
-      <div class="row">
-          <div class="col-xs-12">
-              <h1>my game</h1>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <div class="container-fluid white" style="padding-top:50px;">
+       <div class="row">
+            <div class="col-xs-12">
+               <img src="image/load.gif" style="margin-top:30%;" class="load_detail_Notification center-block">
             </div>
-            
-          </div>
-          
-      </div>
+        </div>
+
+       <!--  Notifications list -->
+       <div class="container">
+         <div id="Notification_list" class="row affiche_detail_Notification" style="display:none;">  
+         </div>
+       </div>
   </div>
-<div id="footer" class="col-xs-12"></div>
+	<div id="footer" class="col-xs-12"></div>
 
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="cordova.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/templateGenerator.js"></script>
+    
+    <script type="text/javascript" src="scripts/NotificationsScript/NotificationGet.js"></script>
     
   </body>
 </html>

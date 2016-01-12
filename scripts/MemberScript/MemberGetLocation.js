@@ -12,7 +12,7 @@ $.ajax(
               $('.load_players').show();
               },
               success:function(result){
-				  alert('MeetingGetLocation '+result.location.latitude);
+				  //alert('MeetingGetLocation '+result.location.latitude);
                 $('#getlat').val(result.location.latitude);
                 $('#getlong').val(result.location.longitude);
                 

@@ -3,14 +3,18 @@ var aLangKeys=new Array();
 aLangKeys['en']=new Array();
 aLangKeys['fr']=new Array();
 
-aLangKeys['en']['Email']='Email';
-aLangKeys['en']['Get info']='Get info';
+aLangKeys['en']['OR']='OR';
+aLangKeys['en']['HERE']='Here';
+aLangKeys['en']['Login_with']='Login With';
+aLangKeys['en']['New_Sign_up']='New ? Sign up';
 
 
 
 
-aLangKeys['fr']['Email']='Adresse email';
-aLangKeys['fr']['Get info']='Les infos';
+aLangKeys['fr']['OR']='OU';
+aLangKeys['fr']['HERE']='Ici';
+aLangKeys['fr']['Login_with']='Se Connecter avec';
+aLangKeys['fr']['New_Sign_up']='Nouveau ? s\'enregistrer';
 
 
 $(document).ready(function() {
@@ -23,7 +27,7 @@ $(document).ready(function() {
 
 
         // translate all translatable elements
-        $('.ok').each(function(i){
+        $('.TranslationDiv').each(function(i){
           lang1 = sessionStorage.getItem("lang");
           $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
         });
@@ -34,7 +38,7 @@ $(document).ready(function() {
 
 
 $(function(){
-		$('.ok').each(function(i){
+		$('.TranslationDiv').each(function(i){
           lang1 = sessionStorage.getItem("lang");
           $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
         });

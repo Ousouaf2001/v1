@@ -14,35 +14,47 @@
       function login() {
           openFB.login(
                   function(response) {
-					  alert("ok");
                       if(response.status === 'connected') {
-                          alert("1");
-						  //window.location.href = 'home.html';
+                         // window.location.href = 'home.html';
                           //alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+						  getInfo();
                       } else {
                           alert('Facebook login failed: ' + response.error);
                       }
-                  }, { scope: 'email,publish_actions,user_birthday', return_scopes: true });
+                  },
+				  { scope: 'email,publish_actions', return_scopes: true });
       }
 
       function getInfo() {
           openFB.api({
               path: '/me',
               success: function(data) {
-                  console.log(JSON.stringify(data));
-				  //alert(data.toSource());
-                  $("#name").val(data.name);
-				  $("#last_name").val(data.name);
-                  $("#image").val('http://graph.facebook.com/' + data.id + '/picture?type=small');
-                  //$("#id").val(data.id);
-                  $("#email").val(data.email);
-                  $("#birthday").val(data.birthday);
-                  $("#genre").val(data.gender);
+                  //alert(JSON.stringify(data));
+				  
+                  document.getElementById("FacebookID").value = data.id;
+				  document.getElementById("name").value = data.first_name;
+                  document.getElementById("last_name").value = data.last_name;
+				  document.getElementById("ImgMember").src = 'http://graph.facebook.com/' + data.id + '/picture?type=small';
+                  //document.getElementById("id").innerHTML = data.id;
+                  document.getElementById("email").value = data.email;
+                  document.getElementById("birthday").value = data.birthday;
+                  document.getElementById("genre").value = data.gender;
+				  
+				  //alert("ID : "+data.id+"ID FB : "+document.getElementById("FacebookID").value);
+				  ConnectMember(1);
+				  
+				  /*var name = document.getElementById("name").value;
+    var last_name = document.getElementById("last_name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var password_conf = document.getElementById("password_conf").value;
+    var birthday = document.getElementById("birthday").value;
+    var genre = document.getElementById("genre").value;
+    var os = document.getElementById("detect_os").value;
+	var device_token = document.getElementById("detect_UUID").value;*/
               },
               error: errorHandler});
       }
-	  function errorHandler(error){
-		alert(error.message);
-	  }
-
-                              
+      function errorHandler(error) {
+        alert(error.message);
+    }

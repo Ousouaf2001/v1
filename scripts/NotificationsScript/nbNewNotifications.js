@@ -4,27 +4,27 @@ $(document).ready(function(){
 
 	
 	var urlWS = "http://api.chessfamily.net/api/query";
-    function nbNewMessage() {
+    function nbNewNotifications() {
         
         $.ajax({
 			type:"POST",
             url:urlWS,
             data:{
 				authentication:"chessfemily",
-				action:"not_read_messages",
+				action:"not_read_notifications",
 				member_id:id_utilisateur
 			},
             dataType:"json",
           success:function(result){
                 //alert(result.nb_messages);
-				$('.nbNewMessage').html(result.nb_messages);
+				$('.nbNewNotification').html(result.nb_notifications);
           }
         });
     }
 
-	nbNewMessage();
+	nbNewNotifications();
 	setInterval(function(){
-		 nbNewMessage();
+		 nbNewNotifications();
 	},15000);
 
 });
