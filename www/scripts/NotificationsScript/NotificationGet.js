@@ -25,13 +25,12 @@ $(document).ready(function(){
 			  
 			  if(result.success==1){
 				  $.each(result.notifications, function (index, item) {
-					$('#Notification_list').append(+
-						"<div class='container'>"+
-							"Receiver Photo : <img src='../Notifications/"+this.receiver_photo+"' /><br/>"+
-						  "Sender Full Name ="+this.sender_name+""+this.sender_last_name+"<br/>"+
-						  "Receiver Full Name ="+this.receiver_name+""+this.receiver_last_name+"<br/>"+
-						  "Message ="+this.message+"<br/>"+
+					$('#Notification_list').append("<div class='container'>"+
+							"<div class='col-xs-3'><img src='"+this.receiver_photo+"' width='50' /></div>"+
+						  "<div class='col-xs-9'><b>"+this.sender_name+" "+this.sender_last_name+"</b> vous à envoyer une notification avec le message suivant : <br/>"+this.message+"</div>"+
 						"</div>");
+						
+						//"Receiver Full Name ="+this.receiver_name+""+this.receiver_last_name+"<br/>"+
 				  });
 			  }else{
 				  $('#Notification_list').html("Pas de Notification");

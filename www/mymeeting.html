@@ -36,30 +36,28 @@
                               <input type="hidden" name="id_meeting_edit" id="id_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
                             
                             <div class="form-group">
-                              <label>name</label>
+                              <label>Name</label>
                               <input type="text" name="name_meeting_edit" id="name_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
                             </div>
                             <div class="form-group">
-                              <label>adress</label>
-                              <input type="text" name="adress_meeting_edit" id="adress_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
+                              <label>Adresse</label>
+                              <input type="text" name="adress_meeting_edit" id="adress_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse">
                             </div>
                             <div class="form-group">
-                              <label>lat</label>
-                              <input type="text" name="latitude_meeting_edit" id="latitude_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
+                              <label>Latitude</label>
+                              <input type="text" name="latitude_meeting_edit" id="latitude_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Latitude">
+                            
+                              <label>Longitude</label>
+                              <input type="text" name="longitude_meeting_edit" id="longitude_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Longitude">
                             </div>
                             <div class="form-group">
-                              <label>long</label>
-                              <input type="text" name="longitude_meeting_edit" id="longitude_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                              <label>type</label>
+                              <label>Type du Meeting Place</label>
                               <select name="meetingType_edit" id="meetingType_edit" class="form-control select_bloc">
                                
                               </select>
                             </div>
                             <div class="form-group">
-                              <label>statuts</label>
-                              
+                              <label>Statuts</label>
                               
                               <select name="status_meeting_edit" id="status_meeting_edit" class="form-control select_bloc">
                                 <option value="0">0</option>
@@ -95,49 +93,47 @@
         <div class="row">
             <div class="col-md-12">
                     <div class="champ">
-                      <div class="inscritok" style="display:none;text-align:center;font-weight:bold;color:red;">ajout ok</div>
-                      <div class="info_requis" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">verif info</div>
-                       <form  id="member_add" action="#">
-                            <div class="form-group">
-                              <label>name</label>
-                              <input type="text" name="name_meeting" id="name_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                              <label>adress</label>
-                              <input type="text" name="adress_meeting" id="adress_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                              <label>lat</label>
-                              <input type="text" name="latitude_meeting" id="latitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                              <label>long</label>
-                              <input type="text" name="longitude_meeting" id="longitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                              <label>type</label>
-                              <select name="meetingType" id="meetingType" class="form-control select_bloc">
-                               
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <label>statuts</label>
-                              
-                              
-                              <select name="status_meeting" id="status_meeting" class="form-control select_bloc">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                              </select>
-                            </div>
-                            </div>
-                            
-                            
-                           
-                            <div class="form-group">
-                               <input type="button" id="submit" onclick="AddMeetingPlace()" value="Add meeting Place" class="btn btn-md btn-block btn_index"/></br>
-                            </div>
-                            
-                        </form>
+                      <div class="inscritok" style="display:none;text-align:center;font-weight:bold;color:red;">Ajout effectué avec succes!</div>
+                      <div class="info_requis" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessous</div>
+<form  id="member_add" action="#">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" name="name_meeting" id="name_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label>Adresse</label>
+      <input type="text" name="adress_meeting" id="adress_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse">
+    </div>
+    <div class="form-group">
+      <label>lat</label>
+      <input type="text" name="latitude_meeting" id="latitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Latitude">
+    </div>
+    <div class="form-group">
+      <label>long</label>
+      <input type="text" name="longitude_meeting" id="longitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Longitude">
+    </div>
+    <div class="form-group">
+      <label>Type du Meeting</label>
+      <select name="meetingType" id="meetingType" class="form-control select_bloc">
+       
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Statuts</label>
+      <select name="status_meeting" id="status_meeting" class="form-control select_bloc">
+        <option value="0">0</option>
+        <option value="1">1</option>
+      </select>
+    </div>
+    </div>
+    
+    
+   
+    <div class="form-group">
+       <input type="button" id="submit" onclick="AddMeetingPlace()" value="Add meeting Place" class="btn btn-md btn-block btn_index"/></br>
+    </div>
+    
+</form>
                     </div>
                 </div>
         </div>
