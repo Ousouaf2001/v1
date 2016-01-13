@@ -1,21 +1,18 @@
 $(document).ready(function(){
     
     var id_utilisateur = sessionStorage.getItem("identifiant");
-
-    var dataString = 'authentication=chessfemily&action=member_events&member_id='+id_utilisateur ;
-    //variable host declarer dans templateGenerator.js
-	var HOST = "http://www.epavia.com/proxy/";
+	var urlWS = "http://api.chessfamily.net/api/query";
     function eventCreatedByMember() {
         
         $.ajax({
-          type: 'GET',
-          contentType: "application/json",
-          async: false,
-          //data: 'authentication=chessfemily&action=find_members&distance=5&latitude=35.6829986572&longitude=10.8500003815&profile=player',
-          data: dataString,
-          dataType: 'jsonp',
-          jsonpCallback: 'member_events',
-          url: HOST + "EventWebService/eventCreatedByMember.php",
+          type:"POST",
+            url:urlWS,
+            data:{
+				authentication:"chessfemily",
+				action:"member_events",
+				member_id:id_utilisateur
+				},
+            dataType:"json",
           beforeSend: function(){
               $('.load_my_events').show();
           },
