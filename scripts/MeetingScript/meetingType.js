@@ -18,6 +18,7 @@ $(document).ready(function(){
                 $('#type_meeting_modif').append("<option value='" + item.id + "'>" + item.label +"</option>");
                 $('#meetingType').append("<option value='" + item.id + "'>" + item.label +"</option>");
                 $('#meetingType_edit').append("<option value='" + item.id + "'>" + item.label +"</option>");
+                $('#meeting_type').append("<option value='" + item.id + "'>" + item.label +"</option>");
             });
 
             

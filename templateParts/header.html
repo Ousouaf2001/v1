@@ -180,26 +180,35 @@
                             </form>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="recherche_place">
-                          
+                          <form action="searchPagePlace.html">
                           <table>
-                                <tr>             
+                                <input type="text" id="getlat2" style="color:black;display:none;" name="lat2">
+                                <input type="text" id="getlong2" style="color:black;display:none;" name="long2">
+                                <tr>         
                                   <th class="table_distance"><h5><b style="color:#582D1C;font-size:10px;">Distance :</h5></th>
-                                  <td class="table_distance"><input type="radio" name="distance" /><font style="color:black;"> -1km </font></td>
-                                  <td class="table_distance"><input type="radio" name="distance" checked="" /><font style="color:black;"> -5km</font></td>
-                                  <td class="table_distance"> <input type="radio" name="distance" /><font style="color:black;"> -10km</font></td>
-                                  <td><input type="radio" name="distance" /><font style="color:black;"> -15km </font></td>
-                                </tr>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance2" value="1" checked="checked" />
+                                      <font style="color:black;"> -1km </font>
+                                  </td>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance2" value="5" />
+                                      <font style="color:black;"> -5km</font>
+                                  </td>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance2" value="10" />
+                                      <font style="color:black;"> -10km</font>
+                                  </td>
+                                  <td>
+                                      <input type="radio" name="distance2" value="15" />
+                                      <font style="color:black;"> -15km </font>
+                                  </td>
                             </table>
                             <table>
                               <tr>
                                 <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Meeting location :</h5></th>
                                 <td>
-                                  <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
-                                      <option value="all_events">Federation</option>
-                                      <option value="all_events">All Events</option>
-                                      <option value="all_events">All Events</option>
-                                      <option value="all_events">All Events</option>
-                                      <option value="all_events">All Events</option>
+                                  <select name="meeting_type" id="meeting_type"  class="form-control input-sm input-block  select_event">
+                                      
                                   </select>
                                 </td>
                               </tr>
@@ -208,17 +217,17 @@
                               <tr>
                                   <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;">Activity now :</h5></th>
                                   <td class="table_distance"  style="font-size: 10px;">
-                                      <input type="radio" checked="" name="activity_now"/>
+                                      <input type="radio" checked="" name="status" value="0" />
                                       <font style="color:black;"> All</font>
                                   </td>
                                   <td class="table_distance"  style="font-size: 10px;">
-                                      <input type="radio" checked="" name="activity_now"/>
+                                      <input type="radio" checked="" name="status" value="1" />
                                       <font style="color:black;"> Only Opened Now</font>
                                   </td>
                               </tr>
                             </table>
                             <button class="btn btn-sm center-block button_event"><b>SEARCH PLACE</b></button>
-
+                            </form>
                         </div>
                         
                         
