@@ -64,7 +64,7 @@ $(document).ready(function(){
 
 
     $(document).on('click','.item', function(){
-		alert($(this).attr('id'));
+		//alert($(this).attr('id'));
         document.location.href = 'profile.html?id_member=' + $(this).attr('id'); 
     });
 });

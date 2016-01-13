@@ -15,6 +15,7 @@ function editMeetingPlace() {
                      '&action=meeting_place_edit'+
                      '&meeting_place_id='+id_meeting+
                      '&member_id='+id_utilisateur+
+					 
                      '&name='+name_meeting+
                      '&address='+adress_meeting + 
                      '&latitude='+latitude_meeting+
@@ -23,15 +24,23 @@ function editMeetingPlace() {
                      '&status='+status_meeting;
     
         
-		var HOST = "http://www.epavia.com/proxy/";
+		var urlWS = "http://api.chessfamily.net/api/query";
         $.ajax({
-          type: 'GET',
-          contentType: "application/json",
-          async: false,
-          data: dataString,
-          dataType: 'jsonp',
-          jsonpCallback: 'meetingEdit',
-          url: HOST + "MeetingWebService/meetingEdit.php",
+          type:"POST",
+            url:urlWS,
+            data:{
+				authentication:"chessfemily",
+				action:"meeting_place_edit",
+				meeting_place_id:id_meeting,
+				member_id:id_utilisateur,
+				name:name_meeting,
+				address:adress_meeting, 
+				latitude:latitude_meeting,
+				longitude:longitude_meeting,
+				type_id:meetingType,
+				status:status_meeting
+				},
+            dataType:"json",
           success:function(result){
                   if(result.success == 1){
                       //$('.testlogin').html(' success connexion');

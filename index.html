@@ -42,7 +42,7 @@
                     <form name="connexionForm" id="connexionForm" action="#">
                         <div class="input-group">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                          <input type="text" class="form-control input_class input-md TranslationDiv" id="login" aria-describedby="inputGroupSuccess1Status" placeholder="EMAIL" />
+                          <input type="email" class="form-control input_class input-md TranslationDiv" id="login" aria-describedby="inputGroupSuccess1Status" placeholder="EMAIL" />
                         </div>
                         <div class="input-group">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
@@ -50,7 +50,7 @@
                         </div>
                         <!--<div class="checkbox">
                           <label class="pull-left">
-                            <input type="checkbox" /> <font style="font-size:10px;color:#978E7A;font-weight:bold;" class="text-uppercase">remember me</font>
+                            <input id="remeber_me" name="remeber_me" type="checkbox" /> <font style="font-size:10px;color:#978E7A;font-weight:bold;" class="text-uppercase">remember me</font>
                           </label>
                           <label class="pull-right" style="margin-bottom:20px;">
                             <font style="font-size:10px;color:#978E7A;font-weight:bold;" class="text-uppercase">forgot password ?</font>
@@ -127,8 +127,7 @@
      
      
      <script type="text/javascript" language="javascript">
-    // device APIs are available
-    //
+    
 /*
 document.addEventListener('deviceready', SplashScreen, true);
 function SplashScreen() {
@@ -137,11 +136,20 @@ function SplashScreen() {
 	 navigator.splashscreen.hide();
 	 }, 5000);
 }*/
-				
-document.addEventListener("offline", checkConnectivity, true);
-function checkConnectivity(){
-	alert("Please activate the connectivity");
-}
+//detection langue systeme 
+/*function checkLanguage() {
+	    navigator.globalization.getPreferredLanguage(
+        function (language) {alert('language: ' + language.value + '\n');},
+        function () {alert('Error getting language\n');}
+      );
+    }*/
+	
+	//verification de la connectivité
+	document.addEventListener("offline", checkConnectivity, true);
+	function checkConnectivity(){
+		alert("Please activate the connectivity");
+	}
+
 
 
 </script>

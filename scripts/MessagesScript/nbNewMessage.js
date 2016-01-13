@@ -1,6 +1,6 @@
 // JavaScript Document
 $(document).ready(function(){
-	var id_utilisateur = 5;//sessionStorage.getItem("identifiant");
+	var id_utilisateur = sessionStorage.getItem("identifiant");
 
 	
 	var urlWS = "http://api.chessfamily.net/api/query";

@@ -23,6 +23,7 @@ function editEvent() {
 			authentication:"chessfemily",
 			action:"event_edit",
 			announcer_id:id_utilisateur,
+			//event_id:,
 			type_id:type_event, 
 			meeting_placeid:type_meeting,
 			name:name,

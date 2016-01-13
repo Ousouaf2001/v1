@@ -28,6 +28,8 @@ $(document).ready(function(){
             data:{authentication:"chessfemily",action:"meeting_place_get",meeting_place_id:m_id},
             dataType:"json",
 			success:function(result){
+				alert(result.toSource());
+				//alert(result.meeting_place.name);
 			  $('.titre_haut').html(result.meeting_place.name);
 			  $('.website').html(result.meeting_place.website);
 			  $('.email').html(result.meeting_place.email);
@@ -40,7 +42,8 @@ $(document).ready(function(){
 			  		$('#openingTimeDiv').append("<b>"+getDayById(item.day_ofweek)+" : "+item.start+" - "+item.end+"<br></b>")
 			});
 			$.each(result.photos, function (index, item) { 
-				$('.rslides').append("<li><img src='"+item.image+"' alt=''></li>")
+			alert(item.id);
+				$('.rslides').append("<li><img id='"+item.id+"' src='"+item.photo+"' alt=''></li>")
 			});
 			// alert(result.meeting_place.toSource());
           }
