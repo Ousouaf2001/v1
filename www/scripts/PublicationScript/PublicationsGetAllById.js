@@ -8,10 +8,6 @@ $(document).ready(function(){
 	}else{
 		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
 	}
-	/*if(id_utilisateur==NULL || id_utilisateur==""){
-		$(location).attr('href',"index.html");
-		alert("Veuillez entrer vos Login/Password");
-	}*/
 	
 	var urlWS = "http://api.chessfamily.net/api/query";
     function PublicationsGetAllById() {

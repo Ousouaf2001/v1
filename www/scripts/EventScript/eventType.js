@@ -15,6 +15,8 @@ $(document).ready(function(){
             $.each(result.event_type, function (index, item) { 
                 $('#type_event').append("<option value='" + item.id + "'>" + item.label +"</option>");
                 $('#type_event_modif').append("<option value='" + item.id + "'>" + item.label +"</option>");
+                $('#event_type_recheche').append("<option value='" + item.id + "'>" + item.label +"</option>");
+
 
             });
 

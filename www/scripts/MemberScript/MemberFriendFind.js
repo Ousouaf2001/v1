@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     function memberFriendFind() {
         //variable host declarer dans templateGenerator.js
-		alert("a");
+		
 		var urlWS = "http://api.chessfamily.net/api/query";
         var id_utilisateur = 5;//sessionStorage.getItem("identifiant");
         $.ajax({
@@ -25,7 +25,7 @@ $(document).ready(function(){
               $('.load_friends').show();
           },
           success:function(result){
-			  alert(result.toSource());
+			 
 			  if(result.success==1){
 				$.each(result.friends, function (index, item) { 
 				  var li = +

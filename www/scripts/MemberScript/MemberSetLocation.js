@@ -1,15 +1,8 @@
 function memberSetLocation() {
-	navigator.geolocation.getCurrentPosition(onSuccess, onError);
+	navigator.geolocation.getCurrentPosition(onSuccess);
 	function onSuccess(position) {
-		alert('Latitude: '           + position.coords.latitude              + '<br />' +
-				'Longitude: '          + position.coords.longitude             + '<br />');
-	}
+		
 	
-	// onError Callback receives a PositionError object
-	function onError(error) {
-		alert('code: '    + error.code    + '\n' +
-			  'message: ' + error.message + '\n');
-	}
 	
 	
 	var latitude = position.coords.latitude;//document.getElementById("lat").value;//Long;
@@ -28,15 +21,12 @@ function memberSetLocation() {
 		},
 		dataType:"json",
 		success:function(result){
-			  alert('votre position est à jour');
+			  alert('ok');
 		},
 		error:function(e){
-			alert(e.toSource());
+			alert('no');
 			
 		}
 	});
 }
-
-
-
-
+}

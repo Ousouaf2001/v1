@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-full">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -21,13 +22,14 @@
                       </ul>
                       <div class="tab-content" style="padding-top:20px;padding-bottom:20px;">
                         <div role="tabpanel" class="tab-pane active" id="recherche_players">
-                           <input type="text" id="getlat" style="color:black;">
-                           <input type="text" id="getlong" style="color:black;">
+                        <form action="searchPage.html">
+                           <input type="text" id="getlat" style="color:black;display:none;" name="lat">
+                           <input type="text" id="getlong" style="color:black;display:none;" name="long">
                             <table>
-                                <tr>             
+                                <tr>      
                                   <th class="table_distance"><h5><b style="color:#582D1C;font-size:10px;">Distance :</h5></th>
                                   <td class="table_distance">
-                                      <input type="radio" name="distance" value="1" />
+                                      <input type="radio" name="distance" value="1" checked="checked" />
                                       <font style="color:black;"> -1km </font>
                                   </td>
                                   <td class="table_distance">
@@ -45,7 +47,7 @@
                                 </tr>
                             </table>
                             <table>
-                              <tr>
+                              <!--<tr>
                                 <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Meeting location:</h5></th>
                                 <td>
                                   <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
@@ -56,27 +58,27 @@
                                       <option value="all_events">All Events</option>
                                   </select>
                                 </td>
-                              </tr>
+                              </tr>-->
                               <tr>
                                 <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Age:</h5></th>
                                 <td>
-                                  From
-                                  <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
-                                      <option value="all_events">20</option>
-                                      <option value="all_events">21</option>
-                                      <option value="all_events">22</option>
-                                      <option value="all_events">23</option>
-                                      <option value="all_events">24</option>
+                                  
+                                  <select name="age_from" id="event_type"  class="form-control input-sm input-block  select_event">
+                                      <option value="20">20</option>
+                                      <option value="21">21</option>
+                                      <option value="22">22</option>
+                                      <option value="23">23</option>
+                                      <option value="24">24</option>
                                   </select>
                                 </td>
                                 <td>
                                   To
-                                  <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
-                                      <option value="all_events">30</option>
-                                      <option value="all_events">31</option>
-                                      <option value="all_events">32</option>
-                                      <option value="all_events">33</option>
-                                      <option value="all_events">34</option>
+                                  <select name="age_to" id="event_type"  class="form-control input-sm input-block  select_event">
+                                      <option value="30">30</option>
+                                      <option value="31">31</option>
+                                      <option value="32">32</option>
+                                      <option value="33">33</option>
+                                      <option value="34">34</option>
                                   </select>
                                 </td>
                               </tr>
@@ -85,15 +87,15 @@
                               <tr>
                                   <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;">Gender :</h5></th>
                                   <td class="table_distance"  style="font-size: 10px;">
-                                      <input type="radio" checked="checked" name="gender"/>
+                                      <input type="radio" checked="checked" name="gender" value="0"/>
                                       <font style="color:black;"> All</font>
                                   </td>
                                   <td class="table_distance"  style="font-size: 10px;">
-                                      <input type="radio" name="gender"/>
+                                      <input type="radio" name="gender" value="2" />
                                       <font style="color:black;"> Femele</font>
                                   </td>
                                   <td class="table_distance"  style="font-size: 10px;">
-                                      <input type="radio" name="gender"/>
+                                      <input type="radio" name="gender" value="1"/>
                                       <font style="color:black;"> Male</font>
                                   </td>
                               </tr>
@@ -102,62 +104,80 @@
                               <tr>
                                   <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;">Profile :</h5></th>
                                   <td class="table_distance"  style="font-size: 10px;">
-                                      <input type="radio" checked="checked" name="profile"/>
+                                      <input type="radio" checked="checked" name="profile" value="all"/>
                                       <font style="color:black;"> All</font>
                                   </td>
                                   <td class="table_distance"  style="font-size: 10px;">
-                                      <input type="radio" name="profile"/>
+                                      <input type="radio" name="profile" value="player" />
                                       <font style="color:black;"> Player</font>
                                   </td>
                                   <td class="table_distance"  style="font-size: 10px;">
-                                      <input type="radio" name="profile"/>
+                                      <input type="radio" name="profile" value="arbiter"/>
                                       <font style="color:black;"> Arbiter</font>
                                   </td>
                                   <td class="table_distance"  style="font-size: 10px;">
-                                      <input type="radio" name="profile"/>
+                                      <input type="radio" name="profile" value="trainer"/>
                                       <font style="color:black;"> Trainer</font>
                                   </td>
                                   <td class="table_distance"  style="font-size: 10px;">
-                                      <input type="radio" name="profile"/>
+                                      <input type="radio" name="profile" value="organizer"/>
                                       <font style="color:black;"> Organizer</font>
                                   </td>
                               </tr>
                             </table>
-                            <button class="btn btn-sm center-block button_event" onclick="memberFind()"><b>SEARCH MEMBERS</b></button>
-                            
+                            <button class="btn btn-sm center-block button_event"><b>SEARCH MEMBERS</b></button>
+                            </form>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="recherche_events">
-                          
-                          <table>
-                                <tr>             
+                          <form action="searchPageEvent.html">
+                            <table>
+                                <input type="text" id="getlat1" style="color:black;display:none;" name="lat1">
+                                <input type="text" id="getlong1" style="color:black;display:none;" name="long1">
+                                <tr>         
                                   <th class="table_distance"><h5><b style="color:#582D1C;font-size:10px;">Distance :</h5></th>
-                                  <td class="table_distance"><input type="radio" name="distance" /><font style="color:black;"> -5km </font></td>
-                                  <td class="table_distance"><input type="radio" name="distance" checked="" /><font style="color:black;"> -10km</font></td>
-                                  <td class="table_distance"> <input type="radio" name="distance" /><font style="color:black;"> -50km</font></td>
-                                  <td><input type="radio" name="distance" /><font style="color:black;"> -300km </font></td>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance1" value="1" checked="checked" />
+                                      <font style="color:black;"> -1km </font>
+                                  </td>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance1" value="5" />
+                                      <font style="color:black;"> -5km</font>
+                                  </td>
+                                  <td class="table_distance">
+                                      <input type="radio" name="distance1" value="10" />
+                                      <font style="color:black;"> -10km</font>
+                                  </td>
+                                  <td>
+                                      <input type="radio" name="distance1" value="15" />
+                                      <font style="color:black;"> -15km </font>
+                                  </td>
                                 </tr>
                             </table>
                             <table>
                               <tr>
                                 <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Event Type:</h5></th>
                                 <td>
-                                  <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
-                                      <option value="all_events">All Events</option>
-                                      <option value="all_events">All Events</option>
-                                      <option value="all_events">All Events</option>
-                                      <option value="all_events">All Events</option>
-                                      <option value="all_events">All Events</option>
+                                  <select name="event_type" id="event_type_recheche"  class="form-control input-sm input-block  select_event">
+                                      
                                   </select>
                                 </td>
                               </tr>
                             </table>
                             <table>
-                              <tr><th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;">Activity:</h5></th>
-                              <td class="table_distance"  style="font-size: 10px;"><input type="radio" checked="" name="activity"/><font style="color:black;"> Taking Place Today</font> </td>
-                              <td style="font-size: 10px;"><input type="radio" name="activity"/> <font style="color:black;">Taking Place in max <b class="x">x</b> days</font></td></tr>
+                              <tr>
+                                <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;">Activity:</h5></th>
+                                <td class="table_distance"  style="font-size: 10px;">
+                                    <input type="radio" checked="checked" name="activity" value="0" />
+                                    <font style="color:black;"> Taking Place Today</font> 
+                                </td>
+                                <td style="font-size: 10px;">
+                                    <input type="radio" name="activity" value="n" />
+                                    <font style="color:black;">Taking Place in max<b class="x">x</b> days</font>
+                                </td>
+                              </tr>
                             </table>
                             <button class="btn btn-sm center-block button_event"><b>SEARCH EVENTS</b></button>
-
+                            </form>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="recherche_place">
                           
@@ -213,3 +233,4 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<script type="text/javascript" src="scripts/EventScript/EventType.js"></script>
