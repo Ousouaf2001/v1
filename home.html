@@ -18,8 +18,85 @@
   <body style="background:#DEDEDE">
 
   <div id="header"></div>
-  <div class="container-fluid white" style="padding-top:50px;">
-  		
+  <div class="container-fluid white" style="padding-top:10px;">
+      <div class="status" >
+          <div class="row">
+              <div class="col-xs-12">
+                  <div class="well well-sm" style="border-radius:10px;">
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <form>
+                                  <div class="form-group">
+                                      <textarea style="width:100%;resize:none;height:50px;" id="statusinput"></textarea>
+                                  </div>
+                              </form>
+                          </div>
+                          <div class="col-xs-12">
+                              <button class="btn btn-xs btn_index " id="video"><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>
+                              <button class="btn btn-xs btn_index" id="link"><i class='glyphicon glyphicon-globe'></i>&nbsp;&nbsp;Link</button>
+                              <button class="btn btn-xs btn_index" id="photo"><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  		<div class="publication" style="background:beige;width:100%;padding:5px;border-radius:10px;margin-bottom:10px;">
+          <div class="row">
+              <div class="col-xs-3">
+                  <h5 class="text-center">drid lotfi</h5>
+                  <img src="icon.png" class="img-responsive img-circle center-block" width="50">
+              </div>
+              <div class="col-xs-6">
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                          </p>
+                      </div>
+                      <div class="col-xs-12">
+
+                          <button class="btn btn-xs btn_index "><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>
+                          <button class="btn btn-xs btn_index"><i class='glyphicon glyphicon-globe'></i>&nbsp;&nbsp;Link</button>
+                          <button class="btn btn-xs btn_index"><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xs-3">
+                  2015-12-18</br>
+                  2015-12-18 
+              </div>
+          </div>
+      </div>
+      <div class="publication" style="background:beige;width:100%;padding:5px;border-radius:10px;margin-bottom:10px;">
+          <div class="row">
+              <div class="col-xs-3">
+                  <h5 class="text-center">drid lotfi</h5>
+                  <img src="icon.png" class="img-responsive img-circle center-block" width="50">
+              </div>
+              <div class="col-xs-6">
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                          </p>
+                      </div>
+                      <div class="col-xs-12">
+
+                          <button class="btn btn-xs btn_index "><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>
+                          <button class="btn btn-xs btn_index"><i class='glyphicon glyphicon-globe'></i>&nbsp;&nbsp;Link</button>
+                          <button class="btn btn-xs btn_index"><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xs-3">
+                  2015-12-18</br>
+                  2015-12-18 
+              </div>
+          </div>
+      </div>
         
         <!-- Submit publication -->
         
@@ -44,26 +121,6 @@
        </div>-->
        
        
-       <div class="row">
-            <div class="col-xs-12">
-                        <img src="image/load.gif" style="margin-top:30%;" class="load_detail_publication center-block">
-            </div>
-        </div>
-
-       <!--  Publication list -->
-       <div class="container">
-         <div id="publication_list" class="row affiche_detail_publication" style="display:none;">  
-         </div>
-       </div>
-       
-       <!--  simple link -->
-      <div class="row">
-          <div class="col-xs-12">
-              <a href="searchPage.html"><button class="center-block btn btn-md btn-primary">Events list</button></a><br>
-              <a href="menu.html"><button class="center-block btn btn-md btn-primary">page menu</button></a><br>
-              <a href="index.html"><button class="center-block btn btn-md btn-primary">sign in</button></a><br>
-           </div>
-      </div>
   </div>
 	<div id="footer" class="col-xs-12"></div>
 
@@ -74,6 +131,19 @@
 	<script type="text/javascript" src="js/templateGenerator.js"></script>
     
     <script type="text/javascript" src="scripts/PublicationScript/PublicationsGetAllById.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#video').click(function(){
+                $('#statusinput').attr('placeholder','Add video');
+            });
+            $('#link').click(function(){
+                $('#statusinput').attr('placeholder','Add link');
+            });
+            $('#photo').click(function(){
+                $('#statusinput').attr('placeholder','Add photo');
+            });
+        });
+    </script>
     
     
   </body>
