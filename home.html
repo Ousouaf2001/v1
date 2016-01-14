@@ -25,9 +25,17 @@
                   <div class="well well-sm" style="border-radius:10px;">
                       <div class="row">
                           <div class="col-xs-12">
+                              <div class="alert alert-success" style="display:none;" id="message">
+                                  status ajouté
+                              </div>
+                              <div class="alert alert-danger" style="display:none;" id="messagee">
+                                  ajouter un status
+                              </div>
+                          </div>
+                          <div class="col-xs-12">
                               <form>
                                   <div class="form-group">
-                                      <textarea style="width:100%;resize:none;height:50px;" id="statusinput"></textarea>
+                                      <textarea style="width:100%;resize:none;height:50px;" id="statusinput" required></textarea>
                                   </div>
                               </form>
                           </div>
@@ -35,6 +43,7 @@
                               <button class="btn btn-xs btn_index " id="video"><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>
                               <button class="btn btn-xs btn_index" id="link"><i class='glyphicon glyphicon-globe'></i>&nbsp;&nbsp;Link</button>
                               <button class="btn btn-xs btn_index" id="photo"><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>
+                              <button class="btn btn-xs btn_index pull-right" onclick="AddPublication()"><i class='glyphicon glyphicon-send'></i>&nbsp;&nbsp;submit</button>
                           </div>
                       </div>
                   </div>
@@ -92,6 +101,7 @@
 	<script type="text/javascript" src="js/templateGenerator.js"></script>
     
     <script type="text/javascript" src="scripts/PublicationScript/PublicationsGetAllById.js"></script>
+    <script type="text/javascript" src="scripts/PublicationScript/PublicationAdd.js"></script>
     <script type="text/javascript">
         $(function(){
             $('#video').click(function(){

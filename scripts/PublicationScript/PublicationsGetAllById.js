@@ -43,7 +43,7 @@ $(document).ready(function(){
 				  			"<div class='publication' >"+
 				  			"<div class='row'>"+
 				              "<div class='col-xs-3'>"+
-				                  "<h5 class='text-center'>"+item.member+"</h5>"+
+				                  "<h6 class='text-center'>"+item.member+"</h6>"+
 
 				                  "<img src='"+item.member_photo+" 'class='img-responsive img-circle center-block' width= '50' height='50'>"+
 				              "</div>"+
@@ -54,15 +54,15 @@ $(document).ready(function(){
 				                      "</div>"+
 				                      "<div class='col-xs-12'>"+
 
-				                          "<button class='btn btn-xs btn_index'><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>"+
-				                          "<button class='btn btn-xs btn_index'><i class='glyphicon glyphicon-globe'></i>&nbsp;&nbsp;Link</button>"+
+				                          "<button class='btn btn-xs btn_index'><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>&nbsp;"+
+				                          "<button class='btn btn-xs btn_index'><i class='glyphicon glyphicon-globe'></i>&nbsp;&nbsp;Link</button>&nbsp;"+
 				                          "<button class='btn btn-xs btn_index'><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>"+
 				                      
 				                      "</div>"+
 				                  "</div>"+
 				              "</div>"+
 				              "<div class='col-xs-3'>"+
-				            		 "<h5>"+item.date+"</h5>"+
+				            		 "<h6>"+item.date+"</h6>"+
 
 				              "</div>"+
 				          "</div>"+
