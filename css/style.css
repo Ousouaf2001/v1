@@ -301,6 +301,9 @@ input:-moz-placeholder { font-size: 10pt; color: #555; }
 .publication{
 	background:beige;width:100%;padding:5px;border-radius:10px;margin-bottom:10px;
 }
+.notification{
+	background:beige;width:100%;padding:10px;border-radius:10px;margin-bottom:10px;
+}
 .pub{
 	display: -webkit-box;
 	margin-top: 10px;

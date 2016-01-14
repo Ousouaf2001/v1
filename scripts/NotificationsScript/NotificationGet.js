@@ -13,7 +13,7 @@ $(document).ready(function(){
 				authentication:"chessfemily",
 				action:"notifications",
 				member_id:id_utilisateur,
-				perpage:10,
+				perpage:30,
 				page:1},
             dataType:"json",
 
@@ -25,15 +25,29 @@ $(document).ready(function(){
 			  
 			  if(result.success==1){
 				  $.each(result.notifications, function (index, item) {
-					$('#Notification_list').append("<div class='container'>"+
-							"<div class='col-xs-3'><img src='"+this.receiver_photo+"' width='50' /></div>"+
-						  "<div class='col-xs-9'><b>"+this.sender_name+" "+this.sender_last_name+"</b> vous à envoyer une notification avec le message suivant : <br/>"+this.message+"</div>"+
-						"</div>");
+					var notif = "<div class='notification'>"+
+						              "<div class='row'>"+
+						                  "<div class='col-xs-3'>"+
+						                      "<img src='"+this.receiver_photo+"' class='img-responsive img-circle' style='width:50px;height:50px;'>"+
+						                  "</div>"+
+						                  "<div class='col-xs-9'>"+
+						                      "<p>"+
+						                          "<b>"+ 
+						                          	this.sender_name+" "+this.sender_last_name +
+						                          "</b>&nbsp;"+
+						                          "<i>vous à envoyer une notification : </i><br/>"+
+						                          this.message+
+											   "</p>"+
+						                  "</div>"+
+						              "</div>"+
+					            "</div>"
 						
-						//"Receiver Full Name ="+this.receiver_name+""+this.receiver_last_name+"<br/>"+
+					$('.Notification_list').append(notif);
+					
+
 				  });
 			  }else{
-				  $('#Notification_list').html("Pas de Notification");
+				  $('.Notification_list').html("Pas de Notification");
 			  }
 	  
           },
