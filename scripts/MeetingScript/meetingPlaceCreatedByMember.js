@@ -20,7 +20,7 @@ $(document).ready(function(){
           },
           success:function(result){
             $.each(result.meeting_places, function (index, item) { 
-            var li = "<li class='list-group-item '><span class='badge' style='background:white;color:grey;margin-top:5px;'><font style='font-size:20px;'> " + item.type + " </font>      <i  class='fa fa-pencil-square modif_location' id='" + item.id + "' style='font-size:25px;color:#4B2618;' data-toggle='modal' data-target='#myModalEdit'></i></span><b class='mycrealocation' id='" + item.id +"'> " + item.name + " <i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i></b><br><font style='font-size:12px;color:grey;'> " + item.city + " KM</font></li>";     
+            var li = "<li class='list-group-item '><span class='badge' style='background:white;color:grey;margin-top:5px;'><font style='font-size:15px;'> " + item.type + " </font>      <i  class='fa fa-pencil-square modif_location' id='" + item.id + "' style='font-size:25px;color:#4B2618;' data-toggle='modal' data-target='#myModalEdit'></i></span><b class='mycrealocation' id='" + item.id +"'> " + item.name + " <i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i></b><br><font style='font-size:12px;color:grey;'> " + item.city + " KM</font></li>";     
                 $('.list-menu-mylocation').append(li);
                 
             });
