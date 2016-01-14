@@ -33,12 +33,12 @@ function AddEvent() {
     	var urlWS = "http://api.chessfamily.net/api/query";
         
         $.ajax({
-          type:"POST",
+            type:"POST",
             url:urlWS,
             data:{
-				authentication:"chessfemily",
-				action:"event_add",
-				announcer_id:id_utilisateur,
+				        authentication:"chessfemily",
+				        action:"event_add",
+				        announcer_id:id_utilisateur,
                 type_id:type_event,
                 meeting_placeid:type_meeting,
                 name:name,
@@ -54,16 +54,11 @@ function AddEvent() {
 				},
             dataType:"json",
           success:function(result){
-                  /*if(result.success == 1){
-                      //$('.testlogin').html(' success connexion');
-                      $('.info_requis').fadeOut();
-                      $('.inscritok').fadeIn();
-                      $('.inscritok').fadeOut(4000);
-                      $('#myModal').hide();
+                  if(result.success == 1){
+                      $('.inscritok').show();
                   }else{
-                      $('.info_requis').fadeIn();
-                  }*/
-                  console.log(result);
+                    $('.info_requis').show();
+                  }
 
                   
           }
