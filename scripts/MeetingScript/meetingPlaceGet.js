@@ -28,7 +28,7 @@ $(document).ready(function(){
             data:{authentication:"chessfemily",action:"meeting_place_get",meeting_place_id:m_id},
             dataType:"json",
 			success:function(result){
-				alert(result.toSource());
+				
 				//alert(result.meeting_place.name);
 			  $('.titre_haut').html(result.meeting_place.name);
 			  $('.website').html(result.meeting_place.website);
@@ -45,7 +45,7 @@ $(document).ready(function(){
 			alert(item.id);
 				$('.rslides').append("<li><img id='"+item.id+"' src='"+item.photo+"' alt=''></li>")
 			});
-			// alert(result.meeting_place.toSource());
+			
           }
         });
     }

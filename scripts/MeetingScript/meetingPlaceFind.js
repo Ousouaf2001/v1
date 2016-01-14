@@ -44,12 +44,12 @@
             /**/
           if(result.success == 1){
             $.each(result.meeting_places, function (index, item) { 
-              var li = "<li class='list-group-item' id='" + item.event_id + "'>" +
+              var li = "<li class='list-group-item' id='" + item.id + "'>" +
                         
                         "<span class='badge' style='background:white;'>" +
-                            "<i class='fa fa-trash delete' id='" + item.event_id +"' style='font-size:25px;color:#4B2618;' ></i>" +
+                            "<i class='fa fa-trash delete' id='" + item.id +"' style='font-size:25px;color:#4B2618;' ></i>" +
                         "</span>" +
-                        "<b class='events' id='"+ item.event_id +"'>" + item.name +
+                        "<b class='location' id='"+ item.id +"'>" + item.name +
                             " <i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i>" +
                         "</b>" +
                         "<br>" +
@@ -61,7 +61,7 @@
 
             });
           }else{
-            $('.list-menu-location').html('no events');
+            $('.list-menu-location').html('no place');
           }
           },
           complete: function(){
@@ -69,4 +69,14 @@
           }
         }
     );
+
+
+    $(document).on('click','.location', function(){
+        document.location.href = 'locationdetails.html?meeting_place_id=' + $(this).attr('id'); 
+    });
+    $(document).on('click','.delete', function(){
+        //document.location.href = 'locationdetails.html?meeting_place_id=' + $(this).attr('id'); 
+        console.log($(this).attr('id'));
+    });
+
 

@@ -21,7 +21,7 @@ $(document).ready(function(){
 				},
             dataType:"json",
           success:function(result){
-			  alert(result.friends.toSource());
+			  
                  $.each(result.friends, function (index, item) { 
 					$('#meetingFriendsDiv').append("<p><span><img src='"+item.photo+"' class='img-circle' width='50'></span>&nbsp;&nbsp;&nbsp;<span><b>"+item.name+" "+item.last_name+"</b></span></p>");
 				});
