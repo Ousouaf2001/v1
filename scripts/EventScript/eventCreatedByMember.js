@@ -1,17 +1,17 @@
 $(document).ready(function(){
     
-    var id_utilisateur = sessionStorage.getItem("identifiant");
-	var urlWS = "http://api.chessfamily.net/api/query";
+    
     function eventCreatedByMember() {
-        
+        var id_utilisateur = sessionStorage.getItem("identifiant");
+        var urlWS = "http://api.chessfamily.net/api/query";
         $.ajax({
           type:"POST",
             url:urlWS,
             data:{
-				authentication:"chessfemily",
-				action:"member_events",
-				member_id:id_utilisateur
-				},
+    				authentication:"chessfemily",
+    				action:"member_events",
+    				member_id:id_utilisateur
+    				},
             dataType:"json",
           beforeSend: function(){
               $('.load_my_events').show();
@@ -59,19 +59,20 @@ $(document).ready(function(){
         var eventId = $(this).attr('id');
         var id_utilisateur = sessionStorage.getItem("identifiant");
         var dataStringDelete = 'authentication=chessfemily&action=event_get&event_id='+eventId;
-        
+        var urlWS = "http://api.chessfamily.net/api/query";
 
         $.ajax({
-          type: 'GET',
-          contentType: "application/json",
-          async: false,
-          //data: 'authentication=chessfemily&action=find_members&distance=5&latitude=35.6829986572&longitude=10.8500003815&profile=player',
-          data: dataStringDelete,
-          dataType: 'jsonp',
-          jsonpCallback: 'event_get',
-          url: HOST + "EventWebService/eventGet.php",
+            type:"POST",
+            url:urlWS,
+            data:{
+              authentication:"chessfemily",
+              action:"event_get",
+              announcer_id:id_utilisateur,
+              event_id:eventId
+            },
+          dataType: 'json',
           success:function(result){
-               
+               $('#id_event_edit').val(result.event.id);
                 $('#name_modif').val(result.event.name);
                 $('#organizer_modif').val(result.event.organizer);
                 $('#start_date_modif').val(result.event.start_date);

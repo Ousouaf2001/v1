@@ -1,10 +1,13 @@
 function AddMeetingPlace() {
     
+  navigator.geolocation.getCurrentPosition(onSuccess);
+  function onSuccess(position) {
+
     var id_utilisateur = sessionStorage.getItem("identifiant");
     var name_meeting = document.getElementById("name_meeting").value;
     var adress_meeting = document.getElementById("adress_meeting").value;
-    var latitude_meeting = document.getElementById("latitude_meeting").value;
-    var longitude_meeting = document.getElementById("longitude_meeting").value;
+    var latitude_meeting = position.coords.latitude;
+    var longitude_meeting = position.coords.longitude;
     var meetingType = document.getElementById("meetingType").value;
     var status_meeting = document.getElementById("status_meeting").value;
 
@@ -39,13 +42,10 @@ function AddMeetingPlace() {
             dataType:"json",
           success:function(result){
                   if(result.success == 1){
-                      //$('.testlogin').html(' success connexion');
-                      $('.info_requis').fadeOut();
-                      $('.inscritok').fadeIn();
-                      $('.inscritok').fadeOut(4000);
-                      
+                      //$('.inscritok').show();
+                      $('#myModal').modal('hide');
                   }else{
-                      $('.info_requis').fadeIn();
+                    $('.info_requis').show();
                   }
                   
 
@@ -55,4 +55,5 @@ function AddMeetingPlace() {
         
     
     return false;
+}
 }

@@ -15,22 +15,9 @@ function AddEvent() {
     var website = document.getElementById("website").value;
 
 
-// Returns successful data submission message when the entered information is stored in database.
-    /*var dataString = 'authentication=chessfemily&action=event_add&announcer_id='+id_utilisateur+
-                     '&type_id='+type_event + 
-                     '&meeting_placeid='+type_meeting+
-                     '&name='+name + 
-                     '&organizer='+organizer+
-                     '&start_date='+start_date +
-                     '&end_date='+end_date +
-                     '&is_rated='+is_rated +
-                     '&description='+description +
-                     '&prize_fund='+prize_fund +
-                     '&phone_number='+phone_number +
-                     '&email='+email +
-                     '&website='+website;*/
 
-    	var urlWS = "http://api.chessfamily.net/api/query";
+
+    	   var urlWS = "http://api.chessfamily.net/api/query";
         
         $.ajax({
             type:"POST",
@@ -55,7 +42,8 @@ function AddEvent() {
             dataType:"json",
           success:function(result){
                   if(result.success == 1){
-                      $('.inscritok').show();
+                      //$('.inscritok').show();
+                      $('#myModal').modal('hide');
                   }else{
                     $('.info_requis').show();
                   }

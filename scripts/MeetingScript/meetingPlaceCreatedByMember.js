@@ -1,11 +1,12 @@
 $(document).ready(function(){
 
-    var id_utilisateur = 4;//sessionStorage.getItem("identifiant");
+    
+    function meetingPlaceCreatedByMember() {
+      var id_utilisateur = sessionStorage.getItem("identifiant");
 
     
     
-	var urlWS = "http://api.chessfamily.net/api/query";
-    function meetingPlaceCreatedByMember() {
+  var urlWS = "http://api.chessfamily.net/api/query";
         
         $.ajax({
 			type:"POST",
@@ -44,18 +45,18 @@ $(document).ready(function(){
         var meetingId = $(this).attr('id');
         var id_utilisateur = sessionStorage.getItem("identifiant");
         var dataStringEdit = 'authentication=chessfemily&action=meeting_place_get&meeting_place_id='+meetingId
-
+         var urlWS = "http://api.chessfamily.net/api/query";
 
         $.ajax({
-          type: 'GET',
-          contentType: "application/json",
-          async: false,
-          //data: 'authentication=chessfemily&action=find_members&distance=5&latitude=35.6829986572&longitude=10.8500003815&profile=player',
-          data: dataStringEdit,
-          dataType: 'jsonp',
-          jsonpCallback: 'meeting_places',
-          url: HOST + "MeetingWebService/meetingPlaceGet.php",
-          success:function(result){
+          type:"POST",
+            url:urlWS,
+            data:{
+              authentication:"chessfemily",
+              action:"meeting_place_get",
+              meeting_place_id:meetingId
+              },
+            dataType:"json",
+            success:function(result){
                               $('#name_meeting_edit').val(result.meeting_place.name);
                               $('#adress_meeting_edit').val(result.meeting_place.adress);
                               $('#latitude_meeting_edit').val(result.meeting_place.latitude);
