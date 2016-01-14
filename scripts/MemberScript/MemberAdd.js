@@ -10,7 +10,7 @@ function AddMember() {
     var os = document.getElementById("detect_os").value;
 	var device_token = document.getElementById("detect_UUID").value;
     
-	if ((name == '') && (last_name == '') && (email == ''))
+	if ((name == '') && (last_name == '') && (email == '') && (password == '') && (password_conf == '') && (birthday == '') && (genre == '') && (password != password_conf))
     {
         $('.info_requis').fadeIn();
     }

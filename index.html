@@ -154,6 +154,13 @@ function SplashScreen() {
 
 </script>
 <script src="js/Languages.js"></script>
-
+<script type="text/javascript">
+  
+  var id_utilisateur = sessionStorage.getItem("identifiant");
+  if(id_utilisateur != null){
+    window.location.href = 'home.html';
+  }
+  
+</script>
   </body>
 </html>

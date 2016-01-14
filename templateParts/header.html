@@ -244,3 +244,11 @@
 </nav>
 <script type="text/javascript" src="scripts/EventScript/EventType.js"></script>
 <script type="text/javascript" src="scripts/MeetingScript/meetingType.js"></script>
+<script type="text/javascript">
+  
+  var id_utilisateur = sessionStorage.getItem("identifiant");
+  if(id_utilisateur == null){
+    window.location.href = 'index.html';
+  }
+  
+</script>
