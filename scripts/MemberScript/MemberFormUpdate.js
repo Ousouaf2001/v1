@@ -24,9 +24,6 @@ $(document).ready(function(){
               $('#email').val(result.member.email);
               $('#birthday').val(result.member.birthday);
               
-              //$('.image_profil').html("<img src='"+ result.member.image +"' class='img-responsive img-circle center-block' width='130' style='border:3px solid white;margin-bottom:20px;'>");
-              //$('.nom_member').html(result.member.name +" "+ result.member.last_name);
-              //console.log(result.member.image);
           }
         });
     }

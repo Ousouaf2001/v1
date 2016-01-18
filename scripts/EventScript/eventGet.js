@@ -17,15 +17,15 @@ $(document).ready(function(){
               $('.load_detail_event').show();
           },
           success:function(result){
-                              $('.titre_haut').html(result.event.name);
-                              $('.event_type').html(result.event.id);
-                              $('.date_start').html(" " + result.event.start_date);
-                              $('.date_end').html(" " + result.event.end_date);
-                              $('.site').html(" " + result.event.website);
-                              $('.email').html(" " + result.event.email);
-                              $('.tel').html(" " + result.event.phone_number);
-                              $('#description').html(" " + result.event.description);
-							  $('address').html(" " + result.event.adress);
+                              $('.titre_haut').val(result.event.name);
+                              $('.event_type').val(result.event.id);
+                              $('.date_start').val(result.event.start_date);
+                              $('.date_end').val(result.event.end_date);
+                              $('.site').val(result.event.website);
+                              $('.email').val(result.event.email);
+                              $('.tel').val(result.event.phone_number);
+                              $('#description').val(result.event.description);
+							  $('address').val(result.event.adress);
 							  //$('#img_event').attr("src",result.event.meeting_photos[0].image);
 							  $.each(result.event.meeting_photos, function (index, item) { 
 									$('.rslides').append("<li><img src='"+item.image+"' alt=''></li>")

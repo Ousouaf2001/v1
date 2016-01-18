@@ -22,7 +22,8 @@ $(document).ready(function(){
             var li = "<li class='list-group-item ' id='" + item.id + "'>" +
                         
                         "<span class='badge' style='background:white;'>" +
-                            "<i data-toggle='modal' data-target='#myModalModif' class='fa fa-pencil-square modif_event' id='" + item.id + "' style='font-size:25px;color:#4B2618;'></i>" +
+                            "<i data-toggle='modal' data-target='#myModalModif' class='fa fa-pencil-square modif_event' id='" + item.id + "' style='font-size:25px;color:#4B2618;'></i>&nbsp;" +
+                            "<i  class='fa fa-trash delete_event' id='" + item.id + "' style='font-size:25px;color:#4B2618;'></i>" +
                         "</span>" +
                         "<b class='events' id='" + item.id + "'>" + item.name +
                             " <i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i>" +
@@ -87,5 +88,26 @@ $(document).ready(function(){
                               
           }
         }); 
+    });
+
+$(document).on('click','.delete_event', function(){
+        var eventId = $(this).attr('id');
+        var id_utilisateur = sessionStorage.getItem("identifiant");
+       
+        $.ajax({
+            type:"POST",
+            url:urlWS,
+            data:{
+        authentication:"chessfemily",
+        action:"event_delete",
+        member_id:id_utilisateur,
+        event_id:eventId
+        },
+            dataType:"json",
+          success:function(result){
+            $('.msg_delete').show();
+            location.reload();
+          }
+        });
     });
 });

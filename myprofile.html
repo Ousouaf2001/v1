@@ -41,17 +41,23 @@
         <div class="container">
             <div class="row">
             <div class="col-md-12 bloc_logo">
-                    <div class="logo text-center">
-                        <img src="image/logo.jpg" class="img-responsive center-block" width="150">
-                        <b class="texte_logo text-uppercase text-center">chess family</b>
+                    <div class="logo ">
+                        <img src="image/logo.jpg" class="img-responsive pull-left" width="50">
+                        <span><b>profile de dridi lotfi</b></span>
                     </div>
 
                 </div>
-                <div class="col-md-12">
-                    <div class="champ">
-                      <div class="inscritok" style="display:none;text-align:center;font-weight:bold;color:red;">inscription ok</div>
-                      <div class="info_requis" style="display:none;text-align:center;font-weight:bold;color:red;">verif info</div>
-                       <form  id="member_add" action="#">
+                <div class="col-xs-12">
+                    <div>
+                      <ul class="nav nav-tabs menu-ho" role="tablist" style="border-bottom:0px;">
+                        <li role="recherche" class="active text-center" style="width:33.33333333333333%"><a href="#profile" aria-controls="recherche_players" role="tab" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;Profile</a></li>
+                        <li role="recherche" class="text-center" style="width:33.33333333333333%"><a href="#member" aria-controls="recherche_events" role="tab" class="text-center" data-toggle="tab"><i class="fa fa-trophy"></i>&nbsp;Set Photo</a></li>
+                        <li role="recherche"class="text-center"  style="width:33.33333333333333%"><a href="#chess" aria-controls="recherche_place" role="tab" data-toggle="tab"><i class="fa fa-map-marker"></i>&nbsp;Chess Profile</a></li>
+                      </ul>
+                      <div class="tab-content" style="padding-top:20px;padding-bottom:20px;">
+                        <div role="tabpanel" class="tab-pane active" id="profile">
+                           
+<form  id="member_add" action="#">
                             <div class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span></span>
                               
@@ -89,24 +95,36 @@
                                   
                               </select>
                             </div>
-                            <div class="input-group">
-                              <span class="input-group-addon"><i class="glyphicon glyphicon-camera"></span>
-                              
-      <button onclick="capturePhoto();" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status">Capture Photo</button>
-      <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status">From Photo Library</button><br />
-      <img id="image" src="" style="display:none;width:100%;">
-      <input type="button" onClick="MemberSetPhoto()" value="Valider" />
-                              
-                            </div>
+                            
                             <div class="form-group">
                                <input type="button" id="submit" onclick="MemberUpdateProfileFunction()" value="Submit" class="btn btn-md btn-block btn_index"/></br>
                                <center><a href="home.html">Home</a></center>
                             </div>
                             
-                        </form>
+                        </form>                           
+                            
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="member">
+                          
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-camera"></span>
+                              
+                              <button onclick="capturePhoto();" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status">Capture Photo</button>
+                              <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status">From Photo Library</button><br />
+                              <img id="image" src="" style="display:none;width:100%;">
+                              <input type="button" onClick="MemberSetPhoto()" value="Valider" />
+                              
+                            </div>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="chess">
+                          
+                        
+                        chess
+                        </div>
+                      </div>
                     </div>
-                </div>
-            </div>
+                </div>            </div>
         </div>     
     	<div id="footer" class="col-xs-12"></div>
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>

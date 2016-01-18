@@ -3,7 +3,6 @@ function editEvent() {
     var id_utilisateur = sessionStorage.getItem("identifiant");
     var id_event = document.getElementById("id_event_edit").value;
     var type_event = document.getElementById("type_event_modif").value;
-    var type_meeting = document.getElementById("type_meeting_modif").value;
     var name = document.getElementById("name_modif").value;
     var organizer = document.getElementById("organizer_modif").value;
     var start_date = document.getElementById("start_date_modif").value;
@@ -25,8 +24,7 @@ function editEvent() {
 			action:"event_edit",
 			announcer_id:id_utilisateur,
 			event_id:id_event,
-			type_id:type_event, 
-			meeting_placeid:type_meeting,
+			type_id:type_event,
 			name:name,
 			organizer:organizer,
 			start_date:start_date,
