@@ -64,11 +64,8 @@ $(document).ready(function(){
 
 
     $(document).on('click','.item', function(){
-<<<<<<< HEAD:www/scripts/MemberScript/MemberFriendFind.js
-		
-=======
-		//alert($(this).attr('id'));
->>>>>>> 1df48319c242f65c27308f99c2c8f073a42bc2e6:scripts/MemberScript/MemberFriendFind.js
+
+	
         document.location.href = 'profile.html?id_member=' + $(this).attr('id'); 
     });
 });
