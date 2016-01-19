@@ -20,6 +20,8 @@ $(document).ready(function(){
 				member_id:id_utilisateur,
 				perpage:10,
 				page:1}
+
+				
 		$(document).on('click','.message_item', function(){
 			document.location.href = 'messages_detail.html?receiver_id=' + $(this).attr('id'); 
 		});
