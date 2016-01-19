@@ -6,7 +6,14 @@ $(document).ready(function(){
 		var url = window.location.search;
     	var id_utilisateur = url.substring(url.lastIndexOf("=")+1);//1;
 	}else{
-		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+		if(localStorage.getItem("identifiant")!= null){
+			var id_utilisateur = localStorage.getItem("identifiant");//4;
+			alert("localStorage : "+id_utilisateur);
+		}else if(sessionStorage.getItem("identifiant")!= null){
+			var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+			alert("sessionStorage : "+id_utilisateur);
+		}
+			
 	}
 	
 	var urlWS = "http://api.chessfamily.net/api/query";

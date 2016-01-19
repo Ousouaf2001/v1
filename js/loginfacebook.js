@@ -17,6 +17,12 @@
                       if(response.status === 'connected') {
                          // window.location.href = 'home.html';
                           //alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+						  /*openFB.api({
+							  path: '/me',
+							  success: function(data) {
+								  ConnectMember(1);
+							  }
+						  });*/
 						  getInfo();
                       } else {
                           alert('Facebook login failed: ' + response.error);
@@ -51,15 +57,6 @@
 				  //alert("ID : "+data.id+"ID FB : "+document.getElementById("FacebookID").value);
 				  ConnectMember(1);
 				  
-				  /*var name = document.getElementById("name").value;
-    var last_name = document.getElementById("last_name").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var password_conf = document.getElementById("password_conf").value;
-    var birthday = document.getElementById("birthday").value;
-    var genre = document.getElementById("genre").value;
-    var os = document.getElementById("detect_os").value;
-	var device_token = document.getElementById("detect_UUID").value;*/
               },
               error: errorHandler});
       }
