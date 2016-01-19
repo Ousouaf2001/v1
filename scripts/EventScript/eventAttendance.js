@@ -2,9 +2,13 @@ $(document).ready(function(){
 
     /* variable host declarer dans templateGenerator.js */
 	var urlWS = "http://api.chessfamily.net/api/query";
-	var id_utilisateur = 5;//sessionStorage.getItem("identifiant");//5;
+	if(localStorage.getItem("identifiantLocal")!= null){
+		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+	}else if(sessionStorage.getItem("identifiant")!= null){
+		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	}	
 	var url = window.location.search;
-	var e_id = 1;//url.substring(url.lastIndexOf("=")+1);//1;
+	var e_id = url.substring(url.lastIndexOf("=")+1);//1;
 	
     function EventAttendance() {
         

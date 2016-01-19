@@ -1,7 +1,11 @@
 function editMeetingPlace() {
     navigator.geolocation.getCurrentPosition(onSuccess);
   function onSuccess(position) {
-    var id_utilisateur = sessionStorage.getItem("identifiant");
+    if(localStorage.getItem("identifiantLocal")!= null){
+		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+	}else if(sessionStorage.getItem("identifiant")!= null){
+		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	}	
     var id_meeting = document.getElementById("id_meeting_edit").value;
     var name_meeting = document.getElementById("name_meeting_edit").value;
     var adress_meeting = document.getElementById("adress_meeting_edit").value;

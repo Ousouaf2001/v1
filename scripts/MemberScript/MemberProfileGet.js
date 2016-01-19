@@ -1,7 +1,11 @@
 $(document).ready(function(){
     function memberFind() {
+          if(sessionStorage.getItem("identifiant")!=null){
+			  var id_utilisateur = sessionStorage.getItem("identifiant");
+		  }else if(localStorage.getItem("identifiantLocal")!=null){
+			  var id_utilisateur = localStorage.getItem("identifiantLocal");
+		  }
           
-          var id_utilisateur = sessionStorage.getItem("identifiant");
           
           var dataString = 'authentication=chessfemily&action=member_get&id_member='+id_utilisateur;
 

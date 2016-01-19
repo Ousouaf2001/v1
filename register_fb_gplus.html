@@ -63,13 +63,20 @@
                        <form  id="member_add" action="#">
                             <input type="hidden" id="detect_os" />
                             <input type="hidden" id="detect_UUID" />
-<img id="ImgMember" src="" width="200px" />
+                            <div style="width:100%; text-align:center;">
+<img id="ImgMember" src="" style="border-radius: 150px;-webkit-border-radius: 150px; -moz-border-radius: 150px;" width="150px" />
 
 	<div class="input-group">
           <span class="input-group-addon">
           <i class="glyphicon glyphicon-user"></i></span>
-          <input type="text" id="FacebookID" />
-          <input type="text" id="GooglePlusID" />
+          <div class="FacebookInfo">
+              <label>Facebook ID :</label>
+              <input type="text" id="FacebookID" />
+          </div>
+          <div class="GooglePlusInfo">
+              <label>Google + ID :</label>
+              <input type="text" id="GooglePlusID" />
+          </div>
       </div>
                             <div class="input-group">
                               <span class="input-group-addon">
@@ -85,14 +92,16 @@
                                 <input type="email" name="email" id="email" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Email"required />
                               </div>
                         
-                         <!--<div class="input-group">
+                         <div class="input-group" style="display:none;">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                               <input type="password" name="password" id="password" class="form-control input_class input-md"  aria-describedby="inputGroupSuccess1Status" placeholder="Password" required />
                          </div>
-                            <div class="input-group">
+                            <div class="input-group" style="display:none;">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                               <input type="password" name="password_conf" id="password_conf" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Password (Confirmation)" required/>
-                            </div>-->
+                            </div>
+                            
+                            
                             <div class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                               <input type="date" name="birthday" id="birthday" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Birthday" required />
@@ -132,15 +141,20 @@
 		$(document).ready(function(){
 			if(sessionStorage.getItem("FacebookID")!=null){
 		  		document.getElementById("FacebookID").value = sessionStorage.getItem("FacebookID");
+				document.getElementById("GooglePlusID").style.display = "none";
 			}else if(sessionStorage.getItem("GooglePlusID")!=null){
 				document.getElementById("GooglePlusID").value = sessionStorage.getItem("GooglePlusID");
+				document.getElementById("FacebookID").style.display = "none";
 			}
 		  document.getElementById("name").value = sessionStorage.getItem("name");
 		  document.getElementById("last_name").value = sessionStorage.getItem("last_name");
 		  document.getElementById("ImgMember").src = sessionStorage.getItem("ImgMember");
 		  document.getElementById("email").value = sessionStorage.getItem("email");
+		  alert("a ");
 		  document.getElementById("birthday").value = sessionStorage.getItem("birthday");
+		  alert("bbb "+sessionStorage.getItem("birthday"));
 		  document.getElementById("genre").selectedIndex = sessionStorage.getItem("genre");
+		  alert("ccc "+document.getElementById("genre").selectedIndex);
 		  alert(sessionStorage.toSource());
 		  sessionStorage.clear();
 		  

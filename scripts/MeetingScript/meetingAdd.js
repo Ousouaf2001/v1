@@ -3,7 +3,11 @@ function AddMeetingPlace() {
   navigator.geolocation.getCurrentPosition(onSuccess);
   function onSuccess(position) {
 
-    var id_utilisateur = sessionStorage.getItem("identifiant");
+    if(localStorage.getItem("identifiantLocal")!= null){
+		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+	}else if(sessionStorage.getItem("identifiant")!= null){
+		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	}	
     var name_meeting = document.getElementById("name_meeting").value;
     var adress_meeting = document.getElementById("adress_meeting").value;
     var latitude_meeting = position.coords.latitude;

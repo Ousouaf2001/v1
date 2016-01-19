@@ -48,14 +48,14 @@
                           <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                           <input type="password" class="form-control input_class input-md TranslationDiv" id="pass" aria-describedby="inputGroupSuccess1Status" placeholder="PASSWORD" />
                         </div>
-                        <!--<div class="checkbox">
+                        <div class="checkbox">
                           <label class="pull-left">
                             <input id="remeber_me" name="remeber_me" type="checkbox" /> <font style="font-size:10px;color:#978E7A;font-weight:bold;" class="text-uppercase">remember me</font>
                           </label>
                           <label class="pull-right" style="margin-bottom:20px;">
                             <font style="font-size:10px;color:#978E7A;font-weight:bold;" class="text-uppercase">forgot password ?</font>
-                          </label>
-                        </div>-->
+                          </label><!--  -->
+                        </div>
                         <div class="checkbox"></div>
                         <div class="form-group">
                             <button class="btn btn-md btn-block btn_index">
@@ -155,11 +155,14 @@ function SplashScreen() {
 </script>
 <script src="js/Languages.js"></script>
 <script type="text/javascript">
-  
-  var id_utilisateur = sessionStorage.getItem("identifiant");
-  if(id_utilisateur != null){
-    window.location.href = 'home.html';
+  if(sessionStorage.getItem("identifiant")!=null){
+	  alert("sessionStorage : "+sessionStorage.getItem("identifiant"));
+	  window.location.href = 'home.html';
+  }else if(localStorage.getItem("identifiantLocal")!=null){
+	  alert("localStorage : "+localStorage.getItem("identifiantLocal"));
+	  window.location.href = 'home.html';
   }
+
   
 </script>
   </body>

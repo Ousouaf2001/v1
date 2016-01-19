@@ -1,17 +1,21 @@
 // JavaScript Document
 $(document).ready(function(){
 	var current_title = $(document).attr('title');
-
+	
 	if(current_title=='Profile Details'){
 		var url = window.location.search;
     	var id_utilisateur = url.substring(url.lastIndexOf("=")+1);//1;
 	}else{
-		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+		
+		if(localStorage.getItem("identifiantLocal")!= null){
+			var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+		}else if(sessionStorage.getItem("identifiant")!= null){
+			var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+		}		
 	}
-	
+
 	var urlWS = "http://api.chessfamily.net/api/query";
     function PublicationsGetAllById() {
-        
         $.ajax({
 			type:"POST",
             url:urlWS,

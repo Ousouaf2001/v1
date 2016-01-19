@@ -16,7 +16,7 @@ function ConnectMember(ConnexionCase){
 	if(ConnexionCase==0){
 		var login = document.getElementById("login").value;
 		var pass = document.getElementById("pass").value;
-		//var Remember = document.getElementById("remeber_me").checked;
+		var Remember = document.getElementById("remeber_me").checked;
 		var DataString = {
 			authentication:"chessfemily",
 			action:"member_connect",
@@ -53,14 +53,13 @@ function ConnectMember(ConnexionCase){
 		  $('.load_connexion').show();
 	  },
 	  success:function(result){
-		 
 		  if(result.success == 1){
-			  /*if(Remember == true){
-				  localStorage.setItem("identifiant", result.member.id);
+			  
+			  if(Remember == true){
+				  localStorage.setItem("identifiantLocal", result.member.id);
 			  }else{
 				  sessionStorage.setItem("identifiant", result.member.id);
-			  }*/
-			  sessionStorage.setItem("identifiant", result.member.id);
+			  }
 			  window.location.href="home.html";
 		  }else{
 			  if(ConnexionCase==1){//facebook

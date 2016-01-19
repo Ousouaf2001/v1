@@ -4,7 +4,11 @@ $(document).ready(function(){
         //variable host declarer dans templateGenerator.js
 		//alert("a");
 		var urlWS = "http://api.chessfamily.net/api/query";
-        var id_utilisateur = 5;//sessionStorage.getItem("identifiant");
+        if(localStorage.getItem("identifiantLocal")!= null){
+			var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+		}else if(sessionStorage.getItem("identifiant")!= null){
+			var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+		}	
         $.ajax({
           type:"POST",
             url:urlWS,
