@@ -17,22 +17,30 @@
   </head>
   <body style="background:#E9E9E9">
   <div id="header"></div>
-  <div class="container-full " style="background:#e6e6e6;" >
-  
-         <div class="row"> 
-         	<ul id="messages_list" class="list-group affiche_detail_message" style="display:none;">
-            	
-          	</ul>
-         </div>
-   </div>
+  <div class="container-fluid white" style="padding-top:10px;">
+    <div class="listmessage">
+        
+    </div>
+    <div class="envoie_message navbar-fixed-bottom">
+        <div class="row">
+            <div class="col-xs-9">
+                <input type="text" class="form-control input-sm input-block" id="textmessage">
+            </div>
+            <div class="col-xs-3">
+                <button class="btn btn-sm btn-index btn-block btn_index" onclick="MessagesSend();">send</button>
+            </div>
+        </div>
+    </div>
+  </div>
 <div id="footer" class="col-xs-12"></div>
 
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="cordova.js" charset="utf-8"></script>
+	  <script type="text/javascript" src="cordova.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/templateGenerator.js"></script>
     
-    <script type="text/javascript" src="scripts/MessagesScript/MessagesGetAll.js"></script>
+    <script type="text/javascript" src="scripts/MessagesScript/MessagesGetByFriend.js"></script>
+    <script type="text/javascript" src="scripts/MessagesScript/MessagesSend.js"></script>
   </body>
 </html>

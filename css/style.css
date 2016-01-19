@@ -305,10 +305,18 @@ input:-moz-placeholder { font-size: 10pt; color: #555; }
 	background:beige;width:100%;padding:10px;border-radius:10px;margin-bottom:10px;
 }
 .monmessage{
-	background:beige;width:100%;padding:10px;border-radius:10px;margin-bottom:10px;
+	width:100%;padding:10px;border-radius:10px;margin-bottom:10px;
 }
 .sonmessage{
 	background:#9CB9E2;width:100%;padding:10px;border-radius:10px;margin-bottom:10px;
+}
+.envoie_message{
+	background:white;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom:55px;
 }
 .pub{
 	display: -webkit-box;

@@ -25,12 +25,12 @@ $(document).ready(function(){
 			  
 			  if(result.success==1){
 				  $.each(result.notifications, function (index, item) {
-					var notif = "<div class='notification'>"+
+					var notif = "<div class='notification' >"+
 						              "<div class='row'>"+
-						                  "<div class='col-xs-3'>"+
-						                      "<img src='"+this.receiver_photo+"' class='img-responsive img-circle' style='width:50px;height:50px;'>"+
+						                  "<div class='sender_profile col-xs-3' id='" + item.sender_id +"'>"+
+						                      "<img src='"+this.sender_photo+"' class='img-responsive img-circle' style='width:50px;height:50px;'>"+
 						                  "</div>"+
-						                  "<div class='col-xs-9'>"+
+						                  "<div class='notif_sender col-xs-9' id='" + item.sender_id +"'>"+
 						                      "<p>"+
 						                          "<b>"+ 
 						                          	this.sender_name+" "+this.sender_last_name +
@@ -61,5 +61,14 @@ $(document).ready(function(){
 
 
     NotificationGetByIdMember();
+
+
+    $(document).on('click','.notif_sender', function(){
+			document.location.href = 'messages_detail.html?sender_id=' + $(this).attr('id'); 
+		});
+
+    $(document).on('click','.sender_profile', function(){
+			document.location.href = 'profile.html?sender_id=' + $(this).attr('id'); 
+		});
 
 });

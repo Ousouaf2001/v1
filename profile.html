@@ -67,11 +67,13 @@
                       <font class="text-uppercase"><b style="font-size:10px;">Play</b></font>
                   </button>
                 </li>
-                <li role="presentation" style="width:25%"  class="text-center">
-                    <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="text-uppercase">
-                    <i class="fa fa-envelope-o" style="font-size:20px;"></i></br>
-                        Message
-                    </a>
+                <input type="hidden" id="memberget">
+                <li role="presentation" class="text-center" style="width:25%">
+                  <button class="message_item btn text-uppercase" id="send_invitation">
+                      
+                      <div class="icones_ko"><i class='fa fa-envelope-o' style='font-size:20px;'></i></div>
+                      <font class="text-uppercase"><b style="font-size:10px;">Message</b></font>
+                  </button>
                 </li>
                 <li role="presentation" style="width:25%"  class="text-center">
                 <a href="#feed" aria-controls="feed" role="tab" data-toggle="tab" class="text-uppercase">
@@ -208,6 +210,10 @@
     <script src="scripts/MemberScript/MemberGetLanguage.js"></script>
     <script type="text/javascript" src="scripts/PublicationScript/PublicationsGetAllById.js"></script>
     <script src="scripts/NotificationsScript/NotificationAdd.js"></script>
-    
+    <script type="text/javascript">
+    $(document).on('click','.message_item', function(){
+      document.location.href = 'messages_detail.html?sender_id=' + $('#memberget').val(); 
+    });
+    </script>
   </body>
 </html>

@@ -23,6 +23,7 @@ $(document).ready(function(){
               $('.load_profil_member').show();
           },
           success:function(result){
+              $('#memberget').val(result.member.id);
               $('.affiche_id').html(" | #" + m_id);
 
               if(result.member.availability == '1'){
