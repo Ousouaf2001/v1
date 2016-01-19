@@ -2,7 +2,11 @@
     function MemberAddFriend() {
           
           var url = window.location.search;
-          var id_utilisateur = sessionStorage.getItem("identifiant");
+          if(localStorage.getItem("identifiantLocal")!= null){
+				var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+			}else if(sessionStorage.getItem("identifiant")!= null){
+				var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+			}	
           var m_id = url.substring(url.lastIndexOf("=")+1);
 
           var dataString = 'authentication=chessfemily&action=friend_add&id_utilisateur='+id_utilisateur+'&friend_id='+m_id;

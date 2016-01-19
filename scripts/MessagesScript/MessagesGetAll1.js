@@ -3,7 +3,11 @@ $(document).ready(function(){
 	//var current_title = $(document).attr('title');
 	var url = window.location.search;
 	var id_receiver = url.substring(url.lastIndexOf("=")+1);//1;
-	var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	if(localStorage.getItem("identifiantLocal")!= null){
+		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+	}else if(sessionStorage.getItem("identifiant")!= null){
+		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	}	
 	if(id_receiver!=""){
 		var DataJSON = {
 				authentication:"chessfemily",

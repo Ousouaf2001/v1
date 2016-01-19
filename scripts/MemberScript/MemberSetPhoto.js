@@ -3,7 +3,11 @@ function MemberSetPhoto() {
     var urlWS = "http://api.chessfamily.net/api/query";
 	var imgSrc = document.getElementById('image').src;
 	alert(imgSrc);
-	var id_utilisateur = sessionStorage.getItem("identifiant");
+	if(localStorage.getItem("identifiantLocal")!= null){
+		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+	}else if(sessionStorage.getItem("identifiant")!= null){
+		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	}	
 	
 	alert(imgSrc.substr(imgSrc.lastIndexOf('/')+1));
     options = new FileUploadOptions();

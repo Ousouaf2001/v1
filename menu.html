@@ -137,12 +137,17 @@
     <script src="scripts/MemberScript/MemberProfileGet.js"></script>
     <script src="scripts/EventScript/eventType.js"></script>
 	<script type="text/javascript">
-	function Logout(){
-    	var id_utilisateur = sessionStorage.getItem("identifiant");
-		sessionStorage.removeItem("identifiant");
-		window.location.href="index.html";
-		//alert(id_utilisateur);
+function Logout(){
+	if(sessionStorage.getItem("identifiant")!=null || localStorage.getItem("identifiant")!=null){
+		if(sessionStorage.getItem("identifiant")!=null){
+			sessionStorage.clear();
+			window.location.href="index.html";
+		}else if(localStorage.getItem("identifiantLocal")!=null){
+			localStorage.clear();
+			window.location.href="index.html";
+		}
 	}
+}
     </script>
     
   </body>

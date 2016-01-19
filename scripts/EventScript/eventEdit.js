@@ -1,6 +1,10 @@
 function editEvent() {
     
-    var id_utilisateur = sessionStorage.getItem("identifiant");
+    if(localStorage.getItem("identifiantLocal")!= null){
+		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+	}else if(sessionStorage.getItem("identifiant")!= null){
+		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	}	
     var id_event = document.getElementById("id_event_edit").value;
     var type_event = document.getElementById("type_event_modif").value;
     var name = document.getElementById("name_modif").value;

@@ -53,14 +53,13 @@ function ConnectMember(ConnexionCase){
 		  $('.load_connexion').show();
 	  },
 	  success:function(result){
-		 alert(result.member.id);
 		  if(result.success == 1){
+			  
 			  if(Remember == true){
 				  localStorage.setItem("identifiantLocal", result.member.id);
 			  }else{
 				  sessionStorage.setItem("identifiant", result.member.id);
 			  }
-			  //sessionStorage.setItem("identifiant", result.member.id);
 			  window.location.href="home.html";
 		  }else{
 			  if(ConnexionCase==1){//facebook

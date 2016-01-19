@@ -2,7 +2,11 @@ $(document).ready(function(){
 
     
     function meetingPlaceCreatedByMember() {
-      var id_utilisateur = sessionStorage.getItem("identifiant");
+      if(localStorage.getItem("identifiantLocal")!= null){
+			var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+		}else if(sessionStorage.getItem("identifiant")!= null){
+			var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+		}	
 
     
     
@@ -51,7 +55,11 @@ $(document).ready(function(){
     $(document).on('click','.modif_location', function(){
 
         var meetingId = $(this).attr('id');
-        var id_utilisateur = sessionStorage.getItem("identifiant");
+        if(localStorage.getItem("identifiantLocal")!= null){
+			var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+		}else if(sessionStorage.getItem("identifiant")!= null){
+			var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+		}	
         var dataStringEdit = 'authentication=chessfemily&action=meeting_place_get&meeting_place_id='+meetingId
          var urlWS = "http://api.chessfamily.net/api/query";
 
@@ -81,7 +89,11 @@ $(document).ready(function(){
 $(document).on('click','.delete_location', function(){
 
         var meetingId = $(this).attr('id');
-        var id_utilisateur = sessionStorage.getItem("identifiant");
+        if(localStorage.getItem("identifiantLocal")!= null){
+			var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+		}else if(sessionStorage.getItem("identifiant")!= null){
+			var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+		}	
         
          var urlWS = "http://api.chessfamily.net/api/query";
 
