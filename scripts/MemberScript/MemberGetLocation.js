@@ -25,6 +25,10 @@ $.ajax(
                 $('#getlat2').val(result.location.latitude);
                 $('#getlong2').val(result.location.longitude);
 
+
+                $('#lat').val(result.location.latitude);
+                $('#long').val(result.location.longitude);
+
               },
               complete: function(){
                   $('.load_players').hide();
