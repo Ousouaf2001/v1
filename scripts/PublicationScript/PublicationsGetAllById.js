@@ -38,9 +38,9 @@ $(document).ready(function(){
 				  var displayPhoto = "";
 				  
 				  $.each(result.publications, function (index, item) {
-					  	if(item.video_link==""){displayVideo = "style='display:none;'";}
-						if(item.web_link==""){displayLink = "style='display:none;'";}
-						if(item.photos==""){displayPhoto = "style='display:none;'";}
+					  	if(item.video_link == null ){ displayVideo = "style='display:none;'";}else{displayVideo = "style='display:visible;'";}
+						if(item.web_link == null ){ displayLink = "style='display:none;'";}else{displayLink = "style='display:visible;'";}
+						if(item.photos.length == 0){ displayPhoto = "style='display:none;'";}
 						
 				  		var pub = ""+
 
@@ -58,9 +58,9 @@ $(document).ready(function(){
 				                      "</div>"+
 				                      "<div class='col-xs-12'>"+
 
-				                          "<button class='btn btn-xs btn_index'><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>&nbsp;"+
-				                          "<button class='btn btn-xs btn_index'><i class='glyphicon glyphicon-globe'></i>&nbsp;&nbsp;Link</button>&nbsp;"+
-				                          "<button class='btn btn-xs btn_index'><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>"+
+				                          "<a href='"+item.video_link+"' target='_blink'><button class='btn btn-xs btn_index'"+ displayVideo +"><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button></a>&nbsp;"+
+				                          "<a href='"+item.web_link+"' target='_blink'><button class='btn btn-xs btn_index'"+ displayLink +"><i class='glyphicon glyphicon-globe'></i>&nbsp;&nbsp;Link</button></a>&nbsp;"+
+				                          "<button class='btn btn-xs btn_index'"+ displayPhoto +"><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>"+
 				                      
 				                      "</div>"+
 				                  "</div>"+
