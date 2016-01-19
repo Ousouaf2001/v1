@@ -60,6 +60,9 @@ function ConnectMember(ConnexionCase){
 			  }else{
 				  sessionStorage.setItem("identifiant", result.member.id);
 			  }
+			  
+			  
+			  
 			  window.location.href="home.html";
 		  }else{
 			  if(ConnexionCase==1){//facebook
@@ -81,4 +84,26 @@ function ConnectMember(ConnexionCase){
 	  }
 	});
  
+}
+
+
+function subscribeToParse(){
+	var appId = "0Ej5SNPfwkMoz57PlZatSp4nbk8DuBwXUqjYbe0V";
+	var clientKey = "FUEv83u49TkaZMpNxGgd1cFLMQEnh3u9DaUZRJen";
+	var JSKey = "M7S10w3YfIYidPc0pi2pEzCJNjDVhoAr2KDvpj2g";
+	parsePlugin.initialize(appId, clientKey, function() {
+		parsePlugin.subscribe('SampleChannel', function() {
+			parsePlugin.getInstallationId(function(id) {
+				alert('id:'+id);
+				SetInstallationItemByID(appId,JSKey,id, 100);
+				alert('after');
+			}, function(e) {
+				alert('error');
+			});
+		}, function(e) {
+			alert('error');
+		});
+	}, function(e) {
+		alert('error');
+	});
 }

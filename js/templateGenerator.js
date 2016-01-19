@@ -22,7 +22,7 @@ $(document).ready(function(){
      });
 	 
 	 
-navigator.geolocation.getCurrentPosition(onSuccess, onError);
+/*navigator.geolocation.getCurrentPosition(onSuccess, onError);
 function onSuccess(position) {
 	alert('Latitude: '           + position.coords.latitude              + '<br />' +
 			'Longitude: '          + position.coords.longitude             + '<br />');
@@ -32,7 +32,7 @@ function onSuccess(position) {
 function onError(error) {
 	alert('code: '    + error.code    + '\n' +
 		  'message: ' + error.message + '\n');
-}
+}*/
 	 
 	 
 	 var defaultDistance = sessionStorage.getItem("DefaultDistance");
@@ -83,13 +83,7 @@ function onError(error) {
 }
 
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}*/
+*/
 
 function showPosition(position) {
     $('#getlat').val(position.coords.latitude);

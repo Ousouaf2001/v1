@@ -22,8 +22,8 @@ $(document).ready(function(){
           success:function(result){
 
               
-              $('.image_profil').html("<img src='"+ result.member.image +"' class='img-responsive img-circle center-block' width='130' style='border:3px solid white;margin-bottom:20px;'>");
-              $('.nom_member').html(result.member.name +" "+ result.member.last_name);
+              $('.image_profil').html("<a href='myprofile.html'><img src='"+ result.member.image +"' class='img-responsive img-circle center-block' width='130' style='border:3px solid white;margin-bottom:20px;'></a>");
+              $('.nom_member').html("<a href='myprofile.html'>"+result.member.name +" "+ result.member.last_name+"</a>");
               //console.log(result.member.image);
           }
         });
