@@ -1,40 +1,44 @@
-function MemberUpdateProfileFunction() {
-    
-    var name = document.getElementById("name").value;
-    var last_name = document.getElementById("last_name").value;
-    
-    //var password = document.getElementById("password").value;
-    //var password_conf = document.getElementById("password_conf").value;
-    var birthday = document.getElementById("birthday").value;
-    var genre = document.getElementById("genre").value;
-    var country = document.getElementById("country").value;
+function MemberUpdateChessProfile() {
 
+
+    var player = document.getElementById("player").checked;
+    if(player == true){
+      var player = 1;
+    }else{
+      var player = 0;
+    }
+    var arbiter = document.getElementById("arbiter").checked;
+    if(arbiter == true){
+      var arbiter = 1;
+    }else{
+      var arbiter = 0;
+    }
+    
     if(localStorage.getItem("identifiantLocal")!= null){
-		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+		  var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
   	}else if(sessionStorage.getItem("identifiant")!= null){
   		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
   	}	
 
-  var urlWS = "http://api.chessfamily.net/api/query";
+    var urlWS = "http://api.chessfamily.net/api/query";
     $.ajax({
           type:"POST",
           url:urlWS,
           data:{
                 authentication:"chessfemily",
                 action:"member_chess_profile_edit",
-                name:name,
-                last_name:last_name,
-                birthday:birthday,
-                gender:genre,
-                residence_countryid:country,
+                is_player:player,
+                is_arbiter:arbiter,
                 member_id:id_utilisateur
               },
               dataType:"json",
               success:function(result){
-                  $('#updateok').show();
+                  console.log(result);
+              },
+              error:function(e){
+                console.log(e);
               }
-        });
-        
-    
+    });
     return false;
+    
 }

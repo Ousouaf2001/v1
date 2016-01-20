@@ -62,23 +62,15 @@
                               <tr>
                                 <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Age:</h5></th>
                                 <td>
-                                  
-                                  <select name="age_from" id="event_type"  class="form-control input-sm input-block  select_event">
-                                      <option value="20">20</option>
-                                      <option value="21">21</option>
-                                      <option value="22">22</option>
-                                      <option value="23">23</option>
-                                      <option value="24">24</option>
+                                  <b style="color:black">From</b>
+                                  <select name="age_from" id="age_from"  class="form-control input-sm input-block  select_event">
+                                      
                                   </select>
                                 </td>
                                 <td>
-                                  To
-                                  <select name="age_to" id="event_type"  class="form-control input-sm input-block  select_event">
-                                      <option value="30">30</option>
-                                      <option value="31">31</option>
-                                      <option value="32">32</option>
-                                      <option value="33">33</option>
-                                      <option value="34">34</option>
+                                  <b style="color:black;">To</b>
+                                  <select name="age_to" id="age_to"  class="form-control input-sm input-block  select_event">
+                                      
                                   </select>
                                 </td>
                               </tr>
@@ -249,4 +241,18 @@
 	  window.location.href = 'index.html';
   }
   
+</script>
+<script type="text/javascript">
+  for (var i = 5; i <= 100; i+=5) {
+        $('#age_from').append("<option>"+i+"</option>");
+  };
+  for (var i = 5; i <= 100; i+=5) {
+        if(i == 60){
+          $('#age_to').append("<option selected='selected'>"+i+"</option>");
+        }else{
+          $('#age_to').append("<option>"+i+"</option>");
+        }
+        
+  };
+
 </script>

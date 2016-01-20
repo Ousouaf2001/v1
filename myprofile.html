@@ -52,15 +52,6 @@
                               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span></span>
                               <input type="text" name="last_name" id="last_name" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Last Name">
                             </div>
-                           
-                            <!--<div class="input-group">
-                              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                              <input type="password" name="password" id="password" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Password">
-                            </div>
-                            <div class="input-group">
-                              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></i></span>
-                              <input type="password" name="password_conf" id="password_conf" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Password (Confirmation)">
-                            </div>-->
                             
                             <div class="input-group input_date">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
@@ -125,13 +116,29 @@
                                           <input type="checkbox" id="trainer">is trainer
                                       </label>
                                   </div>
+                                  <div class="form-group">
+                               <input type="button" id="submit" onclick="MemberUpdateChessProfile()" value="Submit" class="btn btn-md btn-block btn_index"/>
+                              
+                            </div>
                               </div>
+                              
                           </div>
                             
                           
                         </div>
                         <div role="tabpanel" class="tab-pane" id="pass">
-                            pass
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                              <input type="password" name="password" id="password" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Password">
+                            </div>
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></i></span>
+                              <input type="password" name="password_conf" id="password_conf" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Password (Confirmation)">
+                            </div>
+                            <div class="form-group">
+                               <input type="button" id="submit" onclick="MemberUpdatePassword()" value="Submit" class="btn btn-md btn-block btn_index"/>
+                              
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -148,10 +155,10 @@
         <script type="text/javascript" src="scripts/MemberScript/MemberFormUpdate.js"></script>
         <script type="text/javascript" src="scripts/CountryCityScript/CountryGetAll.js"></script>
         <script type="text/javascript" src="scripts/MemberScript/MemberUpdateProfile.js"></script>
+        <script type="text/javascript" src="scripts/MemberScript/MemberUpdatePassword.js"></script>
+        <script type="text/javascript" src="scripts/MemberScript/MemberUpdateChessProfile.js"></script>
         <script type="text/javascript" src="js/camera.js"></script>
         <script type="text/javascript" src="scripts/MemberScript/MemberSetPhoto.js"  charset="utf-8"></script>
-        <script type="text/javascript">
-          alert(document.getElementById("player").checked);
-        </script>
+
   </body>
 </html>

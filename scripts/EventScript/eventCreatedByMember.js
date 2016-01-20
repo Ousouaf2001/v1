@@ -57,7 +57,7 @@ $(document).ready(function(){
 
 
     $(document).on('click','.events', function(){
-        document.location.href = 'eventdetails.html?event_id=' + $(this).attr('id'); 
+        document.location.href = 'eventDetails.html?event_id=' + $(this).attr('id'); 
     });
 
     $(document).on('click','.modif_event', function(){

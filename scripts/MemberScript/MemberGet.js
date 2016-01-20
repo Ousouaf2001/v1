@@ -33,17 +33,17 @@ $(document).ready(function(){
               }
 
 
-              if(result.member.is_player == '1'){
+              if(result.member.is_player == 1){
                   $('.icone_player').html("<i class='fa fa-check-circle' style='color:green'></i>");
               }else{
                 $('.icone_player').html("<i class='fa fa-check-circle' style='color:grey'></i>");
               }
-              if(result.member.is_titled_player == '1'){
+              if(result.member.is_titled_player == 1){
                   $('.titre_player').html("Title " +result.member.title);
               }
               
               
-              if(result.member.is_arbiter == '1'){
+              if(result.member.is_arbiter == 1){
                   $('.icone_arbiter').html("<i class='fa fa-check-circle' style='color:green'></i>");
               }else{
                 $('.icone_arbiter').html("<i class='fa fa-check-circle' style='color:grey'></i>");
