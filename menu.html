@@ -138,7 +138,7 @@
     <script src="scripts/EventScript/eventType.js"></script>
 	<script type="text/javascript">
 function Logout(){
-	if(sessionStorage.getItem("identifiant")!=null || localStorage.getItem("identifiant")!=null){
+	if(sessionStorage.getItem("identifiant")!=null || localStorage.getItem("identifiantLocal")!=null){
 		if(sessionStorage.getItem("identifiant")!=null){
 			sessionStorage.clear();
 			window.location.href="index.html";

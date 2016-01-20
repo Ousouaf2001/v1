@@ -7,9 +7,9 @@ function AddMember() {
     var password_conf = document.getElementById("password_conf").value;
     var birthday = document.getElementById("birthday").value;
     var genre = document.getElementById("genre").value;
-    var os = document.getElementById("detect_os").value;
+	var os = document.getElementById("detect_os").value;
 	var device_token = document.getElementById("detect_UUID").value;
-    
+    //alert("name:"+name+"last_name:"+last_name+"email:"+email+"password:"+password+"birthday:"+birthday+"genre:"+genre);
 	if ((name == '') && (last_name == '') && (email == '') && (password == '') && (password_conf == '') && (birthday == '') && (genre == '') && (password != password_conf))
     {
         $('.info_requis').fadeIn();
@@ -33,7 +33,7 @@ function AddMember() {
 					device_token:device_token},
 				dataType:"json",
 				success:function(data){
-					
+					alert("DataSuccess : "+data.success);
 					if(data.success == 1){
 						  //$('.testlogin').html(' success connexion');
 						  $('.info_requis').fadeOut();
@@ -44,9 +44,9 @@ function AddMember() {
 					  }
 					
 				},
-				error:function()
+				error:function(e)
 				{
-					alert('error');
+					alert('error'+e.toSource());
 				}
 			});
 	}
