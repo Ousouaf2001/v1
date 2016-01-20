@@ -24,7 +24,8 @@ $(document).ready(function(){
           },
           success:function(result){
             $.each(result.meeting_places, function (index, item) { 
-            var li = "<li class='list-group-item '>"+
+            console.log(item);
+			var li = "<li class='list-group-item '>"+
                         "<span class='badge' style='background:white;color:grey;margin-top:5px;'>"+
                           "<font style='font-size:15px;'>"+ item.type + "</font>&nbsp;&nbsp;"+
                           "<i  class='fa fa-pencil-square modif_location' id='" + item.id + "' style='font-size:25px;color:#4B2618;' data-toggle='modal' data-target='#myModalEdit'></i>&nbsp;"+
@@ -50,7 +51,7 @@ $(document).ready(function(){
 
 
     $(document).on('click','.mycrealocation', function(){
-        document.location.href = 'locationdetails.html?meeting_place_id=' + $(this).attr('id'); 
+        document.location.href = 'locationDetails.html?meeting_place_id=' + $(this).attr('id'); 
     });
     $(document).on('click','.modif_location', function(){
 

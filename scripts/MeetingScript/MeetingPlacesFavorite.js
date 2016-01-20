@@ -47,7 +47,7 @@ $(document).ready(function(){
     meetingPlaceFavorite();
 
     $(document).on('click','.location', function(){
-        document.location.href = 'locationdetails.html?meeting_place_id=' + $(this).attr('id'); 
+        document.location.href = 'locationDetails.html?meeting_place_id=' + $(this).attr('id'); 
     });
     $(document).on('click','.delete', function(){
         var LocationId = $(this).attr('id');

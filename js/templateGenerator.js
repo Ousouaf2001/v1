@@ -59,7 +59,7 @@ function getMobileInfo() {
 // a function to test the connectivity
 document.addEventListener("offline", checkConnectivity, true);
 function checkConnectivity(){
-	alert("Please activate the connectivity");
+	alert("Merci d'activer la Connexion!");
 	
 }
 

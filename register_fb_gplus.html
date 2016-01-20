@@ -150,12 +150,12 @@
 		  document.getElementById("last_name").value = sessionStorage.getItem("last_name");
 		  document.getElementById("ImgMember").src = sessionStorage.getItem("ImgMember");
 		  document.getElementById("email").value = sessionStorage.getItem("email");
-		  alert("a ");
+		  //alert("a ");
 		  document.getElementById("birthday").value = sessionStorage.getItem("birthday");
-		  alert("bbb "+sessionStorage.getItem("birthday"));
+		  //alert("bbb "+sessionStorage.getItem("birthday"));
 		  document.getElementById("genre").selectedIndex = sessionStorage.getItem("genre");
-		  alert("ccc "+document.getElementById("genre").selectedIndex);
-		  alert(sessionStorage.toSource());
+		  //alert("ccc "+document.getElementById("genre").selectedIndex);
+		  //alert(sessionStorage.toSource());
 		  sessionStorage.clear();
 		  
 		});
@@ -163,7 +163,7 @@
 		
 			document.addEventListener("offline", checkConnectivity, true);
 			function checkConnectivity(){
-				alert("Please activate the connectivity");
+				alert("Merci d'activer la Connexion!");
 				
 			}
         </script>

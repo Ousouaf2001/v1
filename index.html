@@ -147,7 +147,7 @@ function SplashScreen() {
 	//verification de la connectivité
 	document.addEventListener("offline", checkConnectivity, true);
 	function checkConnectivity(){
-		alert("Please activate the connectivity");
+		alert("Merci d'activer la Connexion!");
 	}
 
 
@@ -156,10 +156,10 @@ function SplashScreen() {
 <script src="js/Languages.js"></script>
 <script type="text/javascript">
   if(sessionStorage.getItem("identifiant")!=null){
-	  alert("sessionStorage : "+sessionStorage.getItem("identifiant"));
+	  //alert("sessionStorage : "+sessionStorage.getItem("identifiant"));
 	  window.location.href = 'home.html';
   }else if(localStorage.getItem("identifiantLocal")!=null){
-	  alert("localStorage : "+localStorage.getItem("identifiantLocal"));
+	  //alert("localStorage : "+localStorage.getItem("identifiantLocal"));
 	  window.location.href = 'home.html';
   }
 
