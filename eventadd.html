@@ -46,9 +46,9 @@
                 <div class="form-group">
                     <label class="control-label">Pays</label>
                     
-                    <input type="text" id="lat">
+                    <input type="text" id="lat" style="display:none;">
                     
-                    <input type="text" id="long">
+                    <input type="text" id="long" style="display:none;">
                     <input  maxlength="100" id="pays" type="text" required="required" class="form-control input-sm input_class" placeholder="Enter First Name"  />
                 </div>
                 <div class="form-group">
@@ -95,8 +95,8 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/templateGenerator.js"></script>
     
-	
-  
+	<script type="text/javascript" src="scripts/MemberScript/MemberGetLocation.js"></script>
+  <script type="text/javascript" src="scripts/GeoScript/Geo.js"></script>
   <script type="text/javascript" src="scripts/CountryCityScript/CitySearch.js"></script>
 	   <script type="text/javascript" src="scripts/MeetingScript/meetingType.js"></script>
       <script type="text/javascript" src="scripts/EventScript/eventCreatedByMember.js"></script>
@@ -106,13 +106,7 @@
 
     
     <script type="text/javascript" src="js/plugin.js"></script>
-
-    <script type="text/javascript">
-        $(window).load(function() {
-            geo();
-            });
-    </script>
-    <script type="text/javascript" src="scripts/GeoScript/Geo.js"></script>
-    <script type="text/javascript" src="scripts/MemberScript/MemberGetLocation.js"></script>
+    
+    
   </body>
 </html>

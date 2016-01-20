@@ -21,7 +21,7 @@ function MemberUpdateProfileFunction() {
           url:urlWS,
           data:{
                 authentication:"chessfemily",
-                action:"member_edit",
+                action:"member_chess_profile_edit",
                 name:name,
                 last_name:last_name,
                 birthday:birthday,
@@ -31,9 +31,7 @@ function MemberUpdateProfileFunction() {
               },
               dataType:"json",
               success:function(result){
-                      $('#updateok').fadeIn(500).delay(2000).fadeOut(500);
-
-                      
+                  $('#updateok').show();
               }
         });
         
