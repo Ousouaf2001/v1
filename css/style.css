@@ -66,7 +66,8 @@ body::-webkit-scrollbar-track {
 	color: white;
 
 }
-
+address{
+	margin-bottom:0px;}
 .nav-tabs>li>a:hover,.nav-tabs>li>a:active,.nav-tabs>li>a:focus{
 	background:#f1d6a1;
 }
@@ -451,6 +452,45 @@ input:-moz-placeholder { font-size: 10pt; color: #555; }
 	margin-top: 10px;
 }
 
+.players .col-xs-6{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+.bloc_profile .btn{
+	-moz-user-select: none;
+    background-image: none;
+	background-color:#955935 !important;
+    border: 0px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.btn_search{
+	
+}
+
+#header{
+	z-index:990;
+}
+.navbar-header{
+	z-index:999;
+	height:56px;}
+#footer{
+	z-index:990;
+}
+.container-fluid{
+	z-index:-1;
+}
 
 /*
 

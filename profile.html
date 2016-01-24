@@ -54,7 +54,7 @@
               <ul class="nav nav-tabs menu-ho1" role="tablist" style="background:#955935;">
                 <li role="presentation" class="text-center" style="width:25%">
                   <button class="btn text-uppercase" id="send_invitation" onclick="MemberAddFriend()">
-                      
+                  	  <div class="icones_ok_fav"></div>
                       <div class="icones_ko_fav"><i class='fa fa-star-o' style='font-size:20px;'></i></div>
                       <font class="text-uppercase"><b style="font-size:10px;">Favorite</b></font>
                   </button>
@@ -70,14 +70,15 @@
                 <input type="hidden" id="memberget">
                 <li role="presentation" class="text-center" style="width:25%">
                   <button class="message_item btn text-uppercase" id="send_invitation">
-                      
-                      <div class="icones_ko"><i class='fa fa-envelope-o' style='font-size:20px;'></i></div>
+                      <div class="icones_ko_message"><i class='fa fa-envelope-o' style='font-size:20px;'></i></div>
                       <font class="text-uppercase"><b style="font-size:10px;">Message</b></font>
                   </button>
                 </li>
                 <li role="presentation" style="width:25%"  class="text-center">
-                <a href="#feed" aria-controls="feed" role="tab" data-toggle="tab" class="text-uppercase">
-                <i class="fa fa-rss" style="font-size:20px;"></i></br>feed</a></li>
+                	<a href="#feed" aria-controls="feed" role="tab" data-toggle="tab" class="text-uppercase">
+                		<i class="fa fa-rss" style="font-size:20px;"></i></br>feed
+                        </a>
+                </li>
               </ul>
               <div class="tab-content" style="padding-left:5px;padding-right:5px;background:#ECECEC;">
                 <div role="tabpanel" class="tab-pane active" id="home">
@@ -210,6 +211,8 @@
     <script src="scripts/MemberScript/MemberGetLanguage.js"></script>
     <script type="text/javascript" src="scripts/PublicationScript/PublicationsGetAllById.js"></script>
     <script src="scripts/NotificationsScript/NotificationAdd.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+    
     <script type="text/javascript">
     $(document).on('click','.message_item', function(){
       document.location.href = 'messages_detail.html?sender_id=' + $('#memberget').val(); 

@@ -70,7 +70,7 @@ var googleapi = {
         googleapi.authorize({
                             client_id: '387553600554-qpbocolfq58h5rqifrgs9lel0bc0hhi0.apps.googleusercontent.com',
                             client_secret: 'xGMpbaUsJ-5DGSmSB2zMi-mP',
-                            redirect_uri: 'http://localhost/frontfinal/www/home.html',
+                            redirect_uri: 'http://localhost/ChessFamilyV2/www/home.html',
                             scope: 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
                             }).done(function(data) {
                                     accessToken=data.access_token;

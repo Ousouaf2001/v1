@@ -1,6 +1,8 @@
 function memberSetLocation() {
-	navigator.geolocation.getCurrentPosition(onSuccess);
-	function onSuccess(position) {
+	navigator.geolocation.getCurrentPosition(onSuccess,onError);
+	
+}
+function onSuccess(position) {
 		var latitude = position.coords.latitude;//document.getElementById("lat").value;//Long;
 		var longitude = position.coords.longitude;//document.getElementById("long").value;//Lat;
 		var member_id = sessionStorage.getItem("identifiant");
@@ -25,4 +27,7 @@ function memberSetLocation() {
 			}
 		});
 	}
+function onError(error) {
+	alert('code: '    + error.code    + '\n' +
+		  'message: ' + error.message + '\n');
 }

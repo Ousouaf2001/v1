@@ -37,16 +37,20 @@ $(document).ready(function(){
 			  $('.country').html(result.meeting_place.country);
 			  $('.phone_number').html(result.meeting_place.phone_number);
 			  $('.type_location').html(result.meeting_place.type);
-			  $.each(result.meeting_place_opening_time, function (index, item) { 
-			  		$('#openingTimeDiv').append("<b>"+getDayById(item.day_ofweek)+" : "+item.start+" - "+item.end+"<br></b>")
-			});
-			if(result.photos.length != 0){
+			  if(result.meeting_place_opening_time.length!=0){
+				  $('#HoursTitle').html("HOURS");
+				  $.each(result.meeting_place_opening_time, function (index, item) { 
+						$('#openingTimeDiv').append("<b>"+getDayById(item.day_ofweek)+" : "+item.start+" - "+item.end+"<br></b>")
+					});
+			  }
+			console.log(result);
+			if(result.photos.id != 0){
 				$.each(result.photos, function (index, item) { 
-					alert(item.toSource());
+					//alert(item.toSource());
 					$('.rslides').append("<li><img id='"+item.id+"' src='"+item.image+"' alt=''></li>")
 				});
 			}else{
-				$('.rslides').html("<li><img id='' src='"+result.photos+"' alt=''></li>")
+				$('.rslides').html("<li><img id='"+result.photos.photos+"' src='"+result.photos.photo+"' alt=''></li>")
 				}
 			
           }

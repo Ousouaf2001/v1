@@ -22,7 +22,7 @@ $(document).ready(function(){
           jsonpCallback: 'member_get',
           url: HOST + "MemberWebService/MemberGet.php",
           success:function(result){
-
+				$('#NameUserTitle').html(result.member.name+" "+result.member.last_name);
               $('#name').val(result.member.name);
               $('#last_name').val(result.member.last_name);
               

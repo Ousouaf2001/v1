@@ -48,13 +48,13 @@
                           <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                           <input type="password" class="form-control input_class input-md TranslationDiv" id="pass" aria-describedby="inputGroupSuccess1Status" placeholder="PASSWORD" />
                         </div>
-                        <div class="checkbox">
+                        <div class="checkbox" style="clear:both; height:25px;">
                           <label class="pull-left">
                             <input id="remeber_me" name="remeber_me" type="checkbox" /> <font style="font-size:10px;color:#978E7A;font-weight:bold;" class="text-uppercase">remember me</font>
                           </label>
-                          <label class="pull-right" style="margin-bottom:20px;">
+                          <!--<label class="pull-right" style="margin-bottom:20px;">
                             <font style="font-size:10px;color:#978E7A;font-weight:bold;" class="text-uppercase">forgot password ?</font>
-                          </label><!--  -->
+                          </label>  -->
                         </div>
                         <div class="checkbox"></div>
                         <div class="form-group">
@@ -62,7 +62,17 @@
                             <i class="glyphicon glyphicon-envelope pull-left"></i>
                             <span class="TranslationDiv" key="Login_with">Log in with </span> <b key="Email" class="ok">Email</b></button>
                         </div>
-                        <div class="text-center text-uppercase TranslationDiv" key="OR" style="margin-top:-5px;margin-bottom:10px;font-size:10px;color:#978E7A;">OR</div>
+                        
+                        
+                        <div class="text-center text-uppercase" style="margin-top:10px;margin-bottom:10px;font-size:12px;color:#978E7A;">
+                        	<span key="New_Sign_up" class="TranslationDiv">New ? Sign up</span>
+                            <a href="register.html">
+                            	<b><span key="HERE" class="TranslationDiv">here</span></b>
+                            </a>
+                         </div>
+                        
+                        
+                        <!--<div class="text-center text-uppercase TranslationDiv" key="OR" style="margin-top:-5px;margin-bottom:10px;font-size:10px;color:#978E7A;">OR</div>-->
                         </form>
                         <div class="form-group">
                             <button class="btn btn-md btn-block btn_index" onclick="login()">
@@ -100,14 +110,6 @@
                     	</form>
                     </div>
                         
-                        
-                        
-                        <div class="text-center text-uppercase" style="margin-top:10px;margin-bottom:10px;font-size:10px;color:#978E7A;">
-                        	<span key="New_Sign_up" class="TranslationDiv">New ? Sign up</span>
-                            <a href="register.html">
-                            	<b><span key="HERE" class="TranslationDiv">here</span></b>
-                            </a>
-                         </div>
 
                 </div>
             </div>
@@ -121,8 +123,11 @@
     <script src="js/loginfacebook.js"></script>
     <script src="js/logingoogle.js"></script>
     
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+    
     <script src="scripts/MemberScript/MemberAdd.js"></script>
      <script src="scripts/MemberScript/MemberConnect.js"></script>
+     
      
      
      

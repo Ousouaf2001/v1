@@ -1,30 +1,26 @@
 $(document).ready(function(){
     function memberFind() {
-          
-          var url = window.location.search;
-  
-          var m_id = url.substring(url.lastIndexOf("=")+1);
+	  var url = window.location.search;
+	  var id_utilisateur = 4;//url.substring(url.lastIndexOf("=")+1);
 
-          var dataString = 'authentication=chessfemily&action=member_get&id_member='+m_id;
-
-        
-		var HOST = "http://www.epavia.com/proxy/";
+        var urlWS = "http://api.chessfamily.net/api/query";
         $.ajax({
-          type: 'GET',
-          contentType: "application/json",
-          async: false,
-          //data: 'authentication=chessfemily&action=find_members&distance=5&latitude=35.6829986572&longitude=10.8500003815&profile=player',
-          data: dataString,
-          dataType: 'jsonp',
-          jsonpCallback: 'member_get',
-          url: HOST + "MemberWebService/MemberGet.php",
+          type:"POST",
+            url:urlWS,
+            data:{
+				authentication:"chessfemily",
+				action:"member_get",
+				id:id_utilisateur
+			},
+            dataType:"json",
           beforeSend: function(){
               $('.affiche_profile_member').hide();
               $('.load_profil_member').show();
           },
           success:function(result){
+			  console.log(result);
               $('#memberget').val(result.member.id);
-              $('.affiche_id').html(" | #" + m_id);
+              $('.affiche_id').html(" | #" + id_utilisateur);
 
               if(result.member.availability == '1'){
                   $('.yourid').html("<i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i>");

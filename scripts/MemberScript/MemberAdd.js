@@ -33,12 +33,16 @@ function AddMember() {
 					device_token:device_token},
 				dataType:"json",
 				success:function(data){
-					alert("DataSuccess : "+data.success);
+					//alert("DataSuccess : "+data.success);
+					//console.log(data);
 					if(data.success == 1){
 						  //$('.testlogin').html(' success connexion');
 						  $('.info_requis').fadeOut();
 						  $('.inscritok').fadeIn();
 						  $('.inscritok').fadeOut(4000);
+						  sessionStorage.setItem("identifiant", data.member.id);
+						  alert("Bienvenue à ChessFamily");
+						  window.location.href="home.html";
 					  }else{
 						  $('.info_requis').fadeIn();
 					  }

@@ -24,7 +24,8 @@
             <div class="col-md-12 bloc_logo">
                     <div class="logo ">
                         <img src="image/logo.jpg" class="img-responsive pull-left" width="50">
-                        <span><b>profile de dridi lotfi</b></span>
+                        <span><b>Edit Profile</b></span><br/>
+                        <span id="NameUserTitle"><b>dridi lotfi</b></span>
                     </div>
 
                 </div>
@@ -33,15 +34,15 @@
                       <ul class="nav nav-tabs menu-ho" role="tablist" style="border-bottom:0px;">
                         <li role="recherche" class="active text-center" style="width:25%"><a href="#profile" aria-controls="recherche_players" role="tab" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;Profile</a></li>
                         <li role="recherche" class="text-center" style="width:25%"><a href="#member" aria-controls="recherche_events" role="tab" class="text-center" data-toggle="tab"><i class="fa fa-trophy"></i>&nbsp;Photo</a></li>
-                        <li role="recherche"class="text-center"  style="width:25%"><a href="#chess" aria-controls="recherche_place" role="tab" data-toggle="tab"><i class="fa fa-map-marker"></i>&nbsp;Chess</a></li>
-                        <li role="recherche"class="text-center"  style="width:25%"><a href="#pass" aria-controls="recherche_place" role="tab" data-toggle="tab"><i class="fa fa-map-marker"></i>&nbsp;Password</a></li>
+                        <li role="recherche"class="text-center"  style="width:25%"><a href="#chess" aria-controls="recherche_place" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-knight"></i>&nbsp;Chess</a></li>
+                        <li role="recherche"class="text-center"  style="width:25%"><a href="#pass" aria-controls="recherche_place" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-lock"></i>&nbsp;Password</a></li>
                       </ul>
                       <div class="tab-content" style="padding-top:20px;padding-bottom:20px;">
                         <div role="tabpanel" class="tab-pane active" id="profile">
                            
 <form  id="member_add" action="#">
 <div class="alert alert-info" id="updateok" style="display:none;">
-                              mise a jour ok
+                              Vos Informations ont été mis à jour!
                            </div>
                             <div class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span></span>
@@ -82,16 +83,30 @@
                         </div>
                         <div role="tabpanel" class="tab-pane" id="member">
                           
-                            <div class="input-group">
+                            <div class="input-group col-xs-12">
+        <button onclick="capturePhoto();" class="form-control input_class input-md">
+        	Capture Photo
+        </button><br>
+        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="form-control input_class input-md">
+        	From Photo Gallery
+        </button><br>
+        <img id="image" src="" style="display:none;width:100%;">
+        
+                            
+                            
+                            
                               <!--<span class="input-group-addon"><i class="glyphicon glyphicon-camera"></span>-->
-                              
-                              <button onclick="capturePhoto();" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status">Capture Photo</button>
-                              <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status">From Photo Library</button><br />
-                              <img id="image" src="" style="display:none;width:100%;">
-                              <input type="button" onClick="MemberSetPhoto()" value="Valider" />
+      
+          <!--<button onclick="capturePhoto();" aria-describedby="inputGroupSuccess1Status">Capture Photo</button>
+          <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);"  aria-describedby="inputGroupSuccess1Status">From Photo Library</button><br />
+          <img id="image" src="" style="display:none;width:100%;">
+          <input type="button" onClick="MemberSetPhoto()" value="Valider" />-->
+     
+                            </div>
+                            <div class="form-group">
+                               <input type="button" id="submit" onclick="MemberSetPhoto()" value="Submit" class="btn btn-md btn-block btn_index"/>
                               
                             </div>
-
                         </div>
                         <div role="tabpanel" class="tab-pane" id="chess">
                           <div class="row">
@@ -147,17 +162,17 @@
     	<div id="footer" class="col-xs-12"></div>
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="cordova.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
+        <!--<script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>-->
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/templateGenerator.js"></script>
-        
+        <script src="js/camera.js" type="text/javascript"></script>
         
         <script type="text/javascript" src="scripts/MemberScript/MemberFormUpdate.js"></script>
         <script type="text/javascript" src="scripts/CountryCityScript/CountryGetAll.js"></script>
         <script type="text/javascript" src="scripts/MemberScript/MemberUpdateProfile.js"></script>
         <script type="text/javascript" src="scripts/MemberScript/MemberUpdatePassword.js"></script>
         <script type="text/javascript" src="scripts/MemberScript/MemberUpdateChessProfile.js"></script>
-        <script type="text/javascript" src="js/camera.js"></script>
+        
         <script type="text/javascript" src="scripts/MemberScript/MemberSetPhoto.js"  charset="utf-8"></script>
 
   </body>
