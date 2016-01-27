@@ -23,15 +23,18 @@ $(document).ready(function(){
           success:function(result){
 			  
             $.each(result.favorite_meeting_places, function (index, item) {
-				//alert(item.toSource());
+				console.log(item);
+				if(item.adress!=null){adresse = item.adress;}else{adresse = "&nbsp;";}
+				if(item.type!=null){typeMeetingPlace = item.type;}else{typeMeetingPlace = "&nbsp;";}
+				if(item.status==1){colorStatus = "#98BF0A"; }else{colorStatus = "#f24e4e";}
                 var li = ""+
 				"<li class='list-group-item'>" +
                 	"<span class='badge' style='background:white;color:grey;margin-top:5px;'>"+
-                		"<font style='font-size:20px;'> " + item.type + "</font>&nbsp;&nbsp;"+
+                		"<font style='font-size:20px;'>" + typeMeetingPlace+ "</font>&nbsp;&nbsp;"+
 						"<i class='fa fa-trash delete' id='" + item.meeting_place_id +"' style='font-size:25px;color:#4B2618;'></i>"+
 					"</span>"+
-					"<b class='location' id='" + item.meeting_place_id +"'> " + item.name + "&nbsp;&nbsp;<i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i></b><br>"+
-					"<font style='font-size:12px;color:grey;'>" + item.distance +" KM</font>"+ // 
+					"<b class='location' id='" + item.meeting_place_id +"'> " + item.name + "&nbsp;&nbsp;<i class='fa fa-circle' style='font-size:15px;color:"+colorStatus+"'></i></b><br>"+
+					"<font style='font-size:12px;color:grey;'>" + adresse +"</font>"+ // 
 				"</li>";
                 $('.list-menu-location').append(li);
             });

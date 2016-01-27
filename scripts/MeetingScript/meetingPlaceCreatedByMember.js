@@ -25,14 +25,17 @@ $(document).ready(function(){
           success:function(result){
             $.each(result.meeting_places, function (index, item) { 
             console.log(item);
+			if(item.adress!=null){adresse = item.adress;}else{adresse = "&nbsp;gg";}
+			if(item.type!=null){typeMeetingPlace = item.type;}else{typeMeetingPlace = "&nbsp;";}
+			if(item.status==1){colorStatus = "#98BF0A"; }else{colorStatus = "#f24e4e";}
 			var li = "<li class='list-group-item '>"+
                         "<span class='badge' style='background:white;color:grey;margin-top:5px;'>"+
-                          "<font style='font-size:15px;'>"+ item.type + "</font>&nbsp;&nbsp;"+
+                          "<font style='font-size:15px;'>"+ typeMeetingPlace + "</font>&nbsp;&nbsp;"+
                           "<i  class='fa fa-pencil-square modif_location' id='" + item.id + "' style='font-size:25px;color:#4B2618;' data-toggle='modal' data-target='#myModalEdit'></i>&nbsp;"+
                           "<i  class='fa fa-trash delete_location' id='" + item.id + "' style='font-size:25px;color:#4B2618;'></i>"+
                           "</span>"+
-                          "<b class='mycrealocation' id='" + item.id +"'> " + item.name + " <i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i></b><br>"+
-                          "<font style='font-size:12px;color:grey;'> " + item.city + " KM</font>"+
+                          "<b class='mycrealocation' id='" + item.id +"'> " + item.name + " <i class='fa fa-circle' style='font-size:15px;color:" + colorStatus + ";'></i></b><br>"+
+                          "<font style='font-size:12px;color:grey;'> " + adresse + "</font>"+
                       "</li>";     
                 $('.list-menu-mylocation').append(li);
                 

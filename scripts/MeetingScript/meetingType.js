@@ -12,6 +12,7 @@ $(document).ready(function(){
           //data: 'authentication=chessfemily&action=find_members&distance=5&latitude=35.6829986572&longitude=10.8500003815&profile=player',
           dataType: 'json',
           success:function(result){
+			$('#meetingType_edit').html("<option value='0'>All</option>");
             $.each(result.meeting_place_type, function (index, item) { 
                 $('#type_meeting').append("<option value='" + item.id + "'>" + item.label +"</option>");
                 

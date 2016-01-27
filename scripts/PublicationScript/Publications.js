@@ -21,8 +21,7 @@ $(document).ready(function(){
             url:urlWS,
             data:{
 				authentication:"chessfemily",
-				action:"member_publications",
-				member_id:id_utilisateur,
+				action:"publications",
 				perpage:10,
 				page:1},
             dataType:"json",

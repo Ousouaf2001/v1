@@ -39,3 +39,11 @@
     }
 
 
+/*
+<button class="btn text-uppercase" id="send_invitation" onclick="MemberAddFriend()">
+  <div class="icones_ok_fav"></div>
+  <div class="icones_ko_fav"><i class='fa fa-star-o' style='font-size:20px;'></i></div>
+  <font class="text-uppercase"><b style="font-size:10px;">Favorite</b></font>
+</button>
+*/
+

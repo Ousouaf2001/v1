@@ -1,7 +1,7 @@
 $(document).ready(function(){
     function memberFind() {
 	  var url = window.location.search;
-	  var id_utilisateur = 4;//url.substring(url.lastIndexOf("=")+1);
+	  var id_utilisateur = url.substring(url.lastIndexOf("=")+1);
 
         var urlWS = "http://api.chessfamily.net/api/query";
         $.ajax({

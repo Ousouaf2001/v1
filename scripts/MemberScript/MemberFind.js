@@ -12,6 +12,12 @@
     }
     return vars;
   }
+  
+  if(localStorage.getItem("identifiantLocal")!= null){
+		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+  	}else if(sessionStorage.getItem("identifiant")!= null){
+  		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+  	}	
     var latitude = $_GET('lat');
     var longitude = $_GET('long');
     var distance = $_GET('distance');
@@ -33,6 +39,7 @@
     				distance:distance,
     				latitude:latitude,
     				longitude:longitude,
+					member_id:id_utilisateur,
             age_min:age_from,
             age_max:age_to,
             gender:gender,
@@ -45,7 +52,7 @@
               },
               success:function(result){
                 if(result.success == 1){
-                    $.each(result.members, function (index, item) { 
+                    $.each(result.members, function (index, item) { //.toFixed(2)
                       var li = ""+
                       "<div class='col-xs-6 item' id='"+ item.id +"'>"+
                         "<div class='panel panel-default' style='background:#E5E5E5'>"+
@@ -63,6 +70,17 @@
                         "</div>"+//"</div>"+
                       "</div>";     
                           
+						  
+						  /*
+						  <button class="btn text-uppercase" id="send_invitation" onclick="AddNotifications()" >
+							  <div class="icones_chargement"></div>
+							  <div class="icones_ok"></div>
+							  <div class="icones_ko"><i class='fa fa-gamepad' style='font-size:20px;'></i></div>
+							  <font class="text-uppercase"><b style="font-size:10px;">Play</b></font>
+						  </button>
+						  */
+						  
+						  
                         $('.players').append(li);
                         
                     });

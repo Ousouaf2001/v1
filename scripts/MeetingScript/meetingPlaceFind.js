@@ -44,16 +44,21 @@
             /**/
           if(result.success == 1){
             $.each(result.meeting_places, function (index, item) { 
+				console.log(item);
+				if(item.adress!=null){adresse = item.adress;}else{adresse = "&nbsp;";}
+				if(item.type!=null){typeMeetingPlace = item.type;}else{typeMeetingPlace = "&nbsp;";}
+				if(item.status==1){colorStatus = "#98BF0A"; }else{colorStatus = "#f24e4e";}
               var li = "<li class='list-group-item' id='" + item.id + "'>" +
                         
                         "<span class='badge' style='background:white;'>" +
-                            "<i class='fa fa-trash delete' id='" + item.id +"' style='font-size:25px;color:#4B2618;' ></i>" +
+							"<img src='"+ item.image + "' width='30px' />"+
+                            "<i class='fa fa-trash delete' id='" + item.id +"' style='font-size:25px;color:#4B2618; margin-left:10px;' ></i>" +
                         "</span>" +
                         "<b class='location' id='"+ item.id +"'>" + item.name +
-                            " <i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i>" +
+                            " <i class='fa fa-circle' style='font-size:15px;color:"+ colorStatus +";'></i>" +
                         "</b>" +
                         "<br>" +
-                        "<font style='font-size:12px;color:grey;'> "+ item.start_date + "   8:00PM - " + item.end_date + "   2:00AM</font>" +
+                        "<font style='font-size:12px;color:grey;'> "+ adresse + "</font>" +
                     "</li>";  
 
                 $('.list-menu-location').append(li);

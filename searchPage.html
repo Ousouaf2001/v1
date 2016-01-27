@@ -31,6 +31,21 @@
                 <li role="presentation" class="active text-center" style="width:100%" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-user" style="font-size:20px;" ></i>&nbsp;&nbsp;Players</a></li>
               </ul>
               <div class="tab-content" style="padding-left:5px;padding-right:5px;">
+              
+              
+              <div class="col-xs-12" style="display:none;" id="affiche_error">
+                <div class="alert alert-danger text-center" style="border-radius:0px;">
+                    Vous êtes deja amis !
+                </div>
+            </div>
+            <div class="col-xs-12" style="display:none;" id="affiche_success">
+                <div class="alert alert-success text-center" style="border-radius:0px;">
+                    Vous êtes maintenant amis !
+                </div>
+            </div>
+              
+              
+              
                 <div role="tabpanel" class="tab-pane active" id="home">
                     <div class="row">
                         <div class="col-xs-12" style="padding-top:15px;padding-bottom:15px;padding-left:30px;">
@@ -63,7 +78,11 @@
         <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/templateGenerator.js"></script>
+        
         <script type="text/javascript" src="scripts/MemberScript/MemberFind.js"></script>
+        <script type="text/javascript" src="scripts/NotificationsScript/NotificationAdd.js"></script>
+        <script type="text/javascript" src="scripts/MemberScript/MemberAddFriend.js"></script> 
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
          
     
   </body>

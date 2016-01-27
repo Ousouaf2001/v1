@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Page</title>
+    <title>My Publications</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -26,10 +26,10 @@
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="alert alert-success" style="display:none;" id="message">
-                                  status ajouté
+                                  Status Ajouté
                               </div>
                               <div class="alert alert-danger" style="display:none;" id="messagee">
-                                  ajouter un status
+                                  Ajouter un status
                               </div>
                           </div>
                           <div class="col-xs-12">
@@ -48,10 +48,20 @@
                               </form>
                           </div>
                           <div class="col-xs-12">
-                              <button class="btn btn-xs btn_index " id="video"><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>
+                              <!--<button class="btn btn-xs btn_index " id="video"><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>
                               <button class="btn btn-xs btn_index" id="link"><i class='glyphicon glyphicon-globe'></i>&nbsp;&nbsp;Link</button>
-                              <button class="btn btn-xs btn_index" id="photo"><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>
+                              <button class="btn btn-xs btn_index" id="photo"><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>-->
+                              
+                              
+        <button onclick="capturePhoto();" class="btn_index input_class input-md">
+        	<i class='glyphicon glyphicon-camera'></i>&nbsp;Camera
+        </button>
+        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="btn_index input_class input-md">
+        	<i class='glyphicon glyphicon-picture'></i>&nbsp;Gallery
+        </button>
                               <button class="btn btn-xs btn_index pull-right" onclick="AddPublication()"><i class='glyphicon glyphicon-send'></i>&nbsp;&nbsp;submit</button>
+                              
+                              <img id="image" src="" style="display:none;width:100%;">
                           </div>
                       </div>
                   </div>
@@ -107,8 +117,9 @@
     <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/templateGenerator.js"></script>
+    <script src="js/camera.js" type="text/javascript"></script>
     
-    <script type="text/javascript" src="scripts/PublicationScript/Publications.js"></script>
+    <script type="text/javascript" src="scripts/PublicationScript/PublicationsGetAllById.js"></script>
     <script type="text/javascript" src="scripts/PublicationScript/PublicationAdd.js"></script>
     <script type="text/javascript">
         $(function(){

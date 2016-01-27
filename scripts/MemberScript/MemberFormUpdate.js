@@ -7,21 +7,22 @@ $(document).ready(function(){
       			var id_utilisateur = sessionStorage.getItem("identifiant");//4;
       		}	
           
-          var dataString = 'authentication=chessfemily&action=member_get&id_member='+id_utilisateur;
-          /*var password = document.getElementById("password").value; 
+          /*var dataString = 'authentication=chessfemily&action=member_get&id_member='+id_utilisateur;
+          var password = document.getElementById("password").value; 
           var password_conf = document.getElementById("password_conf").value;*/
         //variable host declarer dans templateGenerator.js
-		var HOST = "http://www.epavia.com/proxy/";
+		var urlWS = "http://api.chessfamily.net/api/query";
         $.ajax({
-          type: 'GET',
-          contentType: "application/json",
-          async: false,
-          //data: 'authentication=chessfemily&action=find_members&distance=5&latitude=35.6829986572&longitude=10.8500003815&profile=player',
-          data: dataString,
-          dataType: 'jsonp',
-          jsonpCallback: 'member_get',
-          url: HOST + "MemberWebService/MemberGet.php",
+          type:"POST",
+            url:urlWS,
+            data:{
+				authentication:"chessfemily",
+				action:"member_get",
+				id:id_utilisateur
+			},
+            dataType:"json",
           success:function(result){
+			  console.log(result);
 				$('#NameUserTitle').html(result.member.name+" "+result.member.last_name);
               $('#name').val(result.member.name);
               $('#last_name').val(result.member.last_name);
@@ -29,7 +30,8 @@ $(document).ready(function(){
               $('#birthday').val(result.member.birthday);
               $('#gender').val(result.member.gender);
               $('#country').val(result.member.residence_countryid);
-              
+			  
+			  
               
               
           }
