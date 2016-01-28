@@ -14,6 +14,9 @@ a{
 a:hover{
 	text-decoration: none;
 }
+.table_profile tr td{
+	height:35px;*
+}
 .table_profile a{
 	color: #562C1B;
 }

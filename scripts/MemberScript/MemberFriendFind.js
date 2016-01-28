@@ -32,13 +32,12 @@ $(document).ready(function(){
 			  //alert(result.toSource());
 			  if(result.success==1){
 				$.each(result.friends, function (index, item) { 
-					//alert(item.toSource());
+					console.log(item);
 				  var li = "<div class='col-xs-6 item' id='"+ item.friend_id +"'>"+
 				  		"<div class='panel panel-default' style='background:#E5E5E5'>"+
 							"<div class='panel-heading' style='background:#965A36;color:white;font-size:15px;'>"+
 								"<b>" + item.name +" "+ item.last_name + "</b>"+
-								"<font> "+ item.last_name + " </font>"+
-								"<font class='pull-right'> "+ item.distance + " KM </font>"+
+								//"<font class='pull-right'> "+ item.distance + " KM </font>"+
 							"</div>"+
 							"<div class='panel-body' style='padding:0;'>"+
 								"<img src='"+ item.image + "' class='img-responsive  center-block' style='widht:200px; height:150px;' />"+

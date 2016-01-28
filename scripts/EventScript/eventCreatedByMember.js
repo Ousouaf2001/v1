@@ -21,8 +21,11 @@ $(document).ready(function(){
               $('.load_my_events').show();
           },
           success:function(result){
+			  console.log(result);
+
             if(result.success == 1){
                 $.each(result.events, function (index, item) { 
+				if(item.status==1){colorStatus = "#98BF0A"; }else{colorStatus = "#f24e4e";}
             var li = "<li class='list-group-item ' id='" + item.id + "'>" +
                         
                         "<span class='badge' style='background:white;'>" +
@@ -30,10 +33,10 @@ $(document).ready(function(){
                             "<i  class='fa fa-trash delete_event' id='" + item.id + "' style='font-size:25px;color:#4B2618;'></i>" +
                         "</span>" +
                         "<b class='events' id='" + item.id + "'>" + item.name +
-                            " <i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i>" +
+                            //" <i class='fa fa-circle' style='font-size:15px;color:"+colorStatus+"'></i>" +
                         "</b>" +
                         "<br>" +
-                        "<font style='font-size:12px;color:grey;'> "+ item.start_date + "   8:00PM - " + item.end_date + "   2:00AM</font>" +
+                        "<font style='font-size:12px;color:grey;'> " + item.adress + "</font>" +
                     "</li>";     
                 $('.list-menu-myevents').append(li);
                 

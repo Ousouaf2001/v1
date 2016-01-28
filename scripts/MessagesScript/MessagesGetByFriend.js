@@ -4,7 +4,11 @@ $(document).ready(function(){
 	
 	var url = window.location.search;
 	var id_friend = url.substring(url.lastIndexOf("=")+1);//1;
-	var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	if(localStorage.getItem("identifiantLocal")!= null){
+		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+	}else if(sessionStorage.getItem("identifiant")!= null){
+		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	}	
 	
 	
 	var urlWS = "http://api.chessfamily.net/api/query";
@@ -42,7 +46,7 @@ var recu = "<div class='monmessage' style='background:"+ color +"' >"+
 						                    "</div>"+
 						                    "<div class='col-xs-10'>"+
 						                        "<b>"+item.sender_name+" "+item.sender_last_name +" - </b>"+
-						                        "<b>12/12/1991</b>"+
+						                        "<b>" + item.date +"</b>"+
 						                        "<p>"+
 						                        item.message
 						                        "</p>"+
@@ -63,7 +67,7 @@ var recu = "<div class='monmessage' style='background:"+ color +"' >"+
 						                "<div class='row'>"+
 						                    "<div class='col-xs-10'>"+
 						                        "<b>"+item.sender_name+" "+item.sender_last_name +" - </b>"+
-						                        "<b>12/12/1991</b>"+
+						                        "<b>" + item.date +"</b>"+
 						                        "<p>"+
 						                        	item.message+
 						                        "</p>"+

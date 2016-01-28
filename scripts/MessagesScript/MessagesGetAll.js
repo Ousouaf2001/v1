@@ -3,7 +3,11 @@ $(document).ready(function(){
 	
 	
 	
-	var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	if(localStorage.getItem("identifiantLocal")!= null){
+		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+	}else if(sessionStorage.getItem("identifiant")!= null){
+		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	}	
 	
 	
 	var urlWS = "http://api.chessfamily.net/api/query";
@@ -13,14 +17,14 @@ $(document).ready(function(){
 			type:"POST",
             url:urlWS,
             data:{authentication:"chessfemily",
-				action:"messages",
+				action:"messages_resume",
 				member_id:id_utilisateur,
 				perpage:10,
 				page:1},
             dataType:"json",
           success:function(result){
                $.each(result.messages, function (index, item) { 
-
+				console.log(result);
                			if(item.is_read == 1){
                				var color = "silver";
                			}else{
@@ -40,7 +44,7 @@ $(document).ready(function(){
 						                    "</div>"+
 						                    "<div class='message_item col-xs-10' id='" + item.sender_id +"'>"+
 						                        "<b>"+item.sender_name+" "+item.sender_last_name +" - </b>"+
-						                        "<b>12/12/1991</b>"+
+						                        "<b>" + item.date +"</b>"+
 						                        "<p>"+
 						                        item.message
 						                        "</p>"+
