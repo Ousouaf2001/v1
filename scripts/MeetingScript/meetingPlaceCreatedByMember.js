@@ -24,7 +24,7 @@ $(document).ready(function(){
           },
           success:function(result){
             $.each(result.meeting_places, function (index, item) { 
-            console.log(item);
+            
 			var li = "<li class='list-group-item '>"+
                         "<span class='badge' style='background:white;color:grey;margin-top:5px;'>"+
                           "<font style='font-size:15px;'>"+ item.type + "</font>&nbsp;&nbsp;"+

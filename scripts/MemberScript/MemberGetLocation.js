@@ -28,6 +28,25 @@ $.ajax(
 
                 $('#lat').val(result.location.latitude);
                 $('#long').val(result.location.longitude);
+                $.ajax(
+            {
+
+                type:"POST",
+                url:urlWS,
+                data:{
+                    authentication:"chessfemily",
+                    action:"geolocation",
+                    longitude:result.location.longitude,
+                    latitude:result.location.latitude
+                  },
+                dataType:"json",
+                  success:function(result){
+            
+                    $('#pays').val(result.country);
+
+                  }
+            }
+        );
 
               },
               complete: function(){
@@ -35,3 +54,6 @@ $.ajax(
               }
         }
     );
+
+    
+    
