@@ -1,6 +1,6 @@
 
 
-    function EventFavoriteAdd() {
+    function MeetingAddFavorite() {
           
           var url = window.location.search;
           if(localStorage.getItem("identifiantLocal")!= null){
@@ -8,21 +8,21 @@
 			}else if(sessionStorage.getItem("identifiant")!= null){
 				var id_utilisateur = sessionStorage.getItem("identifiant");//4;
 			}	
-          var e_id = url.substring(url.lastIndexOf("=")+1);
+          var m_id = url.substring(url.lastIndexOf("=")+1);
         var urlWS = "http://api.chessfamily.net/api/query";
         $.ajax({
           type:"POST",
             url:urlWS,
             data:{
 				authentication:"chessfemily",
-				action:"events_favorite_add",
+				action:"meeting_place_favorite_add",
 				member_id:id_utilisateur,
-				event_id:e_id
+				meeting_place_id:m_id
 			},
             dataType:"json",
           success:function(result){
               
-             $('#messagefavorite').fadeIn(500);
+              $('#messagefavorite').fadeIn(500);
             $('#messagefavorite').fadeOut(1000);
           }
         });

@@ -21,6 +21,9 @@
             <div class="col-xs-12">
                         <img src="image/load.gif" style="margin-top:30%;" class="load_detail_event center-block">
             </div>
+            <div class="alert alert-success" style="display:none;" id="messagefavorite">
+                ajout ok
+            </div>
         </div>
 <div class="affiche_detail_event" style="display:none;">
 <div class="container-full ">
@@ -30,7 +33,7 @@
                 <b class="titre_haut">-</b><br>
                 <font style="font-size:12px;color:silver;" class="event_type"></font>
                 
-                <i class="fa fa-star-o pull-right fa-2x" style="margin-top:-20px;"></i>
+                <b onclick="EventFavoriteAdd()"><i class="fa fa-star-o pull-right fa-2x" style="margin-top:-20px;" ></i></b>
                 <!--<i class="glyphicon glyphicon-map-marker pull-right fa-2x" style="margin-top:-20px;"></i>-->
               </div>
               <!--<img id="img_event" src="image/imag1.jpg" class="img-responsive">-->
@@ -114,6 +117,7 @@
     
     <script type="text/javascript" src="scripts/EventScript/eventGet.js"></script>
     <script type="text/javascript" src="scripts/EventScript/eventAttendance.js"></script>
+    <script type="text/javascript" src="scripts/EventScript/eventFavoriteAdd.js"></script>
     <script type="text/javascript" src="js/responsiveslides.min.js"></script>
     <script>
 	  $(function() {
