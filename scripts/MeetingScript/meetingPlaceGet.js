@@ -1,3 +1,4 @@
+
 function getDayById(DayId){
 	
 	var day = { 
@@ -62,4 +63,5 @@ $(document).ready(function(){
     meetingGET();
 
 });
+
 

@@ -1,3 +1,4 @@
+
   function $_GET(param) {
     var vars = {};
     window.location.href.replace( 
@@ -83,5 +84,6 @@
         //document.location.href = 'locationDetails.html?meeting_place_id=' + $(this).attr('id'); 
         console.log($(this).attr('id'));
     });
+
 
 

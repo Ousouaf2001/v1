@@ -1,4 +1,4 @@
-//upload image to the server
+
 function MemberSetPhoto() {
     var urlWS = "http://api.chessfamily.net/api/query";
 	var imgSrc = document.getElementById('image').src;
@@ -35,3 +35,4 @@ function fail(error) {
 	alert("upload error source " + error.source);
 	alert("upload error target " + error.target);
 }
+

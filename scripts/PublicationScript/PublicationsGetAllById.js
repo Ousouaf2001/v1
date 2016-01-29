@@ -1,4 +1,4 @@
-// JavaScript Document
+
 $(document).ready(function(){
 	var current_title = $(document).attr('title');
 	
@@ -86,3 +86,4 @@ $(document).ready(function(){
     PublicationsGetAllById();
 
 });
+

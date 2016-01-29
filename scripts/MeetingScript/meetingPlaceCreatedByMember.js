@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
     
@@ -122,3 +123,4 @@ $(document).on('click','.delete_location', function(){
     });
 
 });
+

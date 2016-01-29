@@ -1,3 +1,4 @@
+
 var pictureSource; // picture source
 var destinationType; // sets the format of returned value
 // Wait for device API libraries to load
@@ -78,4 +79,5 @@ function getPhoto(source) {
 // Called if something bad happens.
 function onFail(message) {
     alert('Failed because: ' + message);
+
 }

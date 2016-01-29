@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     function memberFind() {
 	  var url = window.location.search;
@@ -18,7 +19,7 @@ $(document).ready(function(){
               $('.load_profil_member').show();
           },
           success:function(result){
-			  console.log(result);
+			 
               $('#memberget').val(result.member.id);
               $('.affiche_id').html(" | #" + id_utilisateur);
 
@@ -80,3 +81,4 @@ $(document).ready(function(){
 
     memberFind();
 });
+

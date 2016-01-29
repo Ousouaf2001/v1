@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     function meetingPlaceFavorite() {
 		if(localStorage.getItem("identifiantLocal")!= null){
@@ -78,3 +79,4 @@ $(document).ready(function(){
     });
 
 });
+

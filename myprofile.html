@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -21,13 +22,37 @@
      <div id="header"></div>
         <div class="container">
             <div class="row">
-            <div class="col-md-12 bloc_logo">
+                <div class="col-xs-6 bloc_logo">
+
                     <div class="logo ">
                         <img src="image/logo.jpg" class="img-responsive pull-left" width="50">
                         <span><b>Edit Profile</b></span><br/>
                         <span id="NameUserTitle"><b></b></span>
+                        <span class="yourid"></span></b>
+                        
                     </div>
-
+                </div>
+                <div class="col-xs-6 bloc_logo">
+                <div class="logo ">
+                    <div class="dropdown pull-right">
+                        <button style="background:#572C1B" class="btn btn-default dropdown-toggle btn-xs" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <i class="glyphicon glyphicon-cog" style="color:white;"></i>
+                          
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dropmenu">
+                          <li>
+                              <a onclick="setConnected()">
+                                <i class='fa fa-circle' style='font-size:10px;color:#98BF0A'></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a onclick="setDisconnected()">
+                                <i class='fa fa-circle' style='font-size:10px;color:red'></i>
+                              </a>
+                          </li>
+                        </ul>
+                      </div>
+                      </div>
                 </div>
                 <div class="col-xs-12">
                     <div>
@@ -188,8 +213,10 @@
         <script type="text/javascript" src="scripts/MemberScript/MemberUpdateProfile.js"></script>
         <script type="text/javascript" src="scripts/MemberScript/MemberUpdatePassword.js"></script>
         <script type="text/javascript" src="scripts/MemberScript/MemberUpdateChessProfile.js"></script>
-        
+        <script type="text/javascript" src="scripts/MemberScript/MemberSetConnected.js"></script>
+        <script type="text/javascript" src="scripts/MemberScript/MemberSetDisconnected.js"></script>
         <script type="text/javascript" src="scripts/MemberScript/MemberSetPhoto.js"  charset="utf-8"></script>
 
   </body>
 </html>
+

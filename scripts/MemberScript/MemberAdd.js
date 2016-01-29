@@ -1,3 +1,4 @@
+
 function AddMember() {
     var urlWS="http://api.chessfamily.net/api/query";
     var name = document.getElementById("name").value;
@@ -58,3 +59,4 @@ function AddMember() {
    
     return false;
 }
+

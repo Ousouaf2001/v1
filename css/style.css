@@ -1,5 +1,9 @@
+
 html{
 
+}
+#dropmenu{
+	min-width: 0;
 }
 body{
 	background: #F1D6A1;
@@ -570,13 +574,4 @@ input:-moz-placeholder { font-size: 10pt; color: #555; }
  	max-width: 100%;
 }
 */
-
-
-
-
-
-
-
-
-
 

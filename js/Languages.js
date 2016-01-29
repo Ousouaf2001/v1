@@ -1,3 +1,4 @@
+
 // preparing language file
 var aLangKeys=new Array();
 aLangKeys['en']=new Array();
@@ -131,5 +132,6 @@ $(function(){
           lang1 = sessionStorage.getItem("lang");
           $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
         });
+
 
 });

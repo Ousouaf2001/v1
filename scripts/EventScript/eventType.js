@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     //variable host declarer dans templateGenerator.js
 	   
@@ -32,3 +33,4 @@ $(document).ready(function(){
 
     eventType();
 });
+

@@ -1,6 +1,6 @@
 
 
-    function MemberAddFriend() {
+    function MeetingAddFavorite() {
           
           var url = window.location.search;
           if(localStorage.getItem("identifiantLocal")!= null){
@@ -15,25 +15,15 @@
             url:urlWS,
             data:{
 				authentication:"chessfemily",
-				action:"friend_add",
-				id_utilisateur:id_utilisateur,
-				friend_id:m_id
+				action:"meeting_place_favorite_add",
+				member_id:id_utilisateur,
+				meeting_place_id:m_id
 			},
             dataType:"json",
-          beforeSend: function(){
-              $('.icones_ko_fav').html("<img src='image/load.gif' width='20'>");
-          },
           success:function(result){
-              if(result.success == 1){
-                  $('#affiche_success').fadeIn(500).delay(2000).fadeOut(500);
-                  $('.icones_ok_fav').html("<i class='fa fa-gamepad' style='font-size:20px;'></i>");
-                  $('.icones_ko_fav').hide();
-
-              }else{
-                $('#affiche_error').fadeIn(500).delay(2000).fadeOut(500);
-                $('.icones_ko_fav').html("<i class='fa fa-gamepad' style='font-size:20px;'></i>");
-              }
-              console.log(result);
+              
+              $('#messagefavorite').fadeIn(500);
+            $('#messagefavorite').fadeOut(1000);
           }
         });
 

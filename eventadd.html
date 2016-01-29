@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -18,7 +18,66 @@
     <![endif]-->
   </head>
   <body style="background:#E9E9E9">
- 
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background:#582D1C;color:white;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add meeting place</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                    <div class="champ">
+                      <div class="inscritok" style="display:none;text-align:center;font-weight:bold;color:red;">Ajout effectué avec succes!</div>
+                      <div class="info_requis" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessous</div>
+                      <form  id="member_add" action="#">
+                          <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name_meeting" id="name_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
+                          </div>
+                          <div class="form-group">
+                            <label>Adresse</label>
+                            <input type="text" name="adress_meeting" id="adress_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse">
+                          </div>
+                          <!--<div class="form-group">
+                            <label>lat</label>
+                            <input type="text" name="latitude_meeting" id="latitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Latitude">
+                          </div>
+                          <div class="form-group">
+                            <label>long</label>
+                            <input type="text" name="longitude_meeting" id="longitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Longitude">
+                          </div>-->
+                          <div class="form-group">
+                            <label>Type du Meeting</label>
+                            <select name="meetingType" id="meetingType" class="form-control select_bloc">
+                             
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Statuts</label>
+                            <select name="status_meeting" id="status_meeting" class="form-control select_bloc">
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                            </select>
+                          </div>
+                          </div>
+                          
+                          
+                         
+                          <div class="form-group">
+                             <input type="button" id="submit" onclick="AddMeetingPlace()" value="Add meeting Place" class="btn btn-md btn-block btn_index"/>
+                          </div>
+                          
+                      </form>
+                    </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- modal -->
   <div id="header"></div>
       <div class="container-full">
           <div class="container">
@@ -46,15 +105,15 @@
                 <div class="form-group">
                     <label class="control-label">Pays</label>
                     
-                    <input type="text" id="lat" style="display:none;">
+                    <input type="hidden" id="lat">
                     
-                    <input type="text" id="long" style="display:none;">
+                    <input type="hidden" id="long">
                     <input  maxlength="100" id="pays" type="text" required="required" class="form-control input-sm input_class" placeholder="Enter First Name"  />
                 </div>
                 <div class="form-group">
                     <label class="control-label">City</label>
                     <input maxlength="100" type="text" id="search-box" required="required" class="form-control input-sm input_class" placeholder="Enter Last Name" />
-                    <div id="suggesstion-box"></div>
+                   
                 </div>
                 <button class="btn btn-default nextBtn btn-lg pull-right btn-sm input_index" type="button">Next</button>
             </div>
@@ -69,7 +128,7 @@
                     <input maxlength="200"  type="text" required="required" class="form-control input_sm input_class" placeholder="Meeting place" />
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary btn-block btn-sm">Ajouter nouveau lien</button>
+                    <button class="btn btn-primary btn-block btn-sm"  data-toggle="modal" data-target="#myModal">Ajouter nouveau lien</button>
                 </div>
                 <button class="btn btn-default nextBtn btn-sm pull-right" type="button" >Next</button>
             </div>
@@ -95,18 +154,18 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/templateGenerator.js"></script>
     
-	<script type="text/javascript" src="scripts/MemberScript/MemberGetLocation.js"></script>
-  <script type="text/javascript" src="scripts/GeoScript/Geo.js"></script>
+
+  
   <script type="text/javascript" src="scripts/CountryCityScript/CitySearch.js"></script>
-	   <script type="text/javascript" src="scripts/MeetingScript/meetingType.js"></script>
       <script type="text/javascript" src="scripts/EventScript/eventCreatedByMember.js"></script>
       <script type="text/javascript" src="scripts/EventScript/eventType.js"></script>
     <script type="text/javascript" src="scripts/EventScript/eventAdd.js"></script>
     <script type="text/javascript" src="scripts/EventScript/eventEdit.js"></script>
-
+<script type="text/javascript" src="scripts/MeetingScript/meetingAdd.js"></script>
     
     <script type="text/javascript" src="js/plugin.js"></script>
     
     
   </body>
+
 </html>
