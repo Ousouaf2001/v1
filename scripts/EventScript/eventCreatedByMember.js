@@ -3,10 +3,10 @@ $(document).ready(function(){
     
     function eventCreatedByMember() {
         if(localStorage.getItem("identifiantLocal")!= null){
-			var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
-		}else if(sessionStorage.getItem("identifiant")!= null){
-			var id_utilisateur = sessionStorage.getItem("identifiant");//4;
-		}	
+    			var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+    		}else if(sessionStorage.getItem("identifiant")!= null){
+    			var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+    		}	
         var urlWS = "http://api.chessfamily.net/api/query";
         $.ajax({
           type:"POST",
@@ -14,7 +14,9 @@ $(document).ready(function(){
             data:{
     				authentication:"chessfemily",
     				action:"member_events",
-    				member_id:id_utilisateur
+    				member_id:id_utilisateur,
+            perpage:30,
+            page:1
     				},
             dataType:"json",
           beforeSend: function(){
