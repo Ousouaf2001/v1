@@ -24,6 +24,11 @@ $(document).ready(function(){
             dataType:"json",
           success:function(result){
 			  console.log(result);
+        if(result.member.availability == '1'){
+                  $('.yourid').html("<i class='fa fa-circle' style='font-size:10px;color:#98BF0A'></i>");
+              }else{
+                $('.yourid').html("<i class='fa fa-circle' style='font-size:10px;color:red'></i>");
+              }
 				$('#NameUserTitle').html(result.member.name+" "+result.member.last_name);
               $('#name').val(result.member.name);
               $('#last_name').val(result.member.last_name);

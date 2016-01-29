@@ -2,6 +2,9 @@
 html{
 
 }
+#dropmenu{
+	min-width: 0;
+}
 body{
 	background: #F1D6A1;
 	overflow-x: hidden;
