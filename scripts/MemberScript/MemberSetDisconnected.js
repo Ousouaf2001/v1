@@ -20,6 +20,7 @@
 				},
 	            dataType:"json",
 	          success:function(result){
+				  location.reload();
 	              console.log(result);
 	          }
 	        });

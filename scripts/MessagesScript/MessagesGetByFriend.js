@@ -143,7 +143,7 @@ var recu = "<div class='monmessage' style='background:"+ color +"' >"+
 						                    "</div>"+
 						                    "<div class='col-xs-10'>"+
 						                        "<b>"+item.sender_name+" "+item.sender_last_name +" - </b>"+
-						                        "<b>12/12/1991</b>"+
+						                        "<b>" + item.date +"</b>"+
 						                        "<p>"+
 						                        item.message
 						                        "</p>"+

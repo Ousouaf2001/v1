@@ -61,7 +61,7 @@ function ConnectMember(ConnexionCase){
 			  }else{
 				  sessionStorage.setItem("identifiant", result.member.id);
 			  }
-			  
+			  //subscribeToParse(result.member.id);
 			  window.location.href="home.html";
 		  }else{
 			  if(ConnexionCase==1){//facebook

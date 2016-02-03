@@ -6,9 +6,10 @@ aLangKeys['fr']=new Array();
 
 /********************* Anglais **************************/
 //Common Words
-aLangKeys['en']['****']='Submit';
-aLangKeys['en']['****']='Login Page';
-
+aLangKeys['en']['SUBMIT']='Submit';
+aLangKeys['en']['LoginPage']='Login Page';
+aLangKeys['en']['HOME']='Home';
+aLangKeys['en']['NEXT']='Next';
 
 //Page Index
 aLangKeys['en']['HERE']='Here';
@@ -56,8 +57,50 @@ aLangKeys['en']['MeetingLocation']='Meeting Location';
 aLangKeys['en']['OnlyOpenedNow']='Only Opened Now';
 aLangKeys['en']['SearchPlace']='Search Place';
 
+//Page Profile 
+aLangKeys['en']['Profile']='Profile';
+aLangKeys['en']['Photo']='Photo';
+aLangKeys['en']['Chess']='Chess';
+//aLangKeys['en']['Password']='Password';
+aLangKeys['en']['MisAJour_OK']='Vos Informations ont été mis à jour!';
+aLangKeys['en']['CapturePhoto']='Capture Photo';
+aLangKeys['en']['FromGallery']='From Gallery';
+
+aLangKeys['en']['IsPlayer']='Is Player';
+aLangKeys['en']['IsArbiter']='Is Arbiter';
+aLangKeys['en']['IsTitled Player']='Is Titled Player';
+aLangKeys['en']['IsTrainer']='Is Trainer';
+
+
+aLangKeys['en']['ChooseTitle']='-- Choose a Title --';
+aLangKeys['en']['ChooseLevel']='-- Choose a Level --';
+aLangKeys['en']['Beginners']='Beginners';
+aLangKeys['en']['Intermediate']='Intermediate';
+aLangKeys['en']['Advanced']='Advanced';
+aLangKeys['en']['High']='High';
+
+aLangKeys['en']['SetAvailability']='Status';
+aLangKeys['en']['Connected']='Available';
+aLangKeys['en']['Disconnected']='Away';
+
+
+aLangKeys['en']['Ajout_OK_msg']='Item Added Successfully!';
+aLangKeys['en']['Ajout_KO_msg']='Please Check the Data Below';
+aLangKeys['en']['START']='START';
+aLangKeys['en']['END']='END';
+aLangKeys['en']['Contact']='Contact';
+aLangKeys['en']['Country']='Country';
+
+
+
 
 /********************* Francais **************************/
+//Common Words
+aLangKeys['fr']['SUBMIT']='Valider';
+aLangKeys['fr']['LoginPage']='Page Login';
+aLangKeys['fr']['HOME']='Accueil';
+aLangKeys['fr']['NEXT']='Suivant';
+
 //Page Index
 aLangKeys['fr']['HERE']='Ici';
 aLangKeys['fr']['Login_with']='Se Connecter avec';
@@ -93,22 +136,86 @@ aLangKeys['fr']['FindPlaces']='Trouver Emplacement';
 aLangKeys['fr']['Distance']='Distance';
 aLangKeys['fr']['Age']='Age';
 aLangKeys['fr']['Gender']='Sexe';
-aLangKeys['fr']['Profile']='Profile';
-aLangKeys['fr']['SearchMembers']='Recherche Members';
+aLangKeys['fr']['Profile']='Profil';
+aLangKeys['fr']['SearchMembers']='Recherche Membres';
 aLangKeys['fr']['EventType']='Type d\'Evenement';
 aLangKeys['fr']['Activity']='Activité';
-aLangKeys['fr']['TakingPlaceMaxDays']='Ayant Lieu dans Max X Jours';
-aLangKeys['fr']['TakingPlaceToday']='Ayant Lieu Ajourd\'hui';
+aLangKeys['fr']['TakingPlaceMaxDays']='Prochains X Jours';
+aLangKeys['fr']['TakingPlaceToday']='Ajourd\'hui';
 aLangKeys['fr']['SearchEvents']='Rechercher Evènements';
-aLangKeys['fr']['MeetingLocation']='Lieux de rencontre';
-aLangKeys['fr']['OnlyOpenedNow']='Que les ouverts Maintenant';
+aLangKeys['fr']['MeetingLocation']='Lieu de rencontre';
+aLangKeys['fr']['OnlyOpenedNow']='Ouverts Maintenant';
 aLangKeys['fr']['SearchPlace']='Rechercher Lieux';
 
+//Page Profile 
+aLangKeys['fr']['Profile']='Profil';
+aLangKeys['fr']['Photo']='Photo';
+aLangKeys['fr']['Chess']='Echecs';
+//aLangKeys['fr']['Password']='Password';
+aLangKeys['fr']['MisAJour_OK']='Mise à jour effectuée!';
+aLangKeys['fr']['CapturePhoto']='Appareil Photo';
+aLangKeys['fr']['FromGallery']='Galerie photos';
+
+aLangKeys['fr']['IsPlayer']='Joueur';
+aLangKeys['fr']['IsArbiter']='Arbitre';
+aLangKeys['fr']['IsTitledPlayer']='Joueur titré';
+aLangKeys['fr']['IsTrainer']='Entraineur';
+
+aLangKeys['fr']['ChooseTitle']='-- Choisir un Titre --';
+aLangKeys['fr']['ChooseLevel']='-- Choisir un Niveau --';
+aLangKeys['fr']['Beginners']='Débutant';
+aLangKeys['fr']['Intermediate']='Intermediare';
+aLangKeys['fr']['Advanced']='Avancée';
+aLangKeys['fr']['High']='Haut Niv.';
+
+aLangKeys['fr']['SetAvailability']='Statut';
+aLangKeys['fr']['Connected']='Actif';
+aLangKeys['fr']['Disconnected']='Inactif';
+
+
+aLangKeys['fr']['Ajout_OK_msg']='Ajout effectué avec succes!';
+aLangKeys['fr']['Ajout_KO_msg']='Veuillez vérifier les informations ci-dessous';
+aLangKeys['fr']['START']='Commence';
+aLangKeys['fr']['END']='FIN';
+aLangKeys['fr']['Contact']='Contact';
+aLangKeys['fr']['Country']='Pays';
 
 
 
+
+
+	navigator.globalization.getPreferredLanguage(
+		function (language) {
+			alert(language.toSource());
+		  alert('language: ' + language.value + '\n');
+		  if(sessionStorage.getItem("lang")==null){
+			  switch (language.value){
+				  case "en-EN": var lang = "en"; break;
+				  case "fr-FR": var lang = "fr"; break;
+				  default : var lang = "fr"; break;
+			  }
+			  sessionStorage.setItem("lang", lang);
+			  $(this).text(aLangKeys[lang][ $(this).attr('key') ]);
+		  }else{
+			  $(function(){
+					$('.TranslationDiv').each(function(i){
+					  lang1 = sessionStorage.getItem("lang");
+					  $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
+					});
+				});
+		  }
+		},
+		function () {
+		  alert('Error getting language\n');
+		}
+	);
+
+	
+
+
+/*
 $(document).ready(function() {
-
+	
     // onclick behavior
     $('.lang').click( function() {
         var lang = $(this).attr('id'); // obtain language id
@@ -135,3 +242,4 @@ $(function(){
 
 
 });
+*/

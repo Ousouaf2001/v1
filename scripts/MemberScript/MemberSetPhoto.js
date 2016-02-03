@@ -26,9 +26,10 @@ function MemberSetPhoto() {
     return false;
 }
 function win(r) {
-	alert("Code = " + r.responseCode);
+	$('#updatePhotoOK').fadeIn(500).delay(2000).fadeOut(500);
+	/*alert("Code = " + r.responseCode);
 	alert("Response = " + r.response);
-	alert("Sent = " + r.bytesSent);
+	alert("Sent = " + r.bytesSent);*/
 }
 
 function fail(error) {

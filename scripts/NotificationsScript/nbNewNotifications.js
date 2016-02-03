@@ -20,8 +20,13 @@ $(document).ready(function(){
 			},
             dataType:"json",
           success:function(result){
-                
-				$('.nbNewNotification').html(result.nb_notifications);
+                if(result.nb_notifications!=0){
+					$('.nbNewNotification').css("display","block");
+					$('.nbNewNotification').html(result.nb_notifications);
+				}else{
+					$('.nbNewNotification').css("display","none");
+					$('.nbNewNotification').html(result.nb_notifications);
+				}
           }
         });
     }

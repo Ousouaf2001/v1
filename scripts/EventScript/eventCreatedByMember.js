@@ -1,4 +1,4 @@
-/*
+
 $(document).ready(function(){
     
     
@@ -26,7 +26,7 @@ $(document).ready(function(){
 
             if(result.success == 1){
                 $.each(result.events, function (index, item) { 
-				if(item.status==1){colorStatus = "#98BF0A"; }else{colorStatus = "#f24e4e";}
+				//if(item.status==1){colorStatus = "#98BF0A"; }else{colorStatus = "#f24e4e";}
             var li = "<li class='list-group-item ' id='" + item.id + "'>" +
                         
                         "<span class='badge' style='background:white;'>" +
@@ -37,7 +37,7 @@ $(document).ready(function(){
                             //" <i class='fa fa-circle' style='font-size:15px;color:"+colorStatus+"'></i>" +
                         "</b>" +
                         "<br>" +
-                        "<font style='font-size:12px;color:grey;'> " + item.adress + "</font>" +
+                        "<font style='font-size:12px;color:grey;'>Start Date : " + item.start_date + " - End Date : " + item.end_date + "</font>" +
                     "</li>";     
                 $('.list-menu-myevents').append(li);
                 
@@ -127,7 +127,7 @@ $(document).on('click','.delete_event', function(){
         });
     });
 });
-*/
+/*
 $(document).ready(function(){
     
     
@@ -256,3 +256,4 @@ $(document).on('click','.delete_event', function(){
     });
 });
 
+*/

@@ -22,6 +22,7 @@ function MemberUpdatePassword() {
               },
               dataType:"json",
               success:function(result){
+				  $('#updatePasswordOK').fadeIn(500).delay(2000).fadeOut(500);
                   console.log(result);
               }
         });

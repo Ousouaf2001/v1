@@ -59,7 +59,7 @@
                         "<div class='panel panel-default' style='background:#E5E5E5'>"+
                         "<div class='panel-heading' style='background:#965A36;color:white;font-size:15px;'>"+
                           "<b>" + item.name +" "+ item.last_name + "</b></br>"+
-                          "<font> "+ item.last_name + " </font>"+
+                          "<font>&nbsp;</font>"+
                           "<font class='pull-right'> "+ item.distance + " KM </font>"+
                         "</div>"+
                         "<div class='panel-body' style='padding:0;'>"+

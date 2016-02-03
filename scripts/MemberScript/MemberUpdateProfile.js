@@ -8,10 +8,10 @@ function MemberUpdateProfileFunction() {
     var birthday = document.getElementById("birthday").value;
     var genre = document.getElementById("genre").value;
     var country = document.getElementById("country").value;
-
+	
     if(localStorage.getItem("identifiantLocal")!= null){
 		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
-  	}else if(sessionStorage.getItem("identifiant")!= null){
+  	}else if(sessionStorage.getItem("identifiant")!= null){ 
   		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
   	}	
 
@@ -32,7 +32,6 @@ function MemberUpdateProfileFunction() {
               dataType:"json",
               success:function(result){
                       $('#updateok').fadeIn(500).delay(2000).fadeOut(500);
-
                       
               }
         });

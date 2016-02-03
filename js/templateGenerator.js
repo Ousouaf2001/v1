@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var HOST = "http://www.epavia.com/proxy/";
+	
 	//Header
 	$.ajax({
             url: "templateParts/header.html",

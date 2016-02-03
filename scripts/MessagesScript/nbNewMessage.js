@@ -20,8 +20,14 @@ $(document).ready(function(){
 			},
             dataType:"json",
           success:function(result){
-                
-				$('.nbNewMessage').html(result.nb_messages);
+                if(result.nb_messages!=0){
+					$('.nbNewMessage').css("display","block");
+					$('.nbNewMessage').html(result.nb_messages);
+				}else{
+					$('.nbNewMessage').html(result.nb_messages);
+					$('.nbNewMessage').css("display","none");
+				}
+				
           }
         });
     }

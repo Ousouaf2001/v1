@@ -59,7 +59,7 @@
                             " <i class='fa fa-circle' style='font-size:15px;color:"+ colorStatus +";'></i>" +
                         "</b>" +
                         "<br>" +
-                        "<font style='font-size:12px;color:grey;'> "+ adresse + "</font>" +
+                        "<font style='font-size:12px;color:grey;'> "+ adresse + " ("+item.distance+"Km)</font>" +
                     "</li>";  
 
                 $('.list-menu-location').append(li);

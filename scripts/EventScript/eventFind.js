@@ -44,16 +44,18 @@
             /**/
           if(result.success == 1){
             $.each(result.favorite_events, function (index, item) { 
+			console.log();
+			//if(item.status==1){colorStatus = "#98BF0A"; }else{colorStatus = "#f24e4e";}
               var li = "<li class='list-group-item' id='" + item.event_id + "'>" +
                         
                         "<span class='badge' style='background:white;'>" +
                             "<i class='fa fa-trash delete' id='" + item.event_id +"' style='font-size:25px;color:#4B2618;' ></i>" +
                         "</span>" +
                         "<b class='events' id='"+ item.event_id +"'>" + item.name +
-                            " <i class='fa fa-circle' style='font-size:15px;color:#98BF0A'></i>" +
+                            //" <i class='fa fa-circle' style='font-size:15px;color:"+colorStatus+"'></i>" +
                         "</b>" +
                         "<br>" +
-                        "<font style='font-size:12px;color:grey;'> "+ item.start_date + "   8:00PM - " + item.end_date + "   2:00AM</font>" +
+                        "<font style='font-size:12px;color:grey;'>Start Date : " + item.start_date + " - End Date : " + item.end_date + "</font>" +
                     "</li>";  
 
                 $('.list-menu-events').append(li);

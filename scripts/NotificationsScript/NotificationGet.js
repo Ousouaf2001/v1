@@ -39,8 +39,8 @@ $(document).ready(function(){
 						                          "<b>"+ 
 						                          	this.sender_name+" "+this.sender_last_name +
 						                          "</b>&nbsp;"+
-						                          "<i>vous à envoyer une notification : </i><br/>"+
-						                          this.message+
+						                          "<i>vous à envoyer une notification.</i><br/>"+
+						                          //this.message+
 											   "</p>"+
 						                  "</div>"+
 						              "</div>"+

@@ -1,4 +1,4 @@
-/*
+
 $(document).ready(function(){
 
     function memberFriendFind() {
@@ -73,7 +73,7 @@ $(document).ready(function(){
         document.location.href = 'profile.html?id_member=' + $(this).attr('id'); 
     });
 });
-*/
+/*
 $(document).ready(function(){
 
     function memberFriendFind() {
@@ -150,3 +150,4 @@ $(document).ready(function(){
     });
 });
 
+*/

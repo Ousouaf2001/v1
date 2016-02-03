@@ -16,7 +16,7 @@
   <body style="padding-bottom:0px;padding-top:0px;">
 
     <div class="container">
-        <div class="row">
+        <div class="row" style="height:150vh;">
             
             <div class="col-md-12 bloc_logo">
                 <div class="logo text-center">
@@ -128,7 +128,7 @@
     
     <script src="scripts/MemberScript/MemberAdd.js"></script>
      <script src="scripts/MemberScript/MemberConnect.js"></script>
-     
+     <script src="js/Languages.js"></script>
      
      
      
@@ -151,10 +151,14 @@ function SplashScreen() {
     }*/
 	
 	//GetPreferedLanguages
-	/*navigator.globalization.getPreferredLanguage(
-	  function (language) {alert('language: ' + language.value + '\n');},
-	  function () {alert('Error getting language\n');}
-	);*/
+	navigator.globalization.getPreferredLanguage(
+	  function (language) {
+		  //alert('language: ' + language.value + '\n');
+	  },
+	  function () {
+		  alert('Error getting language\n');
+	  });
+	
 
 
 	
@@ -167,7 +171,7 @@ function SplashScreen() {
 
 
 </script>
-<script src="js/Languages.js"></script>
+
 <script type="text/javascript">
   if(sessionStorage.getItem("identifiant")!=null){
 	  //alert("sessionStorage : "+sessionStorage.getItem("identifiant"));

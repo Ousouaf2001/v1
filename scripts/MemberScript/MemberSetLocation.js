@@ -6,7 +6,11 @@ function memberSetLocation() {
 function onSuccess(position) {
 		var latitude = position.coords.latitude;//document.getElementById("lat").value;//Long;
 		var longitude = position.coords.longitude;//document.getElementById("long").value;//Lat;
-		var member_id = sessionStorage.getItem("identifiant");
+		if(localStorage.getItem("identifiantLocal")!= null){
+				var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+			}else if(sessionStorage.getItem("identifiant")!= null){
+				var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+			}	
 		var urlWS = "http://api.chessfamily.net/api/query";
 		$.ajax({
 			type:"POST",
@@ -19,13 +23,21 @@ function onSuccess(position) {
 				longitude:longitude
 			},
 			dataType:"json",
+			beforeSend: function(){
+				  $('.affiche_memberSetLocation').hide();
+				  $('.load_memberSetLocation').show();
+			  },
 			success:function(result){
-				  alert('Votre Position à été mis-à-jour');
+				  alert('Position Updated!');
 			},
 			error:function(e){
 				alert('Erreur est survenue lors de l\'update de votre Position');
 				
-			}
+			},
+			complete: function(){
+				  $('.load_memberSetLocation').hide();
+				  $('.affiche_memberSetLocation').show();
+			  }
 		});
 	}
 function onError(error) {
