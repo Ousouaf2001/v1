@@ -1,19 +1,55 @@
-$('#search-box').val('tunis');
-  /*$("#search-box").keyup(function(){
-    var texte = $("#search-box").val();
+$(document).ready(function(){
+  country_id = $('#id_country').val();
+
+  $("#search-box").keyup(function(){
+    if($("#search-box").val().length >= 4){
+      
+
+
+
     var urlWS="http://api.chessfamily.net/api/query";
     $.ajax({
-    type:"POST",
-                url:urlWS,
-                data:{
-                    authentication:"chessfemily",
-                    action:"city_search",
-                    city:texte
-                  },
-            success: function(data){
-              console.log(data);
-            }
+    type: "POST",
+    url: urlWS,
+    data:{authentication:"chessfemily",action:"city_search",country_id:country_id,city:$(this).val()},
+    beforeSend: function(){
+      $("#search-box").css("background","#FFF url(LoaderIcon.gif) no-repeat 150px");
+    },
+    success: function(result){
+      $("#suggesstion-box").show();
+      $.each(result.city, function (index, item) {
+          if(item.city.length > 0){
+
+          console.log(item.city);
+          $('#suggesstion-box').append("<li class='city' id='"+item.id+"'>"+item.city+"</li>");
+        }
+      });
+      $("#search-box").css("background","#FFF");
+      //$("#suggesstion-box").html(data);
+      
+      
+    },
+    complete: function(){
+      $("#search-box").css("background","white");
+    }
     });
-  });*/
+  }else{
+    $("#suggesstion-box").hide();
+    $("#suggesstion-box li").html('');
 
+  }
+  });
+});
 
+/*function selectCountry() {
+$("#search-box").val(val);
+$("#suggesstion-box").hide();
+}*/
+
+$(document).on('click','.city', function(){
+
+       
+        $("#id_city").val($(this).attr('id'));
+        $("#search-box").val($(this).text());
+        $("#suggesstion-box").hide();
+    });

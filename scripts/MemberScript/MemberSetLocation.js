@@ -18,7 +18,7 @@ function onSuccess(position) {
 			data:{
 				authentication:"chessfemily",
 				action:"member_location_set",
-				member_id:member_id,
+				member_id:id_utilisateur,
 				latitude:latitude,
 				longitude:longitude
 			},

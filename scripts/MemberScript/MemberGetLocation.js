@@ -43,6 +43,7 @@ $.ajax(
                   success:function(result){
             
                     $('#pays').val(result.country);
+                    $('#id_country').val(result.country_id);
 
                   }
             }

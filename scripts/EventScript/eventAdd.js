@@ -47,7 +47,7 @@ function AddEvent() {
           success:function(result){
                   if(result.success == 1){
                       //$('.inscritok').show();
-                      $('#myModal').modal('hide');
+                    $('#myModal').modal('hide');
                   }else{
                     $('.info_requis').show();
                   }
