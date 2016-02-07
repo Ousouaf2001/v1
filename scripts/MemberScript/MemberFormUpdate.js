@@ -29,7 +29,7 @@ $(document).ready(function(){
               }else{
                 $('.yourid').html("<i class='fa fa-circle' style='font-size:10px;color:red'></i>");
               }
-			  $('#NameUserTitle').html(result.member.name+" "+result.member.last_name);
+			       $('#NameUserTitle').html(result.member.name+" "+result.member.last_name);
               $('#name').val(result.member.name);
               $('#last_name').val(result.member.last_name);
               

@@ -24,19 +24,22 @@ function onSuccess(position) {
 			},
 			dataType:"json",
 			beforeSend: function(){
-				  $('.affiche_memberSetLocation').hide();
+				  $('#set_location').hide();
 				  $('.load_memberSetLocation').show();
 			  },
 			success:function(result){
-				  alert('Position Updated!');
+				  $('#messagemapsuccess').fadeIn(500).delay(700).fadeOut(500);
+				  $('#lat').html(latitude);
+				  $('#long').html(longitude);
 			},
 			error:function(e){
-				alert('Erreur est survenue lors de l\'update de votre Position');
+				$('#messagemaperror').fadeIn(500).delay(700).fadeOut(500);
 				
 			},
 			complete: function(){
 				  $('.load_memberSetLocation').hide();
-				  $('.affiche_memberSetLocation').show();
+				  $('.mapcursor').css('color','#582D1C');
+				  $('#set_location').show();
 			  }
 		});
 	}
