@@ -21,7 +21,7 @@
     <div class="row">
     
             <div class="col-xs-12">
-                 <img src="image/load.gif" style="margin-top:30%;display:none;" class="load_profil_member center-block">
+                 <img src="image/load.gif" style="margin-top:30%;display:none;" class="load_profil_member center-block" >
             </div>
         </div>
     <div class="container-full " style="background:#ECECEC;" >
@@ -53,15 +53,22 @@
           <div class="col-xs-12">
             <div>
               <ul class="nav nav-tabs menu-ho1" role="tablist" style="background:#955935;">
-                <li role="presentation" class="text-center" style="width:25%">
-                  <button class="btn text-uppercase" id="send_invitation" onclick="MemberAddFriend()">
+                <li role="presentation" class="text-center" style="width:20%">
+                  <button class="btn text-uppercase" style="background:#955935;color:white;" id="profile_member">
+                      <div class="icones_ok_fav"></div>
+                      <div class="icones_ko_fav"><i class='fa fa-user' style='font-size:20px;'></i></div>
+                      <font class="text-uppercase"><b style="font-size:10px;">Profile</b></font>
+                  </button>
+                </li>
+                <li role="presentation" class="text-center" style="width:20%">
+                  <button class="btn text-uppercase" id="send_invitation" onclick="MemberAddFriend()" style="background:#955935;color:white;">
                   	  <div class="icones_ok_fav"></div>
                       <div class="icones_ko_fav"><i class='fa fa-star-o' style='font-size:20px;'></i></div>
                       <font class="text-uppercase"><b style="font-size:10px;">Favorite</b></font>
                   </button>
                 </li>
-                <li role="presentation" class="text-center" style="width:25%">
-                  <button class="btn text-uppercase" id="send_invitation" onclick="AddNotifications()" >
+                <li role="presentation" class="text-center" style="width:20%">
+                  <button class="btn text-uppercase" id="send_invitation" onclick="AddNotifications()" style="background:#955935;color:white;">
                       <div class="icones_chargement"></div>
                       <div class="icones_ok"></div>
                       <div class="icones_ko"><i class='fa fa-gamepad' style='font-size:20px;'></i></div>
@@ -69,13 +76,13 @@
                   </button>
                 </li>
                 <input type="hidden" id="memberget">
-                <li role="presentation" class="text-center" style="width:25%">
-                  <button class="message_item btn text-uppercase" id="send_invitation">
+                <li role="presentation" class="text-center" style="width:20%">
+                  <button class="message_item btn text-uppercase" id="send_invitation" style="background:#955935;color:white;">
                       <div class="icones_ko_message"><i class='fa fa-envelope-o' style='font-size:20px;'></i></div>
                       <font class="text-uppercase"><b style="font-size:10px;">Message</b></font>
                   </button>
                 </li>
-                <li role="presentation" style="width:25%"  class="text-center">
+                <li role="presentation" style="width:20%"  class="text-center">
                 	<a href="#feed" aria-controls="feed" role="tab" data-toggle="tab" class="text-uppercase">
                 		<i class="fa fa-rss" style="font-size:20px;"></i></br>feed
                         </a>
@@ -137,10 +144,9 @@
                 <div role="tabpanel" class="tab-pane " id="feed">
                     
                     
-                    <div id="publication_list" class="row">
-          
-          
-       				</div>
+                    <div class="publication_list" style="margin-top:0px;">
+                        
+                    </div>
                     
                     
                     
@@ -209,14 +215,20 @@
    
     <script src="scripts/MemberScript/MemberAddFriend.js"></script> 
     <script src="scripts/MemberScript/MemberGet.js"></script>
-    <script src="scripts/MemberScript/MemberGetLanguage.js"></script>
-    <script type="text/javascript" src="scripts/PublicationScript/PublicationsGetAllById.js"></script>
+    <!--<script src="scripts/MemberScript/MemberGetLanguage.js"></script>-->
+    <script type="text/javascript" src="scripts/PublicationScript/PublicationsGetAllByMember.js"></script>
     <script src="scripts/NotificationsScript/NotificationAdd.js"></script>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
     
     <script type="text/javascript">
     $(document).on('click','.message_item', function(){
       document.location.href = 'messages_detail.html?sender_id=' + $('#memberget').val(); 
+    });
+    </script>
+
+    <script type="text/javascript">
+    $(document).on('click','#profile_member', function(){
+      document.location.href = 'profile.html?id_member=' + $('#memberget').val(); 
     });
     </script>
   </body>
