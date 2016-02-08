@@ -15,7 +15,7 @@ function onDeviceReady() {
 //
 
 function onPhotoDataSuccess(imageURI) {
-  alert("Success : onPhotoDataSuccess");
+  //alert("Success : onPhotoDataSuccess");
     // Uncomment to view the base64-encoded image data
     console.log(imageURI);
     // Get image handle
@@ -54,11 +54,12 @@ function onPhotoURISuccess(imageURI) {
 function capturePhoto() {
     // Take picture using device camera and retrieve image as base64-encoded string
     navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
-        quality: 50,
+        /*quality: 30,
         targetWidth: 600,
-        targetHeight: 600,
+        targetHeight: 600,*/
         destinationType: destinationType.FILE_URI,
-        saveToPhotoAlbum: false
+        saveToPhotoAlbum: false,
+		correctOrientation: true
     });
 }
 
@@ -73,7 +74,7 @@ function getPhoto(source) {
         destinationType: destinationType.FILE_URI,
         sourceType: source
     });
-	alert(destinationType.toSource());
+	//alert(destinationType.toSource());
 }
 
 // Called if something bad happens.
