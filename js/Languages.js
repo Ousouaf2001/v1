@@ -181,26 +181,25 @@ aLangKeys['fr']['Contact']='Contact';
 aLangKeys['fr']['Country']='Pays';
 
 
-
-
-
+//$(document).ready(function() {});
 	navigator.globalization.getPreferredLanguage(
-		function (language) {
-			alert(language.toSource());
+	function (language) {
+		  alert(language.toSource());
 		  alert('language: ' + language.value + '\n');
-		  if(sessionStorage.getItem("lang")==null){
+		  if(localStorage.getItem("DefaultLanguage")==null){
 			  switch (language.value){
 				  case "en-EN": var lang = "en"; break;
 				  case "fr-FR": var lang = "fr"; break;
 				  default : var lang = "fr"; break;
 			  }
-			  sessionStorage.setItem("lang", lang);
+			  localStorage.setItem("DefaultLanguage", lang);
 			  $(this).text(aLangKeys[lang][ $(this).attr('key') ]);
 		  }else{
 			  $(function(){
+				  alert("start translation");
 					$('.TranslationDiv').each(function(i){
-					  lang1 = sessionStorage.getItem("lang");
-					  $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
+						  lang1 = localStorage.getItem("DefaultLanguage");
+						  $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
 					});
 				});
 		  }
@@ -208,7 +207,14 @@ aLangKeys['fr']['Country']='Pays';
 		function () {
 		  alert('Error getting language\n');
 		}
-	);
+		
+	  );
+
+
+
+	/*navigator.globalization.getPreferredLanguage(
+		
+	);*/
 
 	
 

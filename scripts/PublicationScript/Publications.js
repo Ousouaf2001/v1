@@ -31,6 +31,7 @@ $(document).ready(function(){
               $('.load_detail_publication').show();
           },
           success:function(result){
+			  console.log(result);
 			  if(result.success==1){
 				  var displayVideo = "";
 				  var displayLink = "";

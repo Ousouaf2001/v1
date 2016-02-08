@@ -44,7 +44,7 @@ $(document).ready(function(){
 						                    "</div>"+
 						                    "<div class='message_item col-xs-10' id='" + item.sender_id +"'>"+
 						                        "<b>"+item.sender_name+" "+item.sender_last_name +" - </b>"+
-						                        "<b>12/12/1991</b>"+
+						                        "<b>" + item.date +"</b>"+
 						                        "<p>"+
 						                        item.message
 						                        "</p>"+
