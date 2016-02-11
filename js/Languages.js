@@ -182,25 +182,24 @@ aLangKeys['fr']['Country']='Pays';
 
 
 //$(document).ready(function() {});
-	navigator.globalization.getPreferredLanguage(
-	function (language) {
-		  alert(language.toSource());
+	/*navigator.globalization.getPreferredLanguage(function (language) {
 		  alert('language: ' + language.value + '\n');
-		  if(localStorage.getItem("DefaultLanguage")==null){
+		  alert(localStorage.getItem("DefaultLanguage"));
+		  if(localStorage.getItem("DefaultLanguage")==""){
+			  var lang ="";
 			  switch (language.value){
-				  case "en-EN": var lang = "en"; break;
-				  case "fr-FR": var lang = "fr"; break;
-				  default : var lang = "fr"; break;
+				  case "en-EN": lang = "en"; break;
+				  case "fr-FR": lang = "fr"; break;
+				  default : lang = "fr"; break;
 			  }
 			  localStorage.setItem("DefaultLanguage", lang);
 			  $(this).text(aLangKeys[lang][ $(this).attr('key') ]);
 		  }else{
-			  $(function(){
-				  alert("start translation");
-					$('.TranslationDiv').each(function(i){
-						  lang1 = localStorage.getItem("DefaultLanguage");
-						  $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
-					});
+			  alert("start translation");
+			  lang1 = localStorage.getItem("DefaultLanguage");
+			  alert(lang1);
+				$('.TranslationDiv').each(function(i){
+					  $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
 				});
 		  }
 		},
@@ -208,10 +207,69 @@ aLangKeys['fr']['Country']='Pays';
 		  alert('Error getting language\n');
 		}
 		
+	  );*/
+$(document).ready(function() {
+	lang = localStorage.getItem("DefaultLanguage");
+		  if(lang != ""){
+			  $(function(){
+					$('.TranslationDiv').each(function(i){
+					  $(this).text(aLangKeys[lang][ $(this).attr('key') ]);
+					});
+				});
+		  }else{
+			  navigator.globalization.getPreferredLanguage(function (language) {
+				  switch (language.value){
+					  case "en-EN": lang = "en"; break;
+					  case "fr-FR": lang = "fr"; break;
+					  default : lang = "fr"; break;
+				  }
+				  localStorage.setItem("DefaultLanguage", lang);
+				  $(function(){
+						$('.TranslationDiv').each(function(i){
+						  $(this).text(aLangKeys[lang][ $(this).attr('key') ]);
+						});
+					});
+				  
+			  },
+				function () {
+				  alert('Error getting language\n');
+				}
+				
+			  );
+				  
+		  }
+});
+	
+/*	
+navigator.globalization.getPreferredLanguage(function (language) {
+		  lang = localStorage.getItem("DefaultLanguage");
+		  if(lang != ""){
+			alert(lang);
+			$(function(){
+				$('.TranslationDiv').each(function(i){
+				  $(this).text(aLangKeys[lang][ $(this).attr('key') ]);
+				});
+			});
+			  
+		  }else{
+			switch (language.value){
+				  case "en-EN": lang = "en"; break;
+				  case "fr-FR": lang = "fr"; break;
+				  default : lang = "fr"; break;
+			  } 
+			  $(function(){
+					$('.TranslationDiv').each(function(i){
+					  $(this).text(aLangKeys[lang][ $(this).attr('key') ]);
+					});
+				}); 
+		  }
+		},
+		function () {
+		  alert('Error getting language\n');
+		}
+		
 	  );
-
-
-
+*/
 	/*navigator.globalization.getPreferredLanguage(
 		
 	);*/
@@ -240,7 +298,7 @@ $(document).ready(function() {
 });
 
 
-$(function(){
+		$(function(){
 		$('.TranslationDiv').each(function(i){
           lang1 = sessionStorage.getItem("lang");
           $(this).text(aLangKeys[lang1][ $(this).attr('key') ]);
