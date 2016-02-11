@@ -26,12 +26,7 @@
                   <div class="well well-sm" style="border-radius:10px;">
                       <div class="row">
                           <div class="col-xs-12">
-                              <div class="alert alert-success" style="display:none;" id="message">
-                                  Statut Ajouté avec succes !
-                              </div>
-                              <div class="alert alert-danger" style="display:none;" id="messagee">
-                                  Ajouter un status
-                              </div>
+                              
                           </div>
                           <div class="col-xs-12">
                               <form>
@@ -49,10 +44,27 @@
                               </form>
                           </div>
                           <div class="col-xs-12">
-                              <button class="btn btn-xs btn_index " id="video"><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>
+                              <!--<button class="btn btn-xs btn_index " id="video"><i class='glyphicon glyphicon-facetime-video'></i>&nbsp;&nbsp;Video</button>
                               <button class="btn btn-xs btn_index" id="link"><i class='glyphicon glyphicon-globe'></i>&nbsp;&nbsp;Link</button>
-                              <button class="btn btn-xs btn_index" id="photo"><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>
-                              <button class="btn btn-xs btn_index pull-right" onclick="AddPublication()"><i class='glyphicon glyphicon-send'></i>&nbsp;&nbsp;submit</button>
+                              <button class="btn btn-xs btn_index" id="photo"><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>-->
+                              
+      <button onclick="capturePhoto();" class="btn_index input_class input-md">
+            <i class='glyphicon glyphicon-camera'></i>&nbsp;Camera
+        </button>
+        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="btn_index input_class input-md">
+            <i class='glyphicon glyphicon-picture'></i>&nbsp;Gallery
+        </button>
+        	 
+        <img id="image" src="" style="display:none;width:50%;">
+                              <img src="image/load.gif" style="margin-top:30%; display:none;" class="load_upload_photo_publication center-block">
+                              
+                              <div class="alert alert-success" style="display:none;" id="message">
+                                  Statut Ajouté avec succes !
+                              </div>
+                              <div class="alert alert-danger" style="display:none;" id="messagee">
+                                  Ajouter un status
+                              </div>
+                              <button class="btn btn-xs btn_index pull-right" onclick="AddPublication()"><i class='glyphicon glyphicon-send'></i>&nbsp;&nbsp;Submit</button>
                           </div>
                       </div>
                   </div>
@@ -101,13 +113,14 @@
        
        
   </div>
-	<div id="footer" class="col-xs-12"></div>
+	<footer id="footer"></footer>
 
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="cordova.js" charset="utf-8"></script>
-    <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
+    <!--<script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>-->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/templateGenerator.js"></script>
+    <script type="text/javascript" src="js/camera.js"></script>
     
     <script type="text/javascript" src="scripts/PublicationScript/Publications.js"></script>
     <script type="text/javascript" src="scripts/PublicationScript/PublicationAdd.js"></script>

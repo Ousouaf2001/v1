@@ -40,7 +40,7 @@ function AddPublication() {
 }
 */
 
-function MemberSetPhoto() {
+function MemberPublication_AddPhoto(publicationID) {
     var urlWS = "http://api.chessfamily.net/api/query";
 	var imgSrc = document.getElementById('image').src;
 	
@@ -58,8 +58,9 @@ function MemberSetPhoto() {
 	
 	var params = new Object();
 	params.authentication="chessfemily";
-	params.action="member_set_photo";
+	params.action="member_publication_add_photo";
 	params.member_id=id_utilisateur;
+	params.publication_id=publicationID;
 	
 	options.params = params;
 	var ft = new FileTransfer();
@@ -106,15 +107,22 @@ function AddPublication() {
 					visibility:1
 				},
 				dataType:"json",
+				beforeSend: function(){
+					  $('.load_upload_photo_publication').show();
+				  },
 				success:function(result){
 					
+					MemberPublication_AddPhoto(result.member_publication.id);
 					$('#message').fadeIn(500);
 					$('#message').fadeOut(1000);
 					$('#statusinput').val('');
 					$('#lienvideo').val('');
 					$('#lienweb').val('');
 					location.reload();
-				}
+				},
+				complete: function(){
+					  $('.load_upload_photo_publication').hide();
+				  }
 			});
 
 		}

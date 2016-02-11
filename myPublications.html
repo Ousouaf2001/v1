@@ -25,12 +25,7 @@
                   <div class="well well-sm" style="border-radius:10px;">
                       <div class="row">
                           <div class="col-xs-12">
-                              <div class="alert alert-success" style="display:none;" id="message">
-                                  Status Ajouté
-                              </div>
-                              <div class="alert alert-danger" style="display:none;" id="messagee">
-                                  Ajouter un status
-                              </div>
+                              
                           </div>
                           <div class="col-xs-12">
                               <form>
@@ -60,9 +55,15 @@
         	<i class='glyphicon glyphicon-picture'></i>&nbsp;Gallery
         </button>
         	 
-        <img id="image" src="" style="display:none;width:100%;">
-        
-                              <button class="btn btn-xs btn_index pull-right" onclick="AddPublication()"><i class='glyphicon glyphicon-send'></i>&nbsp;&nbsp;submit</button>
+        <img id="image" src="" style="display:none;width:50%;">
+        <img src="image/load.gif" style="margin-top:30%; display:none;" class="load_upload_photo_publication center-block">
+        <div class="alert alert-success" style="display:none;" id="message">
+          Status Ajouté
+      </div>
+      <div class="alert alert-danger" style="display:none;" id="messagee">
+          Ajouter un status
+      </div>
+                              <button class="btn btn-xs btn_index pull-right" onclick="AddPublication()"><i class='glyphicon glyphicon-send'></i>&nbsp;&nbsp;Submit</button>
                               
                               
                           </div>
