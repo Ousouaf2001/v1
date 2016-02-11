@@ -62,7 +62,7 @@ $(document).ready(function(){
 
               $('#age').html(result.member.birthday);
               $('.nom_profil').html(result.member.name + " " + result.member.last_name);
-              $('.image_profil').html("<img src='"+ result.member.image +"' class='img-responsive img-circle center-block' width='130' style='border:3px solid white;margin-bottom:20px;'>");
+              $('.image_profil').html("<img src='"+ result.member.image +"' class='img-responsive img-circle center-block' style='border:3px solid white;margin-bottom:20px;width:130px;height:130px;border-radius:130px;'>");
               if(result.member.gender == '1'){
                   $('#gender').html('<b>Male</b>');
               }else{
