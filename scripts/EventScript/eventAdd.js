@@ -6,7 +6,9 @@ function AddEvent() {
 		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
 	}	
     var type_event = document.getElementById("type_event").value;
-    var type_meeting = document.getElementById("type_meeting").value;
+    var type_meeting = document.getElementById("champ_meeting").value;
+
+
     var name = document.getElementById("name").value;
     var organizer = document.getElementById("organizer").value;
     var start_date = document.getElementById("start_date").value;
@@ -27,9 +29,9 @@ function AddEvent() {
             type:"POST",
             url:urlWS,
             data:{
-				        authentication:"chessfemily",
-				        action:"event_add",
-				        announcer_id:id_utilisateur,
+			    authentication:"chessfemily",
+			    action:"event_add",
+			    announcer_id:id_utilisateur,
                 type_id:type_event,
                 meeting_placeid:type_meeting,
                 name:name,
@@ -46,7 +48,7 @@ function AddEvent() {
             dataType:"json",
           success:function(result){
                   if(result.success == 1){
-                      //$('.inscritok').show();
+                      console.log(result);
                     $('#myModal').modal('hide');
                   }else{
                     $('.info_requis').show();

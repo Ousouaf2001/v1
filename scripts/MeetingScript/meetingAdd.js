@@ -12,8 +12,8 @@ function AddMeetingPlace() {
     var adress_meeting = document.getElementById("champ_adress").value;
     var latitude_meeting = document.getElementById("latitude_meeting").value;
     var longitude_meeting = document.getElementById("longitude_meeting").value;
-    var country_meeting = document.getElementById("country_meeting").value;
-    var city_meeting = document.getElementById("city_meeting").value;
+    var country_meeting = document.getElementById("id_country").value;
+    var city_meeting = document.getElementById("id_city").value;
     var meetingType = document.getElementById("meetingType").value;
     //var status_meeting = document.getElementById("status_meeting").value;
 
@@ -43,7 +43,7 @@ function AddMeetingPlace() {
             success:function(result){
                   if(result.success == 1){
                       console.log(result);
-                      $('#type_meeting').val(result.type_id)
+                      $('#champ_meeting').val(result.id);
                       $('#myModal').modal('hide');
                   }else{
                     $('.info_requis').show();
