@@ -19,7 +19,7 @@ $(document).ready(function(){
           if(item.name.length > 0){
 
           console.log(item.name);
-          $('#suggesstion-box_meeting').append("<li class='meeting' id='"+item.id+"'>"+item.name+"</li>");
+          $('#suggesstion-box_meeting').html("<li class='meeting' id='"+item.id+"'>"+item.name+"</li>");
         }
       });
       $("#search-box_meeting").css("background","#FFF");

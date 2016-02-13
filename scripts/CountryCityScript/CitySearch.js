@@ -19,9 +19,7 @@ $(document).ready(function(){
       $("#suggesstion-box").show();
       $.each(result.city, function (index, item) {
           if(item.city.length > 0){
-
-          console.log(item.city);
-          $('#suggesstion-box').append("<li class='city' id='"+item.id+"'>"+item.city+"</li>");
+          $('#suggesstion-box').html("<li class='city' id='"+item.id+"'>"+item.city+"</li>");
         }
       });
       $("#search-box").css("background","#FFF");
