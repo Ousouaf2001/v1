@@ -37,7 +37,7 @@ $(document).ready(function(){
                             //" <i class='fa fa-circle' style='font-size:15px;color:"+colorStatus+"'></i>" +
                         "</b>" +
                         "<br>" +
-                        "<font style='font-size:12px;color:grey;'>Start Date : " + item.start_date + " - End Date : " + item.end_date + "</font>" +
+                        "<font style='font-size:12px;color:grey;'>From : " + item.start_date + " - To : " + item.end_date + "</font>" +
                     "</li>";     
                 $('.list-menu-myevents').append(li);
                 

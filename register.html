@@ -48,19 +48,19 @@
                         <img src="image/logo.jpg" class="img-responsive center-block" width="90" />
                         <b class="texte_logo text-uppercase text-center">chess family</b>
                     </div>
-					<div class="texte_logo text-center">
+					<div class="texte_logo text-center TranslationDiv" key="NewUser">
                     	New user
                     </div>
               </div>
                 
                 
-              
+                
                             
                             
                             <div class="col-md-12">
                   <div class="champ">
-                      <div class="inscritok" style="display:none;text-align:center;font-weight:bold;color:red;">Inscription réussite</div>
-                      <div class="info_requis" style="display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessous</div>
+                      <div class="inscritok TranslationDiv" key="Ajout_OK_msg" style="display:none;text-align:center;font-weight:bold;color:red;">Inscription réussite</div>
+                      <div class="info_requis TranslationDiv" key="Ajout_KO_msg" style="display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessous</div>
                        <form  id="member_add" action="#">
                             <input type="hidden" id="detect_os" />
                             <input type="hidden" id="detect_UUID" />
@@ -104,7 +104,7 @@
                             
                             <div class="form-group">
                                <input type="button" id="submit" onclick="AddMember()" value="Submit" class="btn btn-md btn-block btn_index"/></br>
-                               <center><a href="index.html">Login Page</a></center>
+                               <center><a href="index.html" class="TranslationDiv" key="LoginPage">Login Page</a></center>
                             </div>
                             
                     </form>
@@ -117,8 +117,9 @@
     
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="cordova.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
+        <!--<script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>-->
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/Languages.js"></script>
         
         <script type="text/javascript" src="scripts/MemberScript/MemberAdd.js"></script>
         

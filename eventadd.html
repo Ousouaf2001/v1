@@ -40,8 +40,7 @@
         <div class="row">
             <div class="col-md-12">
                     <div class="champ">
-                      <div class="inscritok" style="display:none;text-align:center;font-weight:bold;color:red;">Ajout effectué avec succes!</div>
-                      <div class="info_requis" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessous</div>
+                      
                       <form  id="member_add" action="#">
                           <div class="form-group">
                             <label>Name</label>
@@ -53,28 +52,28 @@
                             <input type="text" name="adress_meeting" id="adress_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse" style="width:100%;">
                           </div>
                           <div class="form-group">
-                              <button type="button" onclick="GeoAdresse()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Verfication de l'adresse</button>
+                              <button type="button" onClick="GeoAdresse()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Vérfication de l'adresse</button>
                           </div>
                           <div class="form-group">
-                            <label>lat</label>
+                            <label>Latitude</label>
                             <input type="text" name="latitude_meeting" id="latitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Latitude" style="width:100%;" disabled="disabled">
                           </div>
                           <div class="form-group">
-                            <label>long</label>
+                            <label>Longitude</label>
                             <input type="text" name="longitude_meeting" id="longitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Longitude" style="width:100%;" disabled="disabled">
                           </div>
                           <div class="form-group">
                             <label>Country</label>
                             <input type="hidden" id="id_country">
-                            <input type="text" name="country_meeting" id="country_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Longitude" style="width:100%;" disabled="disabled">
+                            <input type="text" name="country_meeting" id="country_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Contry" style="width:100%;" disabled="disabled">
                           </div>
                           <div class="form-group">
                             <label>City</label>
                             <input type="hidden" id="id_city">
-                            <input type="text" name="city_meeting" id="city_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Longitude" style="width:100%;" disabled="disabled">
+                            <input type="text" name="city_meeting" id="city_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="City" style="width:100%;" disabled="disabled">
                           </div>
                           <div class="form-group">
-                          <input type="text" id="champ_meeting">
+                          <input type="hidden" id="champ_meeting">
                             <label>Type du Meeting</label>
                             <select name="meetingType" id="meetingType" class="form-control select_bloc" style="width:100%;">
                              
@@ -89,10 +88,12 @@
                           </div>-->
                           </div>
                           
+                          <div class="MeetingPlaceAdded TranslationDiv" key="Ajout_OK_msg" style="display:none;text-align:center;font-weight:bold;color:red;">Ajout effectué avec succes!</div>
+                      <div class="MeetingPlace_info_requis TranslationDiv" key="Ajout_KO_msg" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessous</div>
                           
                          
                           <div class="form-group">
-                             <input type="button" id="submit" onclick="AddMeetingPlace()" value="Add meeting Place" class="btn btn-md btn-block btn_index"/>
+                             <input type="button" id="submit" onClick="AddMeetingPlace()" value="Add meeting Place" class="btn btn-md btn-block btn_index"/>
                           </div>
                           
                       </form>
@@ -131,13 +132,13 @@
                     <input type="hidden" id="lat">
                     
                     <input type="hidden" id="long">
-                    <input  maxlength="100" id="pays" type="text" required="required" class="form-control input-sm input_class" placeholder="Enter First Name"  style="width:100%;"/>
+                    <input  maxlength="100" id="pays" type="text" required class="form-control input-sm input_class" placeholder="Enter First Name"  style="width:100%;"/>
                     <input type="hidden" id="id_country">
                 </div>
                 <div class="form-group">
                         <label class="control-label">City</label>
                         <input type="hidden" id="id_city">
-                        <input type="text" id="search-box" placeholder="Country Name" required="required" class="form-control input-sm input_class" style="width:100%;"/>
+                        <input type="text" id="search-box" placeholder="Country Name" required class="form-control input-sm input_class" style="width:100%;"/>
                         <ul id="suggesstion-box">
                           
                         </ul>
@@ -226,8 +227,12 @@
                             </div>
                             
                            
+                           <div class="EventAddedSuccess TranslationDiv" key="Ajout_OK_msg" style="display:none;text-align:center;font-weight:bold;color:red;">Item added Successfully</div>
+                      <div class="Event_info_requis TranslationDiv" key="Ajout_KO_msg" style="display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessus</div>
+                           
+                           
                             <div class="form-group">
-                               <input type="button" id="submit" onclick="AddEvent()" value="Terminer !" class="btn btn-md btn-block btn_index" style="width:100%;"/></br>
+                               <input type="button" id="submit" onClick="AddEvent()" value="Terminer !" class="btn btn-md btn-block btn_index" style="width:100%;"/></br>
                             </div>
                             
                         </form>

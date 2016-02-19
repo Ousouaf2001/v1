@@ -15,6 +15,8 @@ aLangKeys['en']['NEXT']='Next';
 aLangKeys['en']['HERE']='Here';
 aLangKeys['en']['Login_with']='Login With';
 aLangKeys['en']['New_Sign_up']='New ? Sign up';
+aLangKeys['en']['REMEMBERME']='remember me';
+
 // Page Register
 aLangKeys['en']['NewUser']='New user';
 aLangKeys['en']['Name']='Name';
@@ -45,6 +47,8 @@ aLangKeys['en']['FindEvents']='Find Events';
 aLangKeys['en']['FindPlaces']='Find Places';
 aLangKeys['en']['Distance']='Distance';
 aLangKeys['en']['Age']='Age';
+aLangKeys['en']['FROM']='From';
+aLangKeys['en']['TO']='To';
 aLangKeys['en']['Gender']='Gender';
 aLangKeys['en']['Profile']='Profile';
 aLangKeys['en']['SearchMembers']='Search Members';
@@ -56,6 +60,10 @@ aLangKeys['en']['SearchEvents']='Search Events';
 aLangKeys['en']['MeetingLocation']='Meeting Location';
 aLangKeys['en']['OnlyOpenedNow']='Only Opened Now';
 aLangKeys['en']['SearchPlace']='Search Place';
+aLangKeys['en']['RESULTS']='RESULTS';
+aLangKeys['en']['LOCATIONS']='&nbsp;&nbsp;locations';
+aLangKeys['en']['EVENTS']='&nbsp;&nbsp;EVENTS';
+aLangKeys['en']['PLAYERS']='&nbsp;&nbsp;Players';
 
 //Page Profile 
 aLangKeys['en']['Profile']='Profile';
@@ -91,7 +99,7 @@ aLangKeys['en']['END']='END';
 aLangKeys['en']['Contact']='Contact';
 aLangKeys['en']['Country']='Country';
 
-
+//page details Events
 
 
 /********************* Francais **************************/
@@ -105,6 +113,7 @@ aLangKeys['fr']['NEXT']='Suivant';
 aLangKeys['fr']['HERE']='Ici';
 aLangKeys['fr']['Login_with']='Se Connecter avec';
 aLangKeys['fr']['New_Sign_up']='Nouveau ? s\'enregistrer';
+aLangKeys['en']['REMEMBERME']='Se Souvenir de Moi';
 // Page Register
 aLangKeys['fr']['NewUser']='Nouvel Utilisateur';
 aLangKeys['fr']['Name']='Nom';
@@ -135,6 +144,8 @@ aLangKeys['fr']['FindEvents']='Trouver Evènements';
 aLangKeys['fr']['FindPlaces']='Trouver Emplacement';
 aLangKeys['fr']['Distance']='Distance';
 aLangKeys['fr']['Age']='Age';
+aLangKeys['fr']['FROM']='De';
+aLangKeys['fr']['TO']='A';
 aLangKeys['fr']['Gender']='Sexe';
 aLangKeys['fr']['Profile']='Profil';
 aLangKeys['fr']['SearchMembers']='Recherche Membres';
@@ -146,6 +157,10 @@ aLangKeys['fr']['SearchEvents']='Rechercher Evènements';
 aLangKeys['fr']['MeetingLocation']='Lieu de rencontre';
 aLangKeys['fr']['OnlyOpenedNow']='Ouverts Maintenant';
 aLangKeys['fr']['SearchPlace']='Rechercher Lieux';
+aLangKeys['fr']['RESULTS']='RESULTATS';
+aLangKeys['fr']['LOCATIONS']='&nbsp;&nbsp;Emplacements';
+aLangKeys['fr']['EVENTS']='&nbsp;&nbsp;Evenements';
+aLangKeys['fr']['PLAYERS']='&nbsp;&nbsp;Joueurs';
 
 //Page Profile 
 aLangKeys['fr']['Profile']='Profil';
@@ -210,6 +225,7 @@ aLangKeys['fr']['Country']='Pays';
 	  );*/
 $(document).ready(function() {
 	lang = localStorage.getItem("DefaultLanguage");
+	//alert(lang);
 		  if(lang != ""){
 			  $(function(){
 					$('.TranslationDiv').each(function(i){

@@ -49,9 +49,10 @@ function AddEvent() {
           success:function(result){
                   if(result.success == 1){
                       console.log(result);
-                    $('#myModal').modal('hide');
+					  $('.EventAddedSuccess').fadeIn(500).delay(2000).fadeOut(500);
+                    //$('#myModal').modal('hide');
                   }else{
-                    $('.info_requis').show();
+                    $('.Event_info_requis').fadeIn(500).delay(2000).fadeOut(500);;
                   }
 
                   

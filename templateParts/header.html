@@ -16,9 +16,9 @@
                 <div class="col-xs-12">
                     <div>
                       <ul class="nav nav-tabs menu-ho" role="tablist" style="border-bottom:0px;">
-                        <li role="recherche" class="active text-center" style="width:33.33333333333333%"><a href="#recherche_players" aria-controls="recherche_players" role="tab" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;Recherche Players</a></li>
-                        <li role="recherche" class="text-center" style="width:33.33333333333333%"><a href="#recherche_events" aria-controls="recherche_events" role="tab" class="text-center" data-toggle="tab"><i class="fa fa-trophy"></i>&nbsp;Recherche Events</a></li>
-                        <li role="recherche"class="text-center"  style="width:33.33333333333333%"><a href="#recherche_place" aria-controls="recherche_place" role="tab" data-toggle="tab"><i class="fa fa-map-marker"></i>&nbsp;Recherche Place</a></li>
+                        <li role="recherche" class="active text-center" style="width:33.33333333333333%"><a href="#recherche_players" aria-controls="recherche_players" role="tab" data-toggle="tab"><i class="fa fa-user"></i><span key="FindPlayers" class="TranslationDiv">&nbsp;Recherche Players</span></a></li>
+                        <li role="recherche" class="text-center" style="width:33.33333333333333%"><a href="#recherche_events" aria-controls="recherche_events" role="tab" class="text-center" data-toggle="tab"><i class="fa fa-trophy"></i><span key="FindEvents" class="TranslationDiv">&nbsp;Recherche Events</span></a></li>
+                        <li role="recherche"class="text-center"  style="width:33.33333333333333%"><a href="#recherche_place" aria-controls="recherche_place" role="tab" data-toggle="tab"><i class="fa fa-map-marker"></i><span key="FindPlaces" class="TranslationDiv">&nbsp;Recherche Place</span></a></li>
                       </ul>
                       <div class="tab-content" style="padding-top:20px;padding-bottom:20px;">
                         <div role="tabpanel" class="tab-pane active" id="recherche_players">
@@ -27,7 +27,7 @@
                            <input type="text" id="getlong" style="color:black;display:none;" name="long">
                             <table>
                                 <tr>      
-                                  <th class="table_distance"><h5><b style="color:#582D1C;font-size:10px;">Distance :</h5></th>
+                                  <th class="table_distance"><h5><b style="color:#582D1C;font-size:10px;" key="Distance" class="TranslationDiv">Distance</b> :</h5></th>
                                   <td class="table_distance">
                                       <input type="radio" name="distance" value="1" checked="checked" />
                                       <font style="color:black;"> -1km </font>
@@ -60,15 +60,15 @@
                                 </td>
                               </tr>-->
                               <tr>
-                                <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Age:</h5></th>
+                                <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;" key="Age" class="TranslationDiv">Age</b>:</h5></th>
                                 <td>
-                                  <b style="color:black">From</b>
+                                  <b style="color:black" key="FROM" class="TranslationDiv">From</b>
                                   <select name="age_from" id="age_from"  class="form-control input-sm input-block  select_event">
                                       
                                   </select>
                                 </td>
                                 <td>
-                                  <b style="color:black;">To</b>
+                                  <b style="color:black;" key="TO" class="TranslationDiv">To</b>
                                   <select name="age_to" id="age_to"  class="form-control input-sm input-block  select_event">
                                       
                                   </select>
@@ -248,7 +248,7 @@
       </div>
   </div>
 </div>
-  
+  <script type="text/javascript" src="js/Languages.js"></script>
 <script type="text/javascript" src="scripts/EventScript/eventType.js"></script>
 <script type="text/javascript" src="scripts/MeetingScript/meetingType.js"></script>
 <script type="text/javascript">
