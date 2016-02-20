@@ -82,6 +82,7 @@ $(document).ready(function(){
                               $('#adress_meeting_edit').val(result.meeting_place.adress);
                               $('#latitude_meeting_edit').val(result.meeting_place.latitude);
                               $('#longitude_meeting_edit').val(result.meeting_place.longitude);
+                              $('#meetingType_edit').val(result.meeting_place.type_id);
                               $('#id_meeting_edit').val(meetingId);
 
                              

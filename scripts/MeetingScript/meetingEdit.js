@@ -12,7 +12,7 @@ function editMeetingPlace() {
     var latitude_meeting = position.coords.latitude;
     var longitude_meeting = position.coords.longitude;
     var meetingType = document.getElementById("meetingType_edit").value;
-    var status_meeting = document.getElementById("status_meeting_edit").value;
+    //var status_meeting = document.getElementById("status_meeting_edit").value;
 
 
 
@@ -31,16 +31,16 @@ function editMeetingPlace() {
     				latitude:latitude_meeting,
     				longitude:longitude_meeting,
     				type_id:meetingType,
-    				status:status_meeting
+    				status:1
     				},
             dataType:"json",
           success:function(result){
                   if(result.success == 1){
                       //$('.testlogin').html(' success connexion');
-                      $('.info_requis').fadeOut();
-                      $('.inscritok').fadeIn();
-                      $('.inscritok').fadeOut(4000);
-                  
+                      $('#affiche_successedit').fadeIn(500).delay(2000).fadeOut(500);
+                      //$('#myModalEdit').modal('hide').delay(1000);
+                      //setTimeout($('#myModalEdit').modal('hide'), 5000);
+                      setTimeout(function() {$('#myModalEdit').modal('hide');}, 1000);
                   }else{
                       $('.info_requis').fadeIn();
                   }

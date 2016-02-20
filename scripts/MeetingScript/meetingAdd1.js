@@ -43,7 +43,7 @@ function AddMeetingPlace() {
                       console.log(result);
                       $('#champ_meeting').val(result.id);
 					            $('#affiche_success').fadeIn(500).delay(2000).fadeOut(500);
-                      $('#myModal').modal('hide');
+                      setTimeout(function() {$('#myModal').modal('hide');}, 1000);
                   }else{
                       $('.MeetingPlace_info_requis').fadeIn(500).delay(2000).fadeOut(500);
                   }
