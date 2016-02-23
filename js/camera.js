@@ -72,7 +72,8 @@ function getPhoto(source) {
         targetWidth: 600,
         targetHeight: 600,*/
         destinationType: destinationType.FILE_URI,
-        sourceType: source
+        sourceType: source,
+		correctOrientation: true
     });
 	//alert(destinationType.toSource());
 }

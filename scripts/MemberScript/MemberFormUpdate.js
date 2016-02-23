@@ -44,6 +44,8 @@ $(document).ready(function(){
 			  if(result.member.is_trainer==1){$('#trainer').attr("checked",true);}else{$('#trainer').attr("checked",false);}
 			  
 			  
+			  $('#image').attr("src",result.member.image);
+			  console.log($('#image').attr("src")+"test");
 			  $('#titleProfile').val(result.member.title);
 			  $('#TrainerLevelProfile').val(result.member.lesson_level);
 			  

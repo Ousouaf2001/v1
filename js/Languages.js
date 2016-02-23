@@ -42,9 +42,9 @@ aLangKeys['en']['Privacy']='Privacy';
 aLangKeys['en']['Logout']='Logout';
 
 // Search Form
-aLangKeys['en']['FindPlayers']='Find Players';
-aLangKeys['en']['FindEvents']='Find Events';
-aLangKeys['en']['FindPlaces']='Find Places';
+aLangKeys['en']['FindPlayers']=' Players';
+aLangKeys['en']['FindEvents']=' Events';
+aLangKeys['en']['FindPlaces']=' Places';
 aLangKeys['en']['Distance']='Distance';
 aLangKeys['en']['Age']='Age';
 aLangKeys['en']['FROM']='From';
@@ -139,9 +139,9 @@ aLangKeys['fr']['Privacy']='Privacy';
 aLangKeys['fr']['Logout']='Se Déconnecter';
 
 // Search Form
-aLangKeys['fr']['FindPlayers']='Trouver Joueurs';
-aLangKeys['fr']['FindEvents']='Trouver Evènements';
-aLangKeys['fr']['FindPlaces']='Trouver Emplacement';
+aLangKeys['fr']['FindPlayers']=' Joueurs';
+aLangKeys['fr']['FindEvents']=' Evènements';
+aLangKeys['fr']['FindPlaces']=' Emplacement';
 aLangKeys['fr']['Distance']='Distance';
 aLangKeys['fr']['Age']='Age';
 aLangKeys['fr']['FROM']='De';
