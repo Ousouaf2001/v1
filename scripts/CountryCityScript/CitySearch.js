@@ -1,6 +1,5 @@
 $(document).ready(function(){
-  country_id = $('#id_country').val();
-  console.log(country_id);
+  
   $("#search-box").keyup(function(){
     if($("#search-box").val().length >= 4){
       
@@ -8,6 +7,7 @@ $(document).ready(function(){
 
 
     var urlWS="http://api.chessfamily.net/api/query";
+    var country_id = document.getElementById("id_country").value;
     $.ajax({
     type: "POST",
     url: urlWS,

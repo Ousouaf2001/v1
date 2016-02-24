@@ -15,17 +15,20 @@ $(document).ready(function(){
             data:{
     				authentication:"chessfemily",
     				action:"member_events",
-    				member_id:id_utilisateur
+    				member_id:id_utilisateur,
+            perpage:10,
+            page:1
     				},
             dataType:"json",
           beforeSend: function(){
               $('.load_my_events').show();
           },
           success:function(result){
-			  console.log(result);
+			  
 
             if(result.success == 1){
                 $.each(result.events, function (index, item) { 
+                  console.log(item);
 				//if(item.status==1){colorStatus = "#98BF0A"; }else{colorStatus = "#f24e4e";}
             var li = "<li class='list-group-item ' id='" + item.id + "'>" +
                         
