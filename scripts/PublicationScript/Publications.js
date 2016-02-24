@@ -22,6 +22,7 @@ $(document).ready(function(){
             data:{
 				authentication:"chessfemily",
 				action:"publications",
+				member_id:id_utilisateur,
 				perpage:10,
 				page:1},
             dataType:"json",

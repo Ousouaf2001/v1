@@ -24,40 +24,40 @@
                   <ul class="nav nav-tabs menu-ho" role="tablist" style="border-bottom:0px;">
                      <li role="recherche" class="active text-center" style="width:100%">
                         <a href="#profile" aria-controls="recherche_players" role="tab" data-toggle="tab">
-                        <i class="fa fa-user" style="font-size:20px;"></i><br>Setting
+                        <i class="fa fa-user" style="font-size:20px;"></i><br><span key="SETTINGS" class="TranslationDiv">Setting</span>
                         </a>
                      </li>
                   </ul>
                   <div class="tab-content" style="padding-top:20px;padding-bottom:20px;">
                      <div role="tabpanel" class="tab-pane active" id="profile">
                         <form  id="member_add" action="#">
-                           <div class="alert alert-info" id="settingok" style="display:none;">
+                           <div class="alert alert-info" id="settingok" style="display:none;" key="Update_OK_msg" class="TranslationDiv">
                               Vos Informations ont été mis à jour!
                            </div>
 
                            <div class="form-group">
-                              <label>Langue par défaut :</label>
+                              <label><span key="DefaultLanguage" class="TranslationDiv">Langue par défaut</span> :</label>
                               <select name="DefaultLanguage" id="DefaultLanguage" class="form-control select_bloc" style="width:100%;">
                                   <option value="en">English</option>
                                   <option value="fr">Français</option>
                               </select>
                            </div>
-                           <div class="form-group">
-                              <label>Paramètre de la recherche :</label>
+                           <!--<div class="form-group">
+                              <label><span key="PositionUpdated" class="TranslationDiv">Paramètre de la recherche</span> :</label>
                               <select name="distance" id="distance" class="form-control select_bloc" style="width:100%;">
                                   <option value="1">-1km</option>
                                   <option value="5">-5km</option>
                                   <option value="10">-10km</option>
                                   <option value="15">-15km</option>
                               </select>
-                           </div>
+                           </div>-->
                            <div class="form-group">
-                              <label>Taking place in max <b>X</b> days</label>
+                              <label><span key="TakingPlaceMaxDays" class="TranslationDiv">Taking place in max</span> <b>X</b> <span key="DAYS" class="TranslationDiv">days</span></label>
                               <input type="text" name="xday" id="xday" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status"  style="width:100%;">
                            </div>
                            <div class="form-group">
-                              <input type="button" id="submit" onclick="MemberSetting()" value="Enregistrer" class="btn btn-md btn-block btn_index"/></br>
-                              <center><a href="home.html">Home</a></center>
+                              <input type="button" id="submit" onclick="MemberSetting()" value="Submit" class="btn btn-md btn-block btn_index"/></br>
+                              
                            </div>
                         </form>
                      </div>
