@@ -41,14 +41,15 @@ function AddMeetingPlace() {
     				},
             dataType:"json",
             success:function(result){
+
                   if(result.success == 1){
-                      console.log(result);
-                      $('#champ_meeting').val(result.id);
-					  $('.MeetingPlaceAdded').fadeIn(500).delay(2000).fadeOut(500);
+
+					           $('.MeetingPlaceAdded').fadeIn(500).delay(2000).fadeOut(500);
                       $('#myModal').modal('hide');
                   }else{
                     $('.MeetingPlace_info_requis').fadeIn(500).delay(2000).fadeOut(500);
                   }
+                  console.log(result.id);
             }
         });
         

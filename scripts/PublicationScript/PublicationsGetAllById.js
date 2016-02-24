@@ -38,6 +38,7 @@ $(document).ready(function(){
 				  //var displayPhoto = "";
 				  
 				  $.each(result.publications, function (index, item) {
+				  	console.log(item);
 					  	if(item.video_link == null ){ displayVideo = "style='display:none;'";}else{displayVideo = "style='display:visible;'";}
 						if(item.web_link == null ){ displayLink = "style='display:none;'";}else{displayLink = "style='display:visible;'";}
 						//if(item.photos.length == 0){ displayPhoto = "style='display:none;'";}

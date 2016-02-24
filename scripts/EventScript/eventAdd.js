@@ -33,7 +33,7 @@ function AddEvent() {
 			    action:"event_add",
 			    announcer_id:id_utilisateur,
                 type_id:type_event,
-                meeting_placeid:type_meeting,
+                meeting_placeid:1,
                 name:name,
                 organizer:organizer,
                 start_date:start_date,
@@ -48,8 +48,9 @@ function AddEvent() {
             dataType:"json",
           success:function(result){
                   if(result.success == 1){
-                      console.log(result);
 					  $('#affiche_success').fadeIn(500).delay(2000).fadeOut(500);
+
+                      setTimeout("window.location='myevent.html'",1000);
                     //$('#myModal').modal('hide');
                   }else{
                     $('.Event_info_requis').fadeIn(500).delay(2000).fadeOut(500);;
