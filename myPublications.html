@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Publications</title>
+    <title key="MyPublications" class="TranslationDiv">My Publications</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -49,21 +48,21 @@
                               
                               
         <button onclick="capturePhoto();" class="btn_index input_class input-md">
-        	<i class='glyphicon glyphicon-camera'></i>&nbsp;Camera
+        	<i class='glyphicon glyphicon-camera'></i>&nbsp;<span key="CAMERA" class="TranslationDiv">Camera</span>
         </button>
         <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="btn_index input_class input-md">
-        	<i class='glyphicon glyphicon-picture'></i>&nbsp;Gallery
+        	<i class='glyphicon glyphicon-picture'></i>&nbsp;<span key="GALLERY" class="TranslationDiv">Gallery</span>
         </button>
         	 
         <img id="image" src="" style="display:none;width:50%;">
         <img src="image/load.gif" style="margin-top:30%; display:none;" class="load_upload_photo_publication center-block">
-        <div class="alert alert-success" style="display:none;" id="message">
-          Status Ajouté
+        <div class="alert alert-success" style="display:none;" id="message" key="Ajout_OK_msg" class="TranslationDiv">
+          Status Ajouté !
       </div>
-      <div class="alert alert-danger" style="display:none;" id="messagee">
+      <div class="alert alert-danger" style="display:none;" id="messagee" key="Ajout_KO_msg" class="TranslationDiv">
           Ajouter un status
       </div>
-                              <button class="btn btn-xs btn_index pull-right" onclick="AddPublication()"><i class='glyphicon glyphicon-send'></i>&nbsp;&nbsp;Submit</button>
+                              <button class="btn btn-xs btn_index pull-right" onclick="AddPublication()"><i class='glyphicon glyphicon-send'></i>&nbsp;&nbsp;<span key="SUBMIT" class="TranslationDiv">Submit</span></button>
                               
                               
                           </div>

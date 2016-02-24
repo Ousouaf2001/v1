@@ -53,7 +53,7 @@
                         
                         "<span class='badge' style='background:white;'>" +
 							"<img src='"+ item.image + "' width='30px' />"+
-                            "<i class='fa fa-trash delete' id='" + item.id +"' style='font-size:25px;color:#4B2618; margin-left:10px;' ></i>" +
+                            //"<i class='fa fa-trash delete' id='" + item.id +"' style='font-size:25px;color:#4B2618; margin-left:10px;' ></i>" +
                         "</span>" +
                         "<b class='location' id='"+ item.id +"'>" + item.name +
                             " <i class='fa fa-circle' style='font-size:15px;color:"+ colorStatus +";'></i>" +

@@ -7,6 +7,21 @@ $(document).ready(function(){
 	}else if(sessionStorage.getItem("identifiant")!= null){
 		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
 	}
+	lang = localStorage.getItem("DefaultLanguage");
+	var NotificationSended = "";
+	var noNotification = "";
+	switch(lang){
+		case 'fr':
+			NotificationSended = "vous à envoyer une notification.";
+			noNotification = "Aucune Notification Trouvée!";
+			break;
+		case 'en':
+			NotificationSended = "sent you a notification.";
+			noNotification = "No Notification found!";
+			break; 
+	}
+	
+	
 	var urlWS = "http://api.chessfamily.net/api/query";
     function NotificationGetByIdMember() {
         
@@ -39,7 +54,7 @@ $(document).ready(function(){
 						                          "<b>"+ 
 						                          	this.sender_name+" "+this.sender_last_name +
 						                          "</b>&nbsp;"+
-						                          "<i>vous à envoyer une notification.</i><br/>"+
+						                          "<i>"+NotificationSended+"</i><br/>"+
 						                          //this.message+
 											   "</p>"+
 						                  "</div>"+

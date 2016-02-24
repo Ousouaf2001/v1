@@ -85,7 +85,7 @@ function ConnectMember(ConnexionCase){
  
 }
 
-
+ /**
 function subscribeToParse(UserID){
 	var appId = "0Ej5SNPfwkMoz57PlZatSp4nbk8DuBwXUqjYbe0V";
 	var clientKey = "FUEv83u49TkaZMpNxGgd1cFLMQEnh3u9DaUZRJen";
@@ -97,15 +97,14 @@ function subscribeToParse(UserID){
 		//alert("subscribe");
         parsePlugin.getInstallationId(function(id) {
 				//alert("getInstallationId : "+id);
-            /**
+           
              * Now you can construct an object and save it to your own services, or Parse, and corrilate users to parse installations
              * 
              var install_data = {
                 installation_id: id,
                 channels: ['SampleChannel']
              }
-             *
-             */
+             
 
         }, function(e) {
             alert('error');
@@ -118,24 +117,7 @@ function subscribeToParse(UserID){
 }, function(e) {
     alert('error');
 });
-	/*parsePlugin.initialize(appId, clientKey, function() {
-		alert("Success Initialize");	
-		parsePlugin.getInstallationId(function(id) {
-			alert('id : '+id+" - userID : "+UserID);
-			SetInstallationItemByID(appId,JSKey,id, UserID);
-			alert('after');
-		}, function(e) {
-			alert('error');
-		});	
-	}, function(e) {
-		alert('error');
-	});
 	
-	parsePlugin.subscribe('SampleChannel', function() {
-		}, function(e) {
-		alert('error');
-		});*/
-	//alert("getInstallationId  - Start");
 	
 }
 function SetInstallationItemByID(appKey,JSKey,installationID, memberID){
@@ -161,3 +143,5 @@ function SetInstallationItemByID(appKey,JSKey,installationID, memberID){
 	});
 }
 
+*
+             */

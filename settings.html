@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>My Profile - Edit</title>
+      <title key="Settings" class="TranslationDiv">Settings</title>
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -42,7 +42,7 @@
                                   <option value="fr">Français</option>
                               </select>
                            </div>
-                           <!--<div class="form-group">
+                           <div class="form-group" style="display:none;">
                               <label><span key="PositionUpdated" class="TranslationDiv">Paramètre de la recherche</span> :</label>
                               <select name="distance" id="distance" class="form-control select_bloc" style="width:100%;">
                                   <option value="1">-1km</option>
@@ -50,7 +50,7 @@
                                   <option value="10">-10km</option>
                                   <option value="15">-15km</option>
                               </select>
-                           </div>-->
+                           </div>
                            <div class="form-group">
                               <label><span key="TakingPlaceMaxDays" class="TranslationDiv">Taking place in max</span> <b>X</b> <span key="DAYS" class="TranslationDiv">days</span></label>
                               <input type="text" name="xday" id="xday" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status"  style="width:100%;">
@@ -71,6 +71,8 @@
       <script type="text/javascript" src="cordova.js" charset="utf-8"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
       <script type="text/javascript" src="js/templateGenerator.js"></script>
+      
+      
       <script type="text/javascript" src="scripts/MemberScript/MemberSetting.js"></script>
       <!--<script type="text/javascript">
          $(document).ready(function(){

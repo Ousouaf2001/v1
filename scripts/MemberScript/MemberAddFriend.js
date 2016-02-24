@@ -26,12 +26,12 @@
           success:function(result){
               if(result.success == 1){
                   $('#affiche_success').fadeIn(500).delay(2000).fadeOut(500);
-                  $('.icones_ok_fav').html("<i class='fa fa-gamepad' style='font-size:20px;'></i>");
+                  $('.icones_ok_fav').html("<i class='fa fa-star-o' style='font-size:20px;'></i>");
                   $('.icones_ko_fav').hide();
 
               }else{
                 $('#affiche_error').fadeIn(500).delay(2000).fadeOut(500);
-                $('.icones_ko_fav').html("<i class='fa fa-gamepad' style='font-size:20px;'></i>");
+                $('.icones_ko_fav').html("<i class='fa fa-star-o' style='font-size:20px;'></i>");
               }
               console.log(result);
           }

@@ -5,6 +5,7 @@
       <button type="button" class="navbar-toggle collapsed btn_search" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <div class="glyphicon glyphicon-search" style="font-size:15px;"></div> <!--  -->
       </button>
+      <div id="titlePage"></div>
       <!--<a class="navbar-brand" href="#" onclick="history.back()"><span class="glyphicon glyphicon-chevron-left"></span></a>-->
     </div>
     
@@ -160,7 +161,7 @@
                                 <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;" key="Activity" class="TranslationDiv">Activity</b>:</h5></th>
                                 <td style="font-size: 10px;">
                                     <input type="radio" name="activity"  checked="checked" value="15" />
-                                    <font style="color:black;"><span key="TakingPlaceMaxDays" class="TranslationDiv">Taking Place in max</span> <b id="xdayheader">15</b> <span key="DAYS" class="TranslationDiv">days</span></font>
+                                    <font style="color:black;"><span key="TakingPlaceMaxDays" class="TranslationDiv">Taking Place in max</span> <b id="xdayheader">15</b> <span key="DAYS" class="TranslationDiv">days</span></font>&nbsp;
                                 </td>
                                 <td class="table_distance"  style="font-size: 10px;">
                                     <input type="radio" name="activity" value="0" />
@@ -258,8 +259,7 @@
 	  window.location.href = 'index.html';
   }
   
-</script>
-<script type="text/javascript">
+
   for (var i = 5; i <= 100; i+=5) {
         $('#age_from').append("<option>"+i+"</option>");
   };
@@ -271,6 +271,9 @@
         }
         
   };
-
+  
+$(document).ready(function(){
+	$('#titlePage').text($('title').text());
+});
 </script>
 

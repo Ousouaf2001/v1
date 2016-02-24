@@ -24,17 +24,30 @@ function AddNotifications() {
 				action:"notification_add",
 				member_id:id_utilisateur,
 				receiver_id:m_id,
-				message:'test notification lotfi'
+				message:''
 			},
             dataType:"json",
+			beforeSend: function(){
+              $('.icones_ko').html("<img src='image/load.gif' width='20'>");
+          },
+		  
           success:function(result){
-			  var messageNotification = result.notification.sender_name+' '+result.notification.sender_last_name+' vous à envoyer une notification';
-                sendPush(appId,JSKey,m_id,messageNotification)
+			  //var messageNotification = result.notification.sender_name+' '+result.notification.sender_last_name+' <span key="ReceivedNotification" class="TranslationDiv">vous à envoyer une notification</span>';
+			  if(result.success == 1){
+                  $('#affiche_success_notif').fadeIn(500).delay(2000).fadeOut(500);
+                  $('.icones_ok').html("<i class='fa fa-gamepad' style='font-size:20px;'></i>");
+                  $('.icones_ko').hide();
+
+              }else{
+                $('#affiche_error_notif').fadeIn(500).delay(2000).fadeOut(500);
+                $('.icones_ko').html("<i class='fa fa-gamepad' style='font-size:20px;'></i>");
+              }
+                //sendPush(appId,JSKey,m_id,messageNotification)
 				console.log(result);
           }
         });
     }
-	
+	/*
 	function sendPush(appKey,JSKey,member_id,message)
 	{
 		Parse.initialize(appKey,JSKey);
@@ -54,7 +67,7 @@ function AddNotifications() {
 				alert('error');
 		  }
 		});
-	}
+	}*/
 
 
 	

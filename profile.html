@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile Details</title>
+    <title key="Profile" class="TranslationDiv">Profile Details</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -28,15 +28,27 @@
         
         <div class="row affiche_profile_member" >
             <div class="col-xs-12" style="display:none;" id="affiche_error">
-                <div class="alert alert-danger text-center" style="border-radius:0px;">
+                <div class="alert alert-danger text-center" style="border-radius:0px;" key="AlreadyFriendMsg" class="TranslationDiv">
                     Vous êtes deja amis !
                 </div>
             </div>
             <div class="col-xs-12" style="display:none;" id="affiche_success">
-                <div class="alert alert-success text-center" style="border-radius:0px;">
+                <div class="alert alert-success text-center" style="border-radius:0px;" key="FriendAddedMsg" class="TranslationDiv">
                     Vous êtes maintenant amis !
                 </div>
             </div>
+            
+            <div class="col-xs-12" style="display:none;" id="affiche_error_notif">
+                <div class="alert alert-danger text-center" style="border-radius:0px;" key="ProblemNotificationMsg" class="TranslationDiv">
+                    Problem when submitting a notification!
+                </div>
+            </div>
+            <div class="col-xs-12" style="display:none;" id="affiche_success_notif">
+                <div class="alert alert-success text-center" style="border-radius:0px;" key="NotificationAddedMsg" class="TranslationDiv">
+                    Notification Sended Successfully !
+                </div>
+            </div>
+            
             <div class="col-md-12 bloc_profile">
                 <div class="logo text-center">
                   <div class="image_profil">
@@ -52,11 +64,12 @@
             
           <div class="col-xs-12">
             <div>
-              <ul class="nav nav-tabs menu-ho1" role="tablist" style="background:#955935;">
+              <ul class="nav nav-tabs menu-ho1" role="tablist" style="background:#955935;height:60px;">
                 <li role="presentation" class="text-center" style="width:20%">
                   <button class="btn text-uppercase" style="background:#955935;color:white;" id="profile_member">
                       <!--<div class="icones_ok_fav"></div>
                       <div class="icones_ko_fav"><i class='fa fa-user' style='font-size:20px;'></i></div>-->
+                      <div><i class='fa fa-user' style='font-size:20px;'></i></div>
                       <font class="text-uppercase"><b style="font-size:10px;" key="Profile" class="TranslationDiv">Profile</b></font>
                   </button>
                 </li>
@@ -212,13 +225,15 @@
     <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
    <script type="text/javascript" src="js/templateGenerator.js"></script>
+   <!--<script type="text/javascript" src="js/Languages.js"></script>-->
    
     <script src="scripts/MemberScript/MemberAddFriend.js"></script> 
     <script src="scripts/MemberScript/MemberGet.js"></script>
-    <!--<script src="scripts/MemberScript/MemberGetLanguage.js"></script>-->
+    
     <script type="text/javascript" src="scripts/PublicationScript/PublicationsGetAllByMember.js"></script>
     <script src="scripts/NotificationsScript/NotificationAdd.js"></script>
-    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+    <!--<script src="scripts/MemberScript/MemberGetLanguage.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>-->
     
     <script type="text/javascript">
     $(document).on('click','.message_item', function(){
