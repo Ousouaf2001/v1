@@ -11,6 +11,8 @@ function onSuccess(position) {
 			}else if(sessionStorage.getItem("identifiant")!= null){
 				var id_utilisateur = sessionStorage.getItem("identifiant");//4;
 			}	
+			var city_s = document.getElementById("search-box").value;
+    var country_s = document.getElementById("pays").value;
 		var urlWS = "http://api.chessfamily.net/api/query";
 		$.ajax({
 			type:"POST",
@@ -31,6 +33,11 @@ function onSuccess(position) {
 				  $('#messagemapsuccess').fadeIn(500).delay(700).fadeOut(500);
 				  $('#lat').html(latitude);
 				  $('#long').html(longitude);
+				  $('#latitude_meeting').val(latitude);
+				  $('#longitude_meeting').val(longitude);
+				  $('#country_meeting').val(country_s);
+                    $('#city_meeting').val(city_s);
+				  console.log(result);
 			},
 			error:function(e){
 				$('#messagemaperror').fadeIn(500).delay(700).fadeOut(500);

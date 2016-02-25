@@ -52,7 +52,15 @@
                             <input type="text" name="adress_meeting" id="adress_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse" style="width:100%;">
                           </div>
                           <div class="form-group">
-                              <button type="button" onClick="GeoAdresse()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Vérfication de l'adresse</button>
+                              <div class="row">
+                                  <div class="col-xs-6">
+                                      <button type="button" onClick="GeoAdresse()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Vérification de l'adresse</button>
+                                  </div>
+                                  <div class="col-xs-6">
+                                      <button type="button" onclick="memberSetLocation()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">J'y Suis</button>
+                                  </div>
+                              </div>
+                              
                           </div>
                           <div class="form-group">
                             <label>Latitude</label>
@@ -73,7 +81,7 @@
                             <input type="text" name="city_meeting" id="city_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="City" style="width:100%;" disabled="disabled">
                           </div>
                           <div class="form-group">
-                          <input type="text" id="champ_meeting">
+                          <input type="hidden" id="champ_meeting">
                             <label>Type du Meeting</label>
                             <select name="meetingType" id="meetingType" class="form-control select_bloc" style="width:100%;">
                              
@@ -136,15 +144,15 @@
                 <div class="form-group">
                     <label class="control-label">Pays</label>
                     
-                    <input type="text" id="lat">
+                    <input type="hidden" id="lat">
                     
-                    <input type="text" id="long">
+                    <input type="hidden" id="long">
                     <input  maxlength="100" id="pays" type="text" required class="form-control input-sm input_class" placeholder="Enter First Name"  style="width:100%;"/>
-                    <input type="text" id="id_country">
+                    <input type="hidden" id="id_country">
                 </div>
                 <div class="form-group">
                         <label class="control-label">City</label>
-                        <input type="text" id="id_city">
+                        <input type="hidden" id="id_city">
                         <input type="text" id="search-box" placeholder="Country Name" required class="form-control input-sm input_class" style="width:100%;"/>
                         <ul id="suggesstion-box">
                           
@@ -259,7 +267,7 @@
     <script type="text/javascript" src="js/templateGenerator.js"></script>
     
 
-  
+  <script type="text/javascript" src="scripts\MemberScript\jesuis.js"></script>
   <script type="text/javascript" src="scripts/CountryCityScript/CitySearch.js"></script>
   <script type="text/javascript" src="scripts/MeetingScript/meetingPlaceSearch.js"></script>
       <script type="text/javascript" src="scripts/EventScript/eventCreatedByMember.js"></script>
@@ -268,6 +276,7 @@
     <script type="text/javascript" src="scripts/EventScript/eventEdit.js"></script>
 <script type="text/javascript" src="scripts/MeetingScript/meetingAdd.js"></script>
     <script type="text/javascript" src="scripts/GeoScript/GeoAdresse.js"></script>
+    
     <script type="text/javascript" src="js/plugin.js"></script>
     
     
