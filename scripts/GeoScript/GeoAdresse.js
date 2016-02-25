@@ -22,6 +22,7 @@ function GeoAdresse(){
                     $('#longitude_meeting').val(result.longitude);
                     $('#country_meeting').val(country_s);
                     $('#city_meeting').val(city_s);
+                    $('#adress_meeting').prop("disabled", false);
                   }
             }
         );

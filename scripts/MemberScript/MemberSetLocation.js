@@ -37,6 +37,7 @@ function onSuccess(position) {
 				  $('#longitude_meeting').val(longitude);
 				  $('#country_meeting').val(country_s);
                     $('#city_meeting').val(city_s);
+                    $("#adress_meeting").attr('disabled','disabled');
 				  console.log(result);
 			},
 			error:function(e){
