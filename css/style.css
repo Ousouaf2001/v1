@@ -12,6 +12,16 @@ body{
 	padding-top: 55px;
 	padding-bottom: 70px;
 }
+#titlePage{
+	position: absolute;
+    left: 20px;
+    top: 5px;
+    height: 309px;
+    vertical-align: middle;
+    text-align: center;
+    padding-top:1em;
+    font-size: 13px;
+}
 a{
 	text-decoration: none;
 	
@@ -326,7 +336,9 @@ input:-moz-placeholder { font-size: 10pt; color: #555; }
 	padding-bottom: 12px;
 	padding-left: 5px;
 	padding-right: 5px;
-	margin-bottom:55px;
+	position: fixed;
+	width: 100%;
+	z-index: 99999;
 }
 .pub{
 	display: -webkit-box;

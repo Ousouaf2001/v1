@@ -20,7 +20,7 @@ $(document).ready(function(){
 			},
             dataType:"json",
           success:function(result){
-                if(result.nb_notifications!=0){
+                if(result.nb_notifications != 0){
 					$('.nbNewNotification').css("display","block");
 					$('.nbNewNotification').html(result.nb_notifications);
 				}else{
