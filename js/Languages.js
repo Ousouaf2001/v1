@@ -29,6 +29,7 @@ aLangKeys['en']['Male']='Male';
 aLangKeys['en']['Female']='Female';
 
 // Page Menu
+aLangKeys['en']['TitleMenu']='My Profile - Menu';
 aLangKeys['en']['MyNotifications']='My Notifications';
 aLangKeys['en']['MyPublications']='My Publications';
 aLangKeys['en']['MyMeetingPlaces']='My Meeting Places';
@@ -114,6 +115,7 @@ aLangKeys['en']['Ajout_OK_msg']='Item Added Successfully!';
 aLangKeys['en']['Ajout_KO_msg']='Please Check the Form Data';
 aLangKeys['en']['Update_OK_msg']='Item Updated Successfully!';
 aLangKeys['en']['Update_KO_msg']='Please Check the Form Data';
+aLangKeys['fr']['Delete_OK_msg']='Item Deleted Successfully!';
 
 aLangKeys['en']['START']='START';
 aLangKeys['en']['END']='END';
@@ -134,6 +136,8 @@ aLangKeys['en']['AlreadyFriendMsg']='You are already Friends !';
 aLangKeys['en']['FriendAddedMsg']='You are now friends!';
 aLangKeys['en']['ProblemNotificationMsg']='Problem when submitting a notification!';
 aLangKeys['en']['NotificationAddedMsg']='Notification Sended Successfully !';
+
+aLangKeys['en']['Messages']='Messages';
 //page details Events
 
 
@@ -161,6 +165,7 @@ aLangKeys['fr']['Male']='Homme';
 aLangKeys['fr']['Female']='Femme';
 
 // Page Menu
+aLangKeys['fr']['TitleMenu']='Mon Profil - Menu';
 aLangKeys['fr']['MyNotifications']='Mes Notifications';
 aLangKeys['fr']['MyPublications']='Mes Publications';
 aLangKeys['fr']['MyMeetingPlaces']='Mes Lieux de Rencontre';
@@ -246,6 +251,7 @@ aLangKeys['fr']['Ajout_OK_msg']='Ajout effectué avec succes!';
 aLangKeys['fr']['Ajout_KO_msg']='Veuillez vérifier les informations du formulaire';
 aLangKeys['fr']['Update_OK_msg']='Mis-à-jour effectuée avec succes!';
 aLangKeys['fr']['Update_KO_msg']='Veuillez vérifier les informations du formulaire';
+aLangKeys['fr']['Delete_OK_msg']='Elément Supprimé avec succes!';
 aLangKeys['fr']['START']='Commence';
 aLangKeys['fr']['END']='FIN';
 aLangKeys['fr']['Contact']='Contact';
@@ -265,6 +271,10 @@ aLangKeys['fr']['AlreadyFriendMsg']='Vous êtes deja amis !';
 aLangKeys['fr']['FriendAddedMsg']='Vous êtes maintenant amis !';
 aLangKeys['fr']['ProblemNotificationMsg']='Un Problème est survenu !';
 aLangKeys['fr']['NotificationAddedMsg']='Notification envoyée avec Succès !';
+
+
+aLangKeys['fr']['Messages']='Messages';
+
 
 //$(document).ready(function() {});
 	/*navigator.globalization.getPreferredLanguage(function (language) {

@@ -125,7 +125,7 @@
 
     
     
-    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+    <!--<script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>-->
     
     <script src="scripts/MemberScript/MemberAdd.js"></script>
      <script src="scripts/MemberScript/MemberConnect.js"></script>
@@ -153,10 +153,26 @@ function SplashScreen() {
 	}
 
 
+document.addEventListener('deviceready', function () {
+  // Enable to debug issues.
+  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+  var notificationOpenedCallback = function(jsonData) {
+	  //alert("success");
+    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+  };
 
-</script>
+  window.plugins.OneSignal.init("2a80da6b-5bfa-4426-a57e-121ccbc8ee94",
+                                 {googleProjectNumber: "171205579455"},
+                                 notificationOpenedCallback);
+  
+  // Show an alert box if a notification comes in when the user is in your app.
+  window.plugins.OneSignal.enableInAppAlertNotification(true);
+}, false);
 
-<script type="text/javascript">
+
+
+
   if(sessionStorage.getItem("identifiant")!=null){
 	  //alert("sessionStorage : "+sessionStorage.getItem("identifiant"));
 	  window.location.href = 'home.html';

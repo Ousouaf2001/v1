@@ -14,7 +14,7 @@ $(document).ready(function(){
 				authentication:"chessfemily",
 				action:"meeting_place_favorite",
 				member_id:id_utilisateur,
-				perpage:10,
+				perpage:30,
 				page:1
 				},
             dataType:"json",
@@ -26,13 +26,14 @@ $(document).ready(function(){
             $.each(result.favorite_meeting_places, function (index, item) {
 				console.log(item);
 				if(item.adress!=null){adresse = item.adress;}else{adresse = "&nbsp;";}
-				if(item.type!=null){typeMeetingPlace = item.type;}else{typeMeetingPlace = "&nbsp;";}
+				if(item.type!=null){typeMeetingPlaceDisplay = "";}else{typeMeetingPlaceDisplay = "display:none;";}
 				if(item.status==1){colorStatus = "#98BF0A"; }else{colorStatus = "#f24e4e";}
                 var li = ""+
 				"<li class='list-group-item'>" +
-                	"<span class='badge' style='background:white;color:grey;margin-top:5px;'>"+
-                		"<font style='font-size:20px;'>" + typeMeetingPlace+ "</font>&nbsp;&nbsp;"+
-						"<i class='fa fa-trash delete' id='" + item.meeting_place_id +"' style='font-size:25px;color:#4B2618;'></i>"+
+                	"<span class='badge' style='background:white;color:grey;margin-top:0px;'>"+
+                		//"<font style='font-size:20px;'>" + typeMeetingPlace+ "</font>&nbsp;&nbsp;"+
+						"<img src='"+ item.image + "' width='30px' style='"+typeMeetingPlaceDisplay+"' />"+
+						"<i class='fa fa-trash delete' id='" + item.meeting_place_id +"' style='font-size:25px;color:#4B2618; margin-left:15px;'></i>"+
 					"</span>"+
 					"<b class='location' id='" + item.meeting_place_id +"'> " + item.name + "&nbsp;&nbsp;<i class='fa fa-circle' style='font-size:15px;color:"+colorStatus+"'></i></b><br>"+
 					"<font style='font-size:12px;color:grey;'>" + adresse +"</font>"+ // 

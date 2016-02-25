@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Favorite - Meeting Places - Events</title>
+    <title key="MyFavorites" class="TranslationDiv">My Favorite</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -17,7 +17,7 @@
   </head>
   <body style="background:#E9E9E9">
   <!-- Modal edit -->
-<div class="modal fade" id="myModalModif" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!--<div class="modal fade" id="myModalModif" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -102,9 +102,9 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -189,15 +189,15 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
   <div id="header"></div>
   <div class="container-full">
       <div class="row">
           <div class="col-xs-12">
             <div>
               <ul class="nav nav-tabs menu-ho" role="tablist" style="background:#F1D6A1;padding-top:15px;">
-                <li role="presentation" class="active text-center" style="width:50%"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-user" style="font-size:20px;"></i>&nbsp;&nbsp;event</a></li>
-                <li role="presentation" style="width:50%" class="text-center"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-trophy" style="font-size:20px;"></i>&nbsp;&nbsp;meeting place</a></li>
+                <li role="presentation" class="active text-center" style="width:50%"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-user" style="font-size:20px;"></i><span key="EVENTS" class="TranslationDiv">event</span></a></li>
+                <li role="presentation" style="width:50%" class="text-center"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="text-uppercase"><i class="fa fa-trophy" style="font-size:20px;"></i><span key="LOCATIONS" class="TranslationDiv">meeting place</span></a></li>
               </ul>
               <div class="tab-content" style="padding-left:5px;padding-right:5px;">
                 <div role="tabpanel" class="tab-pane active" id="home">
@@ -217,8 +217,8 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" id="profile">
                   <div class="row">
-                        <div class="col-xs-12" style="padding-top:15px;padding-bottom:15px;padding-left:30px;">
-                        <b class="msg_delete" style="display:none;">Favorite event deleted</b>
+                     <div class="col-xs-12" style="padding-top:15px;padding-bottom:15px;padding-left:30px;">
+                        <b class="msg_delete" style="display:none;" key="Delete_OK_msg" class="TranslationDiv">Item Deleted Successfully!</b>
                     </div>
                     <div class="col-xs-12">
                         <img src="image/load.gif" style="display:none;margin-top:30%;" class="load_events center-block">
