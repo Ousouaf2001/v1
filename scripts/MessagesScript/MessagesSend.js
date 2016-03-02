@@ -16,7 +16,7 @@ function MessagesSend() {
 			action:"send_message",
 			member_id:id_utilisateur,
 			receiver_id:id_friend,
-			object:'objet',
+			object:'--',
 			message:message
 			},
 		dataType:"json",

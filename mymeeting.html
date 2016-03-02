@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Meeting Places</title>
+    <title key="PLAYERS" class="TranslationDiv">My Meeting Places</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -22,12 +22,12 @@
     <div class="modal-content">
       <div class="modal-header" style="background:#582D1C;color:white;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Edit Meeting place</h4>
+        <h4 class="modal-title" id="myModalLabel" key="PLAYERS" class="TranslationDiv">Edit Meeting place</h4>
       </div>
       <div class="modal-body">
         <div class="row">
          <div class="col-xs-12" style="display:none;" id="affiche_successedit">
-                <div class="alert alert-success text-center" style="border-radius:0px;">
+                <div class="alert alert-success text-center" style="border-radius:0px;" key="PLAYERS" class="TranslationDiv">
                    Meeting edit
                 </div>
             </div>
@@ -92,12 +92,12 @@
     <div class="modal-content">
       <div class="modal-header" style="background:#582D1C;color:white;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Add meeting place</h4>
+        <h4 class="modal-title" id="myModalLabel" key="PLAYERS" class="TranslationDiv">Add meeting place</h4>
       </div>
       <div class="modal-body">
         <div class="row">
             <div class="col-xs-12" style="display:none;" id="affiche_success">
-                <div class="alert alert-success text-center" style="border-radius:0px;">
+                <div class="alert alert-success text-center" style="border-radius:0px;" key="PLAYERS" class="TranslationDiv">
                    Meeting added !
                 </div>
             </div>
@@ -111,13 +111,37 @@
                             <input type="text" name="name_meeting" id="name_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name" style="width:100%;">
                           </div>
                           <div class="form-group">
+                          	<label>Vous êtes dans la meeting place?</label>
+                          	<div class="col-xs-12">
+                                 <button type="button" onClick="memberSetLocation(1)" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1; margin-bottom:10px;">Oui, J'y Suis</button>
+                                 <img src="image/load.gif" style="margin-top:5%;display:none;" class="load_jySuis center-block">
+                            </div>
+                            <div class="col-xs-12">
+                                 <button type="button" onClick="showHideAddressBlock(1)" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Non, Je veux entrer une adresse</button>
+                            </div>
+                          </div>
+                          <div class="AddressBlock" style="display:none;">
+                              <div class="form-group">
+                                <label>Adresse</label>
+                                <input type="hidden" id="champ_adress">
+                                <input type="text" name="adress_meeting" id="adress_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse" style="width:100%;">
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-xs-12">
+                                      <button type="button" onClick="GeoAdresse()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Vérification de l'adresse</button>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                          
+                          <!--<div class="form-group">
                             <label>Adresse</label>
                             <input type="hidden" id="champ_adress">
                             <input type="text" name="adress_meeting" id="adress_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse" style="width:100%;">
                           </div>
                           <div class="form-group">
                               <button type="button" onClick="GeoAdresse()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Vérfication de l'adresse</button>
-                          </div>
+                          </div>-->
                           <div class="form-group">
                             <label>Latitude</label>
                             <input type="text" name="latitude_meeting" id="latitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Latitude" style="width:100%;" disabled="disabled">
@@ -129,7 +153,7 @@
                           <div class="form-group">
                             <label>Country</label>
                             <input type="hidden" id="id_country">
-                            <input type="text" name="country_meeting" id="country_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Contry" style="width:100%;" disabled="disabled">
+                            <input type="text" name="country_meeting" id="country_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Country" style="width:100%;" disabled="disabled">
                           </div>
                           <!--<div class="form-group">
                             <label>City</label>
@@ -205,7 +229,7 @@
 
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="cordova.js" charset="utf-8"></script>
-    <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
+    <!--<script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>-->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/templateGenerator.js"></script>
     
@@ -213,5 +237,14 @@
     <script type="text/javascript" src="scripts/MeetingScript/meetingPlaceCreatedByMember.js"></script>
     <script type="text/javascript" src="scripts/MeetingScript/meetingEdit.js"></script>
     <script type="text/javascript" src="scripts/GeoScript/GeoAdresse1.js"></script>
+    <script type="text/javascript">
+    	function showHideAddressBlock(status){
+			if(status==1){
+				$('.AddressBlock').show();
+			}else{
+				$('.AddressBlock').hide();
+			}
+		}
+    </script>
   </body>
 </html>

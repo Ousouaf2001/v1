@@ -57,7 +57,7 @@ $(document).ready(function(){
 				              "<div class='col-xs-3'>"+
 				                  "<img src='"+item.member_photo+" 'class='img-responsive img-circle center-block' width= '50' height='50'>"+
 				              "</div>"+
-				              "<div class='col-xs-9'>"+
+				              "<div class='col-xs-7'>"+
 				                  "<div class='row'>"+
 				                      "<div class='col-xs-12'>"+
 									  	  "<h5><b>"+item.member+"</b></h5>"+
@@ -72,6 +72,9 @@ $(document).ready(function(){
 				                      
 				                      "</div>"+
 				                  "</div>"+
+				              "</div>"+
+							  "<div class='col-xs-1'>"+
+				              	"<i  class='fa fa-trash delete_pub' id='" + item.id + "' style='font-size:25px;color:#4B2618;'></i>" +
 				              "</div>"+
 				          "</div>"+
 				          "</div>";
@@ -95,3 +98,28 @@ $(document).ready(function(){
     PublicationsGetAllById();
 
 });
+
+
+$(document).on('click','.delete_pub', function(){
+        var pubId = $(this).attr('id');
+        if(localStorage.getItem("identifiantLocal")!= null){
+			var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+		}else if(sessionStorage.getItem("identifiant")!= null){
+			var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+		}	
+       
+        $.ajax({
+            type:"POST",
+            url:urlWS,
+            data:{
+	        authentication:"chessfemily",
+	        action:"member_publication_delete",
+	        member_id:id_utilisateur,
+	        publication_id:pubId
+	        },		
+            dataType:"json",
+          	success:function(result){
+            location.reload();
+          }
+        });
+    });

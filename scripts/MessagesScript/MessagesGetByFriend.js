@@ -105,8 +105,12 @@ $(document).ready(function(){
 	
 	var url = window.location.search;
 	var id_friend = url.substring(url.lastIndexOf("=")+1);//1;
-	var id_utilisateur = sessionStorage.getItem("identifiant");//4;
 	
+	if(localStorage.getItem("identifiantLocal")!= null){
+		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
+	}else if(sessionStorage.getItem("identifiant")!= null){
+		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
+	}
 	
 	var urlWS = "http://api.chessfamily.net/api/query";
     function MessagesGetAll() {

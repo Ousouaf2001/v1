@@ -1,8 +1,4 @@
 function AddMeetingPlace() {
-    
-  navigator.geolocation.getCurrentPosition(onSuccess);
-  function onSuccess(position) {
-
     if(localStorage.getItem("identifiantLocal")!= null){
 		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
   	}else if(sessionStorage.getItem("identifiant")!= null){
@@ -18,7 +14,9 @@ function AddMeetingPlace() {
 
 
 
-    
+   if((name_meeting=="")||(meetingType=="")){
+		$('.MeetingPlace_info_requis').fadeIn(500).delay(2000).fadeOut(500);
+	}else{ 
         var urlWS = "http://api.chessfamily.net/api/query";
 		
         $.ajax({
@@ -41,7 +39,7 @@ function AddMeetingPlace() {
             success:function(result){
                   if(result.success == 1){
                       console.log(result);
-                      $('#champ_meeting').val(result.id);
+                      //$('#champ_meeting').val(result.id);
 					            $('#affiche_success').fadeIn(500).delay(2000).fadeOut(500);
                       setTimeout(function() {$('#myModal').modal('hide');}, 1000);
                   }else{
@@ -49,8 +47,7 @@ function AddMeetingPlace() {
                   }
             }
         });
-        
+	}
     
     return false;
-}
 }

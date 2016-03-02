@@ -41,7 +41,7 @@ $(document).ready(function(){
               $('.load_detail_Notification').show();
           },
           success:function(result){
-			  
+			  console.log(result);
 			  if(result.success==1){
 				  $.each(result.notifications, function (index, item) {
 					var notif = "<div class='notification notif_lu' id='" + item.id +"'>"+
@@ -51,10 +51,12 @@ $(document).ready(function(){
 						                  "</div>"+
 						                  "<div class='notif_sender col-xs-9' >"+
 						                      "<p>"+
-						                          "<b>"+ 
+											  	   this.date+
+						                          "<br/><b>"+ 
 						                          	this.sender_name+" "+this.sender_last_name +
 						                          "</b>&nbsp;"+
-						                          "<i>"+NotificationSended+"</i><br/>"+
+						                          "<i>"+NotificationSended+"</i>"+
+												  
 						                          //this.message+
 											   "</p>"+
 						                  "</div>"+

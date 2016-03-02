@@ -31,7 +31,7 @@ $(document).ready(function(){
                				var color = "#efeded";
                			}
 
-               		if(item.receiver_id == id_utilisateur ){
+               		//if(item.receiver_id == id_utilisateur ){
 
                			
 
@@ -55,7 +55,7 @@ $(document).ready(function(){
 						      "</div>";
 
 					$('.listmessage').append(recu);
-				}
+				//}
                });	
           },
         });

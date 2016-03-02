@@ -74,7 +74,7 @@ $(document).ready(function(){
 				                  "</div>"+
 				              "</div>"+
 				              "<div class='col-xs-1'>"+
-				              	"<i  class='fa fa-trash delete_pub' id='" + item.id + "' style='font-size:25px;color:#4B2618;'></i>" +
+				              	"<i class='fa fa-trash delete_pub' id='" + item.id + "' style='font-size:20px;color:#4B2618;'></i>" +
 				              "</div>"+
 				          "</div>"+
 				          "</div>";

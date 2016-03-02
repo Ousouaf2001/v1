@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Events</title>
+    <title>Add Events</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style_wizard.css">
 
@@ -43,24 +43,30 @@
                       
                       <form  id="member_add" action="#">
                           <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" name="name_meeting" id="name_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name" style="width:100%;">
+                            <label>Name</label><span style="color:red;">*</span>
+                            <input type="text" name="name_meeting" id="name_meeting" required class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name" style="width:100%;">
                           </div>
                           <div class="form-group">
-                            <label>Adresse</label>
-                            <input type="hidden" id="champ_adress">
-                            <input type="text" name="adress_meeting" id="adress_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse" style="width:100%;">
+                          	<label>Vous êtes dans la meeting place?</label>
+                          	<div class="col-xs-12">
+                                 <button type="button" onClick="memberSetLocation(1)" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1; margin-bottom:10px;">Oui, J'y Suis</button>
+                                 <img src="image/load.gif" style="margin-top:5%;display:none;" class="load_jySuis center-block">
+                            </div>
+                            <div class="col-xs-12">
+                                 <button type="button" onClick="showHideAddressBlock(1)" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Non, Je veux entrer une adresse</button>
+                            </div>
                           </div>
-                          <div class="form-group">
-                              <div class="row">
-                                  <div class="col-xs-6">
+                          <div class="AddressBlock" style="display:none;">
+                              <div class="form-group">
+                                <label>Adresse</label>
+                                <input type="hidden" id="champ_adress">
+                                <input type="text" name="adress_meeting" id="adress_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse" style="width:100%;">
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-xs-12">
                                       <button type="button" onClick="GeoAdresse()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Vérification de l'adresse</button>
                                   </div>
-                                  <div class="col-xs-6">
-                                      <button type="button" onclick="memberSetLocation()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">J'y Suis</button>
-                                  </div>
                               </div>
-                              
                           </div>
                           <div class="form-group">
                             <label>Latitude</label>
@@ -73,7 +79,7 @@
                           <div class="form-group">
                             <label>Country</label>
                             <input type="hidden" id="id_country_meeting">
-                            <input type="text" name="country_meeting" id="country_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Contry" style="width:100%;" disabled="disabled">
+                            <input type="text" name="country_meeting" id="country_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Country" style="width:100%;" disabled="disabled">
                           </div>
                           <div class="form-group">
                             <label>City</label>
@@ -82,11 +88,24 @@
                           </div>
                           <div class="form-group">
                           <input type="hidden" id="champ_meeting">
-                            <label>Type du Meeting</label>
+                            <label>Type du Meeting</label><span style="color:red;">*</span>
                             <select name="meetingType" id="meetingType" class="form-control select_bloc" style="width:100%;">
+                            	<option value=''>--</option>
                              
                             </select>
                           </div>
+                          <div class="form-group">
+                              <label>Phone</label>
+                              <input type="tel" name="phone_number_meeting" id="phone_number_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Phone" style="width:100%;">
+                            </div>
+                            <div class="form-group">
+                              <label>Email</label>
+                              <input type="email" name="email_meeting" id="email_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Email" style="width:100%;">
+                            </div>
+                            <div class="form-group">
+                              <label>Web Site</label>
+                              <input type="url" name="website_meeting" id="website_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Web Site" style="width:100%;">
+                            </div>
                           <!--<div class="form-group">
                             <label>Statuts</label>
                             <select name="status_meeting" id="status_meeting" class="form-control select_bloc">
@@ -97,7 +116,7 @@
                           </div>
                           
                           <div class="MeetingPlaceAdded TranslationDiv" key="Ajout_OK_msg" style="display:none;text-align:center;font-weight:bold;color:red;">Ajout effectué avec succes!</div>
-                      <div class="MeetingPlace_info_requis TranslationDiv" key="Ajout_KO_msg" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessous</div>
+                      <div class="MeetingPlace_info_requis TranslationDiv" key="Ajout_KO_msg" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessus</div>
                           
                          
                           <div class="form-group">
@@ -267,18 +286,27 @@
     <script type="text/javascript" src="js/templateGenerator.js"></script>
     
 
-  <script type="text/javascript" src="scripts\MemberScript\jesuis.js"></script>
+  <!--<script type="text/javascript" src="scripts/MemberScript/jesuis.js"></script>-->
   <script type="text/javascript" src="scripts/CountryCityScript/CitySearch.js"></script>
   <script type="text/javascript" src="scripts/MeetingScript/meetingPlaceSearch.js"></script>
-      <script type="text/javascript" src="scripts/EventScript/eventCreatedByMember.js"></script>
-      <script type="text/javascript" src="scripts/EventScript/eventType.js"></script>
-    <script type="text/javascript" src="scripts/EventScript/eventAdd.js"></script>
-    <script type="text/javascript" src="scripts/EventScript/eventEdit.js"></script>
-<script type="text/javascript" src="scripts/MeetingScript/meetingAdd.js"></script>
-    <script type="text/javascript" src="scripts/GeoScript/GeoAdresse.js"></script>
+  <script type="text/javascript" src="scripts/EventScript/eventCreatedByMember.js"></script>
+  <script type="text/javascript" src="scripts/EventScript/eventType.js"></script>
+  <script type="text/javascript" src="scripts/EventScript/eventAdd.js"></script>
+  <script type="text/javascript" src="scripts/EventScript/eventEdit.js"></script>
+  <script type="text/javascript" src="scripts/MeetingScript/meetingAdd.js"></script>
+  <script type="text/javascript" src="scripts/GeoScript/GeoAdresse.js"></script>
     
     <script type="text/javascript" src="js/plugin.js"></script>
     
+    <script type="text/javascript">
+    	function showHideAddressBlock(status){
+			if(status==1){
+				$('.AddressBlock').show();
+			}else{
+				$('.AddressBlock').hide();
+			}
+		}
+    </script>
     
   </body>
 

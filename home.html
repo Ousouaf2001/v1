@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title key="HOME" class="TranslationDiv">Home</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -49,22 +49,22 @@
                               <button class="btn btn-xs btn_index" id="photo"><i class='glyphicon glyphicon-camera'></i>&nbsp;&nbsp;Photo</button>-->
                               
       <button onclick="capturePhoto();" class="btn_index input_class input-md">
-            <i class='glyphicon glyphicon-camera'></i>&nbsp;Camera
+            <i class='glyphicon glyphicon-camera'></i>&nbsp;<span key="CAMERA" class="TranslationDiv">Camera</span>
         </button>
         <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="btn_index input_class input-md">
-            <i class='glyphicon glyphicon-picture'></i>&nbsp;Gallery
+            <i class='glyphicon glyphicon-picture'></i>&nbsp;<span key="GALLERY" class="TranslationDiv">Gallery</span>
         </button>
         	 
         <img id="image" src="" style="display:none;width:50%;">
                               <img src="image/load.gif" style="margin-top:30%; display:none;" class="load_upload_photo_publication center-block">
                               
-                              <div class="alert alert-success" style="display:none;" id="message">
-                                  Statut Ajouté avec succes !
-                              </div>
-                              <div class="alert alert-danger" style="display:none;" id="messagee">
-                                  Ajouter un status
-                              </div>
-                              <button class="btn btn-xs btn_index pull-right" onclick="AddPublication()"><i class='glyphicon glyphicon-send'></i>&nbsp;&nbsp;Submit</button>
+                              <div class="alert alert-success" style="display:none;" id="message" key="Ajout_OK_msg" class="TranslationDiv">
+          Status Ajouté !
+      </div>
+      <div class="alert alert-danger" style="display:none;" id="messagee" key="Ajout_KO_msg" class="TranslationDiv">
+          Ajouter un status
+      </div>
+                              <button class="btn btn-xs btn_index pull-right" onclick="AddPublication()"><i class='glyphicon glyphicon-send'></i>&nbsp;&nbsp;<span key="SUBMIT" class="TranslationDiv">Submit</span></button>
                           </div>
                       </div>
                   </div>
@@ -120,11 +120,12 @@
     <!--<script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>-->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/templateGenerator.js"></script>
-    <script type="text/javascript" src="js/Languages.js"></script>
+    
     <script type="text/javascript" src="js/camera.js"></script>
     
     <script type="text/javascript" src="scripts/PublicationScript/Publications.js"></script>
     <script type="text/javascript" src="scripts/PublicationScript/PublicationAdd.js"></script>
+    <script type="text/javascript" src="scripts/MeetingScript/meetingTypeList.js"></script>
     <script type="text/javascript">
         $(function(){
             $('#video').click(function(){

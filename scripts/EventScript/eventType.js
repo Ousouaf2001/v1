@@ -15,11 +15,19 @@ $(document).ready(function(){
           success:function(result){
 			  //$('#type_event').html("<option value=''>All</option>");
 			  //$('#type_event_modif').html("<option value=''>All</option>");
-			  $('#event_type_recheche').html("<option value='0'>All</option>");
+			  if($('#event_type_recheche').length){
+				  $('#event_type_recheche').html("<option value='0'>All</option>");
+			  }
             $.each(result.event_type, function (index, item) { 
-                $('#type_event').append("<option value='" + item.id + "'>" + item.label +"</option>");
-                $('#type_event_modif').append("<option value='" + item.id + "'>" + item.label +"</option>");
-                $('#event_type_recheche').append("<option value='" + item.id + "'>" + item.label +"</option>");
+                if($('#type_event').length){
+					$('#type_event').append("<option value='" + item.id + "'>" + item.label +"</option>");
+				}
+				if($('#type_event_modif').length){
+                	$('#type_event_modif').append("<option value='" + item.id + "'>" + item.label +"</option>");
+				}
+				if($('#event_type_recheche').length){
+                	$('#event_type_recheche').append("<option value='" + item.id + "'>" + item.label +"</option>");
+				}
 
 
             });

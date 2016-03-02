@@ -17,7 +17,7 @@
     var distance = $_GET('distance1');
     var event_type = $_GET('event_type');
     var activity = $_GET('activity');
-      
+      console.log(event_type);
         
 		    var urlWS="http://api.chessfamily.net/api/query";
         $.ajax(
@@ -40,7 +40,7 @@
               $('.load_events').show();
           },
           success:function(result){
-           
+           console.log();
             /**/
           if(result.success == 1){
             $.each(result.favorite_events, function (index, item) { 
@@ -55,7 +55,7 @@
                             //" <i class='fa fa-circle' style='font-size:15px;color:"+colorStatus+"'></i>" +
                         "</b>" +
                         "<br>" +
-                        "<font style='font-size:12px;color:grey;'>Start Date : " + item.start_date + " - End Date : " + item.end_date + "</font>" +
+                        "<font style='font-size:12px;color:grey;'>From : " + item.start_date + " - To : " + item.end_date + "</font>" +
                     "</li>";  
 
                 $('.list-menu-events').append(li);

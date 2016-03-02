@@ -1,6 +1,7 @@
 $(document).ready(function(){
   country_id = $('#id_country').val();
   city_id = $('#id_city').val();
+  
   $("#search-box_meeting").keyup(function(){
     if($("#search-box_meeting").val().length >= 4){
 
@@ -14,12 +15,12 @@ $(document).ready(function(){
       $("#search-box_meeting").css("background","#FFF url(LoaderIcon.gif) no-repeat 150px");
     },
     success: function(result){
+		
       $("#suggesstion-box_meeting").show();
+	  $('#suggesstion-box_meeting').html("");
       $.each(result.meeting_places, function (index, item) {
           if(item.name.length > 0){
-
-          console.log(item.name);
-          $('#suggesstion-box_meeting').html("<li class='meeting' id='"+item.id+"'>"+item.name+"</li>");
+          $('#suggesstion-box_meeting').append("<li class='meeting' id='"+item.id+"'>"+item.name+"</li>");
         }
       });
       $("#search-box_meeting").css("background","#FFF");

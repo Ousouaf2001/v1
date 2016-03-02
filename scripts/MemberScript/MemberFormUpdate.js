@@ -35,9 +35,9 @@ $(document).ready(function(){
               
               $('#birthday').val(result.member.birthday);
               $('#gender').val(result.member.gender);
-              $('#country').val(result.member.residence_countryid);
+              //$('#country').val(result.member.residence_countryid);
 			  //alert(result.member.residence_countryid);
-			  
+			  CountryGetAll(result.member.residence_countryid);
 			  if(result.member.is_player==1){$('#player').attr("checked",true);}else{$('#player').attr("checked",false);}
 			  if(result.member.is_arbiter==1){$('#arbiter').attr("checked",true);}else{$('#arbiter').attr("checked",false);}
 			  if(result.member.is_titled_player==1){$('#titled').attr("checked",true);}else{$('#titled').attr("checked",false);}
@@ -45,7 +45,7 @@ $(document).ready(function(){
 			  
 			  
 			  $('#image').attr("src",result.member.image);
-			  console.log($('#image').attr("src")+"test");
+			  
 			  $('#titleProfile').val(result.member.title);
 			  $('#TrainerLevelProfile').val(result.member.lesson_level);
 			  
@@ -53,7 +53,25 @@ $(document).ready(function(){
           }
         });
     }
-
+	function CountryGetAll(SelectedCountry) {
+        
+        $.ajax({
+			type:"POST",
+            url:urlWS,
+            data:{authentication:"chessfemily",action:"country_get_all"},
+            dataType:"json",
+			  success:function(result){
+				$.each(result.country, function (index, item) { 
+					if(SelectedCountry==item.id){
+						$('#country').append("<option value='" + item.id + "' selected>" + item.name +"</option>");
+					}else{
+						$('#country').append("<option value='" + item.id + "'>" + item.name +"</option>");
+					}
+					
+				});
+			  }
+        });
+    }
 
 
     memberFind();

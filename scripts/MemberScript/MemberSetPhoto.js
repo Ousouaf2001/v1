@@ -1,5 +1,6 @@
 
 function MemberSetPhoto() {
+	$('.load_upload_photo_member').show();
     var urlWS = "http://api.chessfamily.net/api/query";
 	var imgSrc = document.getElementById('image').src;
 	
@@ -26,6 +27,7 @@ function MemberSetPhoto() {
     return false;
 }
 function win(r) {
+	$('.load_upload_photo_member').hide();
 	$('#updatePhotoOK').fadeIn(500).delay(2000).fadeOut(500);
 	/*alert("Code = " + r.responseCode);
 	alert("Response = " + r.response);
@@ -33,6 +35,7 @@ function win(r) {
 }
 
 function fail(error) {
+	$('.load_upload_photo_member').hide();
 	alert("upload error source " + error.source);
 	alert("upload error target " + error.target);
 }

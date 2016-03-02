@@ -6,7 +6,7 @@ function AddEvent() {
 		var id_utilisateur = sessionStorage.getItem("identifiant");//4;
 	}	
     var type_event = document.getElementById("type_event").value;
-    var type_meeting = document.getElementById("champ_meeting").value;
+    //var type_meeting = document.getElementById("champ_meeting").value;
 
 
     var name = document.getElementById("name").value;
@@ -19,6 +19,9 @@ function AddEvent() {
     var phone_number = document.getElementById("phone_number").value;
     var email = document.getElementById("email").value;
     var website = document.getElementById("website").value;
+
+var meetingPlaceID = sessionStorage.getItem('id_saved_meetingPlace');
+//var meetingPlaceName = sessionStorage.getItem('name_saved_meetingPlace');
 
 
 
@@ -33,7 +36,7 @@ function AddEvent() {
 			    action:"event_add",
 			    announcer_id:id_utilisateur,
                 type_id:type_event,
-                meeting_placeid:1,
+                meeting_placeid:meetingPlaceID,
                 name:name,
                 organizer:organizer,
                 start_date:start_date,
@@ -48,9 +51,9 @@ function AddEvent() {
             dataType:"json",
           success:function(result){
                   if(result.success == 1){
-					  $('#affiche_success').fadeIn(500).delay(2000).fadeOut(500);
-
-                      setTimeout("window.location='myevent.html'",1000);
+					  $('#affiche_success').fadeIn(100).delay(800).fadeOut(100);
+                      //$('#myModal').modal('hide');
+					  setTimeout(function() {window.location='myevent.html';}, 1000);
                     //$('#myModal').modal('hide');
                   }else{
                     $('.Event_info_requis').fadeIn(500).delay(2000).fadeOut(500);;

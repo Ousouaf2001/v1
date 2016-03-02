@@ -16,11 +16,13 @@ body{
 	position: absolute;
     left: 20px;
     top: 5px;
-    height: 309px;
+    height: 30px;
     vertical-align: middle;
     text-align: center;
-    padding-top:1em;
-    font-size: 13px;
+    padding-top:0.8em;
+    font-size: 15px;
+	font-weight:bold;
+	text-shadow:1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 a{
 	text-decoration: none;
@@ -242,7 +244,7 @@ input:-moz-placeholder { font-size: 10pt; color: #555; }
     
 }
 .select_event{
-    background-color: #592e1d;
+    background-color: #965a36;
     color: #fff;
 }
 .x{
@@ -270,8 +272,8 @@ input:-moz-placeholder { font-size: 10pt; color: #555; }
 }
 .button_event{
     margin-top: 10px;
-    width: 150px;
-    height: 25px;
+    
+    
     background-color: #965a36;
     color: #fff;
     border: 0px
@@ -338,7 +340,7 @@ input:-moz-placeholder { font-size: 10pt; color: #555; }
 	padding-right: 5px;
 	position: fixed;
 	width: 100%;
-	z-index: 99999;
+	z-index: 1000;
 }
 .pub{
 	display: -webkit-box;
@@ -528,74 +530,6 @@ footer{
 	width:auto;
 	}
 
-
-
-/*
-
-
-.listmsg{
-	height: 100px;
-	margin-bottom: 10px;
-	margin-left: 2em;
-	margin-right: 2em;
-	background-color: #fff;
-	list-style: none;
+.modal-body{
+	height:200vh;
 }
-
-.imgmsg{
-	width: 60px;
-	margin-top: 9px;
-	margin-left: 24px;
-}
-.textlistmsg{
-	font-size: 20px;
-	margin-top: 20px;
-	color: #5a2b21;
-}
-.datemsg{
-	font-size: 15px;
-	margin-top: 25px;
-	color: #5a2b21;
-}
-
-.detailmsg{
-	height: 100px;
-	width: 75%;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 5px;
-	margin-right: 5px;
-	background-color: #fff;
-	list-style: none;
-    border-radius: 20px;
-}
-.textleftmsg{
-	margin-top: 11px;
-
-	font-size: 14px;
-}
-.textrightmsg{
-	margin-top: 11px;
-    margin-left: -91px;
-	font-size: 14px;
-
-}
-.imgleftmsg{
-	width: 50px;
-	margin-top: 50px;
-	margin-left: -125px;
-}
-.imgrightmsg{
-	width: 50px;
-	margin-top: 50px;
-	margin-left: 57px;
-}
-.headermsg{
-	margin-top: 10px;
-}
-.imgresponsive{
-	display: block;
- 	max-width: 100%;
-}
-*/
-

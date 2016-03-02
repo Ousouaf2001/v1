@@ -10,9 +10,24 @@ function AddMember() {
     var genre = document.getElementById("genre").value;
 	var os = document.getElementById("detect_os").value;
 	var device_token = document.getElementById("detect_UUID").value;
-    //alert("name:"+name+"last_name:"+last_name+"email:"+email+"password:"+password+"birthday:"+birthday+"genre:"+genre);
-	if ((name == '') && (last_name == '') && (email == '') && (password == '') && (password_conf == '') && (birthday == '') && (genre == '') && (password != password_conf))
-    {
+  
+  document.addEventListener('deviceready', function () {
+  // Enable to debug issues.
+  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+  var notificationOpenedCallback = function(jsonData) {
+	  //alert("success");
+    alert('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+  };
+
+  window.plugins.OneSignal.init("6b7a8cef-2b9c-4205-ad53-f2ebedda3c6a",
+                                 {googleProjectNumber: "663342117564"},
+                                 notificationOpenedCallback);
+  
+  // Show an alert box if a notification comes in when the user is in your app.
+  window.plugins.OneSignal.enableInAppAlertNotification(true);
+}, false);  //alert("name:"+name+"last_name:"+last_name+"email:"+email+"password:"+password+"birthday:"+birthday+"genre:"+genre);
+	if ((name == '') && (last_name == '') && (email == '') && (password == '') && (password_conf == '') && (birthday == '') && (genre == '') && (password != password_conf)){
         $('.info_requis').fadeIn();
     }
     else

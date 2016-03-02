@@ -3,9 +3,6 @@ $(document).ready(function(){
   $("#search-box").keyup(function(){
     if($("#search-box").val().length >= 4){
       
-
-
-
     var urlWS="http://api.chessfamily.net/api/query";
     var country_id = document.getElementById("id_country").value;
     $.ajax({
@@ -16,10 +13,13 @@ $(document).ready(function(){
       $("#search-box").css("background","#FFF url(LoaderIcon.gif) no-repeat 150px");
     },
     success: function(result){
+		
       $("#suggesstion-box").show();
+	  $('#suggesstion-box').html("");
       $.each(result.city, function (index, item) {
+		  console.log(item.city);
           if(item.city.length > 0){
-          $('#suggesstion-box').html("<li class='city' id='"+item.id+"'>"+item.city+"</li>");
+          $('#suggesstion-box').append("<li class='city' id='"+item.id+"'>"+item.city+"</li>");
         }
       });
       $("#search-box").css("background","#FFF");

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Events</title>
+    <title key="MyEVENT" class="TranslationDiv">My Events</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -22,41 +22,41 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Edit event</h4>
+        <h4 class="modal-title" id="myModalLabel" key="EDITEVENT" class="TranslationDiv">Edit event</h4>
       </div>
       <div class="modal-body">
         <div class="row">
             <div class="col-md-12">
                     <div class="champ">
-                      <div class="inscritok_modif" style="display:none;text-align:center;font-weight:bold;color:red;">Ajout Evenement Réussi</div>
-                      <div class="info_requis_modif" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">Veuillez Vérifier les informations ci-dessous</div>
+                      
                        <form  id="member_add_modif" action="#">
-                       <input type="text" name="id_event_edit" id="id_event_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
+                       <input type="hidden" name="id_event_edit" id="id_event_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
+                            
                             <div class="form-group">
-                              <label>Event Type </label>
+                              <label key="Name" class="TranslationDiv">Name</label>
+                              
+                              <input type="text" name="name_modif" id="name_modif" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                              <label key="EventType" class="TranslationDiv">Event Type </label>
                               <select name="type_event_modif" id="type_event_modif" class="form-control select_bloc">
                                
                             </select>
                             </div>
                             <div class="form-group">
-                              <label>Name</label>
-                              
-                              <input type="text" name="name_modif" id="name_modif" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                              <label>Organizer</label>
+                              <label key="Organiser" class="TranslationDiv">Organizer</label>
                               <input type="text" name="organizer_modif" id="organizer_modif" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Organizer">
                             </div>
                             <div class="form-group">
-                              <label>Start date</label>
+                              <label key="STARTDATE" class="TranslationDiv">Start date</label>
                               <input type="date" name="start_date_modif" id="start_date_modif" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Start date">
                             </div>
                             <div class="form-group">
-                              <label>End date</label>
+                              <label key="ENDDATE" class="TranslationDiv">End date</label>
                               <input type="date" name="end_date_modif" id="end_date_modif" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="End date">
                             </div>
                             <div class="form-group">
-                              <label>Rate</label>
+                              <label key="RATE" class="TranslationDiv">Rate</label>
                               
                               <select name="is_rated_modif" id="is_rated_modif" class="form-control select_bloc">
                                 <option value="1">1</option>
@@ -65,27 +65,28 @@
                             </div>
                             
                             <div class="form-group">
-                              <label>Description</label>
+                              <label key="DESCRIPTION" class="TranslationDiv">Description</label>
                               <textarea class="form-control" cols="100" id="description_modif" name="description_modif"></textarea>
                             </div>
                             <div class="form-group">
-                              <label>Prize fund</label>
+                              <label key="PRIZEFUND" class="TranslationDiv">Prize fund</label>
                               <input type="text" name="prize_fund_modif" id="prize_fund_modif" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Prize fund">
                             </div>
                             <div class="form-group">
-                              <label>Phone</label>
+                              <label key="PHONE" class="TranslationDiv">Phone</label>
                               <input type="tel" name="phone_number_modif" id="phone_number_modif" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Phone">
                             </div>
                             <div class="form-group">
-                              <label>Email</label>
+                              <label key="Email" class="TranslationDiv">Email</label>
                               <input type="email" name="email_modif" id="email_modif" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Email">
                             </div>
                             <div class="form-group">
-                              <label>Web Site</label>
+                              <label key="WEBSITE" class="TranslationDiv">Web Site</label>
                               <input type="url" name="website_modif" id="website_modif" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Web Site">
                             </div>
                             
-                           
+                           <div class="inscritok_modif" style="display:none;text-align:center;font-weight:bold;color:red;" key="Update_OK_msg" class="TranslationDiv">Modification Evenement Réussi</div>
+                      <div class="info_requis_modif" style="display:none;display:none;text-align:center;font-weight:bold;color:red;" key="Update_KO_msg" class="TranslationDiv">Veuillez Vérifier les informations ci-dessous</div>
                             <div class="form-group">
                                <input type="button" id="submit" onclick="editEvent()" value="Submit" class="btn btn-md btn-block btn_index"/></br>
                             </div>
@@ -99,7 +100,7 @@
   </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -122,7 +123,7 @@
                             <div class="form-group">
                               <label>Meeting place</label>
                               <select name="type_meeting" id="type_meeting" class="form-control select_bloc">
-                               
+                               <option value='0'>--</option>
                             </select>
                             </div>
                             <div class="form-group">
@@ -184,7 +185,7 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
   <div id="header"></div>
   <div class="container-full">
       <div class="row">
@@ -202,7 +203,7 @@
                     </div>
                     <div class="col-xs-12">
                         <ul class="list-group list-menu-myevents">
-                            <li class="list-group-item cre_event" style="display:none;">
+                            <li class="list-group-item cre_event" style="display:none;" key="PLAYERS" class="TranslationDiv">
                                 No Event Created
                             </li>
                         </ul>
@@ -222,12 +223,12 @@
 
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="cordova.js" charset="utf-8"></script>
-    <script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>
+    <!--<script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>-->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/templateGenerator.js"></script>
     
 	
-	   <script type="text/javascript" src="scripts/MeetingScript/meetingType.js"></script>
+	<script type="text/javascript" src="scripts/MeetingScript/meetingType.js"></script>
     <script type="text/javascript" src="scripts/EventScript/eventCreatedByMember.js"></script>
     <script type="text/javascript" src="scripts/EventScript/eventType.js"></script>
     <script type="text/javascript" src="scripts/EventScript/eventAdd.js"></script>

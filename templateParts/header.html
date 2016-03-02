@@ -48,18 +48,7 @@
                                 </tr>
                             </table>
                             <table>
-                              <!--<tr>
-                                <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;">Meeting location:</h5></th>
-                                <td>
-                                  <select name="event_type" id="event_type"  class="form-control input-sm input-block  select_event">
-                                      <option value="all_events">Federation</option>
-                                      <option value="all_events">All Events</option>
-                                      <option value="all_events">All Events</option>
-                                      <option value="all_events">All Events</option>
-                                      <option value="all_events">All Events</option>
-                                  </select>
-                                </td>
-                              </tr>-->
+                             
                               <tr>
                                 <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;" key="Age" class="TranslationDiv">Age</b>:</h5></th>
                                 <td>
@@ -85,7 +74,7 @@
                                   </td>
                                   <td class="table_distance"  style="font-size: 10px;">
                                       <input type="radio" name="gender" value="2" />
-                                      <font style="color:black;" key="Female" class="TranslationDiv"> Femele</font>
+                                      <font style="color:black;" key="Female" class="TranslationDiv"> Female</font>
                                   </td>
                                   <td class="table_distance"  style="font-size: 10px;">
                                       <input type="radio" name="gender" value="1"/>
@@ -200,8 +189,8 @@
                               <tr>
                                 <th class="table_event"><h5><b style="color:#582D1C;font-size:10px;" key="MeetingPlaceType" class="TranslationDiv">Meeting Place Type</b> :</h5></th>
                                 <td>
-                                  <select name="meeting_type" id="meetingType_edit"  class="form-control input-sm input-block  select_event">
-                                      
+                                  <select name="meeting_type" id="type_meeting_search"  class="form-control input-sm input-block  select_event">
+                                      <option value='0'>-All-</option>
                                   </select>
                                 </td>
                               </tr>
@@ -254,6 +243,7 @@
   <script type="text/javascript" src="js/Languages.js"></script>
 <script type="text/javascript" src="scripts/EventScript/eventType.js"></script>
 <script type="text/javascript" src="scripts/MeetingScript/meetingType.js"></script>
+<script type="text/javascript" src="scripts/MeetingScript/meetingTypeList.js"></script>
 <script type="text/javascript">
   if(sessionStorage.getItem("identifiant")==null && localStorage.getItem("identifiantLocal")==null){
 	  window.location.href = 'index.html';

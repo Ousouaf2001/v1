@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Event Details</title>
+    <title key="EventDetails" class="TranslationDiv">Event Details</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -21,7 +21,7 @@
             <div class="col-xs-12">
                         <img src="image/load.gif" style="margin-top:30%;" class="load_detail_event center-block">
             </div>
-            <div class="alert alert-success" style="display:none;" id="messagefavorite">
+            <div class="alert alert-success" style="display:none;" id="messagefavorite" key="Ajout_OK_msg" class="TranslationDiv">
                 Ajout effectué avec succes!
             </div>
         </div>
@@ -51,11 +51,11 @@
               <div class="row">
                   <div class="col-xs-7">
                       <p>
-                          <font color="978E7A" >START</font><b class="date_start">&nbsp;&nbsp;&nbsp;-</b><br>
-                          <font color="978E7A">END</font><b class="date_end">&nbsp;&nbsp;&nbsp;-</b>
+                          <font color="978E7A" key="START" class="TranslationDiv">START</font><b class="date_start">&nbsp;&nbsp;&nbsp;-</b><br>
+                          <font color="978E7A" key="END" class="TranslationDiv">END</font><b class="date_end">&nbsp;&nbsp;&nbsp;-</b>
                       </p>
                       <p>
-                          <font color="978E7A">CONTACTS :</font><br>
+                          <font color="978E7A"><span key="Contact" class="TranslationDiv">CONTACT</span> :</font><br>
                           <b style="color:#978E7A" class="site"></b><br>
                           <b style="color:#978E7A" class="email"></b><br>
                           <b style="color:#978E7A" class="tel"></b>
@@ -83,7 +83,7 @@
                   <div class="col-xs-6 nopadding">
                    <div class="well well-sm" style="margin-top:-10px;">
                       <p>
-                          <font color="978E7A">DESCRIPTION</font><br>
+                          <font color="978E7A" key="DESCRIPTION" class="TranslationDiv">DESCRIPTION</font><br>
                       </p>
                       <p id="description" style="text-align:justify">
                         -
@@ -93,7 +93,7 @@
                   <div class="col-xs-6 nopadding">
                    <div class="well well-sm" style="margin-top:-10px;">
                     <p>
-                          <font color="978E7A">ATTENDANCE (<span id="nbTotalAttendance"></span>)</font><br>
+                          <font color="978E7A"><span key="ATTENDANCE" class="TranslationDiv">ATTENDANCE</span> (<span id="nbTotalAttendance"></span>)</font><br>
                       </p>
                       <div id="attendanceList">
                       
@@ -114,7 +114,7 @@
     <!--<script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>-->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/templateGenerator.js"></script>
-    <script type="text/javascript" src="js/Languages.js"></script>
+
     
     <script type="text/javascript" src="scripts/EventScript/eventGet.js"></script>
     <script type="text/javascript" src="scripts/EventScript/eventAttendance.js"></script>

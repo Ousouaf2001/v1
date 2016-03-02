@@ -1,7 +1,7 @@
-$(document).ready(function(){
+//$(document).ready(function(){
     
 	var urlWS = "http://api.chessfamily.net/api/query";
-    function CountryGetAll() {
+    function CountryGetAll(SelectedCountry) {
         
         $.ajax({
 			type:"POST",
@@ -10,7 +10,12 @@ $(document).ready(function(){
             dataType:"json",
 			  success:function(result){
 				$.each(result.country, function (index, item) { 
-					$('#country').append("<option value='" + item.id + "'>" + item.name +"</option>")
+					if(SelectedCountry==item.id){
+						$('#country').append("<option value='" + item.id + "' selected>" + item.name +"</option>");
+					}else{
+						$('#country').append("<option value='" + item.id + "'>" + item.name +"</option>");
+					}
+					
 				});
 			  }
         });
@@ -18,5 +23,5 @@ $(document).ready(function(){
 
 
 
-    CountryGetAll();
-});
+    //CountryGetAll();
+//});

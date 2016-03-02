@@ -75,14 +75,26 @@ aLangKeys['en']['Trainer']=' Trainer';
 aLangKeys['en']['Organiser']=' Organizer';
 aLangKeys['en']['All']=' All';
 
+aLangKeys['en']['PRIZEFUND']='Prize Fund';
+aLangKeys['en']['PHONE']='Phone';
+aLangKeys['en']['WEBSITE']='Web Site';
+aLangKeys['en']['RATE']='Rate';
+aLangKeys['en']['STARTDATE']='Date Début';
+aLangKeys['en']['ENDDATE']='Date fin';
+aLangKeys['en']['EDITEVENT']='edit Event';
+aLangKeys['en']['MyEVENT']='My Event';
+aLangKeys['en']['NoEVENTCreated']='No Event Created';
 //titles des pages
-aLangKeys['en']['PRIVACY']='Privacy';
+
 
 //Page Profile 
+
+aLangKeys['en']['EditProfile']='Edit My Profile';
+aLangKeys['en']['ProfileOf']='Profile of :';
 aLangKeys['en']['Profile']='Profile';
 aLangKeys['en']['Photo']='Photo';
 aLangKeys['en']['Chess']='Chess';
-aLangKeys['en']['ChessProfile']='Chess Profile';
+aLangKeys['en']['ChessProfile']='Chess';
 //aLangKeys['en']['Password']='Password';
 aLangKeys['en']['MisAJour_OK']='Vos Informations ont été mis à jour!';
 aLangKeys['en']['CapturePhoto']='Capture Photo';
@@ -90,7 +102,7 @@ aLangKeys['en']['FromGallery']='From Gallery';
 
 aLangKeys['en']['IsPlayer']='Is Player';
 aLangKeys['en']['IsArbiter']='Is Arbiter';
-aLangKeys['en']['IsTitled Player']='Is Titled Player';
+aLangKeys['en']['IsTitledPlayer']='Is Titled Player';
 aLangKeys['en']['IsTrainer']='Is Trainer';
 
 
@@ -115,11 +127,13 @@ aLangKeys['en']['Ajout_OK_msg']='Item Added Successfully!';
 aLangKeys['en']['Ajout_KO_msg']='Please Check the Form Data';
 aLangKeys['en']['Update_OK_msg']='Item Updated Successfully!';
 aLangKeys['en']['Update_KO_msg']='Please Check the Form Data';
-aLangKeys['fr']['Delete_OK_msg']='Item Deleted Successfully!';
+aLangKeys['en']['Delete_OK_msg']='Item Deleted Successfully!';
 
 aLangKeys['en']['START']='START';
 aLangKeys['en']['END']='END';
 aLangKeys['en']['Contact']='Contact';
+aLangKeys['en']['DESCRIPTION']='DESCRIPTION';
+aLangKeys['en']['ATTENDANCE']='ATTENDANCE';
 aLangKeys['en']['Country']='Country';
 
 aLangKeys['en']['PositionUpdated']='Position updated';
@@ -138,7 +152,14 @@ aLangKeys['en']['ProblemNotificationMsg']='Problem when submitting a notificatio
 aLangKeys['en']['NotificationAddedMsg']='Notification Sended Successfully !';
 
 aLangKeys['en']['Messages']='Messages';
+aLangKeys['en']['MessageDetails']='Conversation Details';
+aLangKeys['en']['SENDMSG']='Send';
 //page details Events
+aLangKeys['en']['EventDetails']='Event Details';
+aLangKeys['en']['LocationDetails']='Meeting Place Details';
+
+aLangKeys['en']['ACTIVITYTODAY']='ACTIVITY TODAY';
+aLangKeys['en']['FRIENDS-ON-SITE']='FRIENDS (Friends on site)';
 
 
 /********************* Francais **************************/
@@ -211,15 +232,31 @@ aLangKeys['fr']['Trainer']=' Entraineur';
 aLangKeys['fr']['Organiser']=' Organisateur';
 aLangKeys['fr']['All']=' All';
 
+aLangKeys['fr']['PRIZEFUND']='Prize Fund';
+aLangKeys['fr']['PHONE']='Téléphone';
+aLangKeys['fr']['WEBSITE']='Site Web';
+aLangKeys['fr']['RATE']='Rate';
+aLangKeys['fr']['STARTDATE']='Date Début';
+aLangKeys['fr']['ENDDATE']='Date fin';
+aLangKeys['fr']['EDITEVENT']='Modifier évènement';
+aLangKeys['fr']['MyEVENT']='My Event';
+aLangKeys['fr']['NoEVENTCreated']='Aucune évènement crée!';
+
+
+
+
 
 //titles des pages
-aLangKeys['fr']['PRIVACY']='Privacy';
+
+
 
 //Page Profile 
+aLangKeys['fr']['EditProfile']='Modifier Mon Profil';
+aLangKeys['fr']['ProfileOf']='Profil de :';
 aLangKeys['fr']['Profile']='Profil';
 aLangKeys['fr']['Photo']='Photo';
 aLangKeys['fr']['Chess']='Echecs';
-aLangKeys['fr']['ChessProfile']='Profile Echecs';
+aLangKeys['fr']['ChessProfile']='Echecs';
 //aLangKeys['fr']['Password']='Password';
 aLangKeys['fr']['MisAJour_OK']='Mise à jour effectuée!';
 aLangKeys['fr']['CapturePhoto']='Appareil Photo';
@@ -255,6 +292,8 @@ aLangKeys['fr']['Delete_OK_msg']='Elément Supprimé avec succes!';
 aLangKeys['fr']['START']='Commence';
 aLangKeys['fr']['END']='FIN';
 aLangKeys['fr']['Contact']='Contact';
+aLangKeys['fr']['DESCRIPTION']='DESCRIPTION';
+aLangKeys['fr']['ATTENDANCE']='PRESENCE';
 aLangKeys['fr']['Country']='Pays';
 
 aLangKeys['fr']['PositionUpdated']='Position mis-à-jour';
@@ -274,6 +313,14 @@ aLangKeys['fr']['NotificationAddedMsg']='Notification envoyée avec Succès !';
 
 
 aLangKeys['fr']['Messages']='Messages';
+aLangKeys['fr']['MessageDetails']='Détails de la Conversation';
+aLangKeys['fr']['SENDMSG']='Envoyer';
+
+aLangKeys['fr']['EventDetails']='Détails de l\'évènement';
+aLangKeys['fr']['LocationDetails']='Détails du Lieux';
+
+aLangKeys['fr']['ACTIVITYTODAY']='ACTIVITE AUJOURD\'HUI';
+aLangKeys['fr']['FRIENDS-ON-SITE']='AMIS (Amis présent)';
 
 
 //$(document).ready(function() {});
