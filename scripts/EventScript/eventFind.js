@@ -14,7 +14,7 @@
   }
     var latitude = $_GET('lat1');
     var longitude = $_GET('long1');
-    var distance = $_GET('distance1');
+    var distance = $_GET('rangeevent');
     var event_type = $_GET('event_type');
     var activity = $_GET('activity');
       console.log(event_type);

@@ -21,7 +21,7 @@
   	}	
     var latitude = $_GET('lat');
     var longitude = $_GET('long');
-    var distance = $_GET('distance');
+    var distance = $_GET('range');
     var age_from = $_GET('age_from');
     var age_to = $_GET('age_to');
     var gender = $_GET('gender');

@@ -15,7 +15,7 @@
   }
     var latitude = $_GET('lat2');
     var longitude = $_GET('long2');
-    var distance = $_GET('distance2');
+    var distance = $_GET('rangeplace');
     var meeting_type = $_GET('meeting_type');
     var status = $_GET('status');
       
