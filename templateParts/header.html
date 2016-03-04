@@ -125,10 +125,15 @@
                             </table>
                             <table>
                               <tr>
-                                <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;" key="Activity" class="TranslationDiv">Activity</b>:</h5></th>
+                                <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;" key="Distance" class="TranslationDiv">Distance</b> :</h5></th>
                                 <td style="font-size: 10px;">
-                                    <input type="radio" name="activity"  checked="checked" value="15" />
-                                    <font style="color:black;"><span key="TakingPlaceMaxDays" class="TranslationDiv">Taking Place in max</span> <b id="xdayheader">15</b> <span key="DAYS" class="TranslationDiv">days</span></font>&nbsp;
+                                    <!--<font style="color:black;"><span key="TakingPlaceMaxDays" class="TranslationDiv">Taking Place in max</span> <b id="xdayheader">15</b> <span key="DAYS" class="TranslationDiv">days</span>&nbsp;-->
+                                    <output id="rangeDanger" class="out">50</output>
+                                  <div class="range range-danger"  style="width:100%;height:10px;margin-bottom:10px">
+
+                                    <input type="range" name="activity" id="activity" min="1" max="100" value="50" onchange="rangeDanger.value=value" style="height:10px;">
+                                    
+                                  </div>
                                 </td>
                                 <td class="table_distance"  style="font-size: 10px;">
                                     <input type="radio" name="activity" value="0" />
