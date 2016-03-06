@@ -30,10 +30,10 @@
                                   <b style="color:#582D1C;font-size:10px;" key="Distance" class="TranslationDiv">Distance 
                                      
                                   </b>
-                                   <output id="rangePrimary" class="out">50</output>
+                                   <output id="rangePrimary" class="out">12</output>
                                   <div class="range range-primary"  style="width:100%;height:10px;margin-bottom:10px">
 
-                                    <input type="range" name="range" id="range" min="1" max="20" value="50" onchange="rangePrimary.value=value" style="height:10px;">
+                                    <input type="range" name="range" id="range" min="1" max="25" value="12" onchange="rangePrimary.value=value" style="height:10px;">
                                     
                                   </div>
 
@@ -107,10 +107,10 @@
                                 <input type="text" id="getlong1" style="color:black;display:none;" name="long1">
                                 <b style="color:#582D1C;font-size:10px;" key="Distance" class="TranslationDiv">Distance</b> 
                                 
-                                <output id="rangeSuccess" class="out">50</output>
+                                <output id="rangeSuccess" class="out">150</output>
                                   <div class="range range-success"  style="width:100%;height:10px;margin-bottom:10px">
 
-                                    <input type="range" name="rangeevent" id="rangeevent" min="1" max="100" value="50" onchange="rangeSuccess.value=value" style="height:10px;">
+                                    <input type="range" name="rangeevent" id="rangeevent" min="1" max="300" value="150" onchange="rangeSuccess.value=value" style="height:10px;">
                                     
                                   </div>
                             <table>
@@ -123,23 +123,45 @@
                                 </td>
                               </tr>
                             </table>
-                            <table>
+                            <!--<table>
                               <tr>
-                                <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;" key="Distance" class="TranslationDiv">Distance</b> :</h5></th>
+                                <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;" key="Distance" class="TranslationDiv">qsdsqdqsdsqdsqds</b> :</h5></th>
+                              
+                              
                                 <td style="font-size: 10px;">
-                                    <!--<font style="color:black;"><span key="TakingPlaceMaxDays" class="TranslationDiv">Taking Place in max</span> <b id="xdayheader">15</b> <span key="DAYS" class="TranslationDiv">days</span>&nbsp;-->
-                                    <output id="rangeDanger" class="out">50</output>
-                                  <div class="range range-danger"  style="width:100%;height:10px;margin-bottom:10px">
+                                    <font style="color:black;"><span key="TakingPlaceMaxDays" class="TranslationDiv">Taking Place in max</span> <b id="xdayheader">15</b> <span key="DAYS" class="TranslationDiv">days</span>&nbsp;
+                                    qsdsqd<output id="rangeDanger" class="out" style="">50</output>qsdsqdsq
+                                  <div class="range range-danger"  style="width:100%;height:10px;margin-bottom:10px;margin-top:10px;">
 
                                     <input type="range" name="activity" id="activity" min="1" max="100" value="50" onchange="rangeDanger.value=value" style="height:10px;">
                                     
                                   </div>
                                 </td>
-                                <td class="table_distance"  style="font-size: 10px;">
-                                    <input type="radio" name="activity" value="0" />
-                                    <font style="color:black;" key="TakingPlaceToday" class="TranslationDiv"> Taking Place Today</font> 
-                                </td>
                               </tr>
+                            </table>-->
+                            <table>
+                                <tr>
+                                    <th class="table_activity"><h5><b style="color:#582D1C;font-size:10px;">Activity:</h5></th>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 11px;">
+                                      <font style="color:black;">Taking Place in max <b id="xdayheader"></b> days</font>
+                                    </td>
+                                    <td>
+                                    <output id="rangeDanger" class="out" style="display:none">50</output>
+                                      <div class="range range-danger"  style="margin-left:10px;width:100%;height:10px;margin-bottom:10px;margin-top:5px;">
+
+                                    <input type="range" name="activity" id="activity" min="1" max="100" value="50" onchange="rangeDanger.value=value" style="height:10px;width:150px;">
+                                    
+                                  </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                     <td class="table_distance"  style="font-size: 10px;">
+                                    <input type="radio" name="activity" value="0" />
+                                    <font style="color:black;font-size:11px;"> Taking Place Today</font>
+                                    </td>
+                                </tr>
                             </table>
                             <button class="btn btn-sm center-block button_event"><b key="SearchEvents" class="TranslationDiv">SEARCH EVENTS</b></button>
                             </form>
@@ -151,10 +173,10 @@
                                   <b style="color:#582D1C;font-size:10px;" key="Distance" class="TranslationDiv">Distance</b> 
                                   
 
-                                  <output id="rangeInfo" class="out">50</output>
+                                  <output id="rangeInfo" class="out">25</output>
                                   <div class="range range-info"  style="width:100%;height:10px;margin-bottom:10px">
 
-                                    <input type="range" name="rangeplace" id="rangeplace" min="1" max="100" value="50" onchange="rangeInfo.value=value" style="height:10px;">
+                                    <input type="range" name="rangeplace" id="rangeplace" min="1" max="50" value="25" onchange="rangeInfo.value=value" style="height:10px;">
                                     
                                   </div>
                             <table>

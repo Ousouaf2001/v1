@@ -650,16 +650,16 @@ footer{
 }
 
 .range.range-danger input[type="range"]::-webkit-slider-thumb {
-    background-color: rgb(217, 83, 79);
+    background-color: rgb(150, 90, 54);
     border-radius: 50%;
 }
 .range.range-danger input[type="range"]::-moz-slider-thumb {
-    background-color: rgb(217, 83, 79);
+    background-color: rgb(150, 90, 54);
     border-radius: 50%;
 }
 
 .range.range-danger input[type="range"] {
-    outline-color: rgb(217, 83, 79);
+    outline-color: rgb(150, 90, 54);
     border-radius: 50%;
 }
 
