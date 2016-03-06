@@ -2,6 +2,7 @@
 function memberSetLocation(typeBtn) {
 	// 1 - ajout event btn J y Suis
 	// 2 - btn footer
+	// 3-  ajout meeting place
 	
 	if(typeBtn==1){
 		$('.AddressBlock').hide();

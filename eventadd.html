@@ -210,9 +210,9 @@
                 <form  id="member_add" action="#">
                             
                             <div class="form-group">
-                              <label key="Name" class="TranslationDiv">Name</label>
+                              <label key="Name" class="TranslationDiv">Name</label><span style="color:red;">*</span>
                               
-                              <input type="text" name="name" id="name" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name" style="width:100%;">
+                              <input type="text" required name="name" id="name" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name" style="width:100%;">
                             </div>
                             <div class="form-group">
                               <label key="EventType" class="TranslationDiv">Event type</label>
@@ -225,12 +225,12 @@
                               <input type="text" name="organizer" id="organizer" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Organizer" style="width:100%;">
                             </div>
                             <div class="form-group">
-                              <label key="STARTDATE" class="TranslationDiv">Start date</label>
-                              <input type="date" name="start_date" id="start_date" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Start date" style="width:100%;">
+                              <label key="STARTDATE" class="TranslationDiv">Start date</label><span style="color:red;">*</span>
+                              <input type="date" required name="start_date" id="start_date" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Start date" style="width:100%;">
                             </div>
                             <div class="form-group">
-                              <label key="ENDDATE" class="TranslationDiv">End date</label>
-                              <input type="date" name="end_date" id="end_date" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="End date" style="width:100%;">
+                              <label key="ENDDATE" class="TranslationDiv">End date</label><span style="color:red;">*</span>
+                              <input type="date" required name="end_date" id="end_date" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="End date" style="width:100%;">
                             </div>
                             <div class="form-group">
                               <label key="RATE" class="TranslationDiv">Rate</label>

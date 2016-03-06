@@ -539,9 +539,9 @@ footer{
     display: table;
     position: relative;
     height: 25px;
-    background-color: #f1d6a1;
-    /*border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: #e7bb65;
+    border-radius: 20px;
+    /*-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);*/
     cursor: pointer;
 }
@@ -651,16 +651,16 @@ footer{
 }
 
 .range.range-danger input[type="range"]::-webkit-slider-thumb {
-    background-color: rgb(217, 83, 79);
+    background-color: rgb(150, 90, 54);
     border-radius: 50%;
 }
 .range.range-danger input[type="range"]::-moz-slider-thumb {
-    background-color: rgb(217, 83, 79);
+    background-color: rgb(150, 90, 54);
     border-radius: 50%;
 }
 
 .range.range-danger input[type="range"] {
-    outline-color: rgb(217, 83, 79);
+    outline-color: rgb(150, 90, 54);
     border-radius: 50%;
 }
 

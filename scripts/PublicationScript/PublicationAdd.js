@@ -118,7 +118,6 @@ function AddPublication() {
 					$('#statusinput').val('');
 					$('#lienvideo').val('');
 					$('#lienweb').val('');
-					location.reload();
 				},
 				complete: function(){
 					  $('.load_upload_photo_publication').hide();

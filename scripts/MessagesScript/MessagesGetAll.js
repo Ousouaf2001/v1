@@ -67,17 +67,6 @@ $(document).ready(function(){
 
     $(document).on('click','.sender_profile', function(){
 			document.location.href = 'profile.html?sender_id=' + $(this).attr('id'); 
-	
-
-
-
-
-
-
-
-
-
-
 	});
 
     $(document).on('click','.message_item', function(){
