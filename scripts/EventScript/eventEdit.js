@@ -44,11 +44,11 @@ function editEvent() {
 		  success:function(result){
 			  if(result.success == 1){
 					  $('.inscritok_modif').fadeIn(100).delay(800).fadeOut(100);
-					  setTimeout(function() {$('#myModal').modal('hide');}, 1000);
+					  setTimeout(function() {$('#myModalLabel').modal('hide');}, 1000);
                   }else{
                     $('.info_requis_modif').fadeIn(500).delay(2000).fadeOut(500);
                   }
-			 console.log(result);
+			 
 		  },
 		  error:function(msg){
 			 console.log(msg);

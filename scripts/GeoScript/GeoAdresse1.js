@@ -8,6 +8,7 @@ function GeoAdresse(){
     $.ajax(
             {
 
+
                 type:"POST",
                 url:urlWS,
                 data:{
@@ -21,6 +22,8 @@ function GeoAdresse(){
                     $('#latitude_meeting').val(result.latitude);
                     $('#longitude_meeting').val(result.longitude);
                     $('#country_meeting').val(result.country);
+					$('#id_country').val(result.country_id);
+					console.log(result);
                   }
             }
         );

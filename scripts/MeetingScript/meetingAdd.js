@@ -62,12 +62,6 @@ var urlWS = "http://api.chessfamily.net/api/query";
             }
         });
 }
-
-
-    
-        
-        
-    
     return false;
 
 }

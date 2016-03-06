@@ -84,6 +84,8 @@ aLangKeys['en']['ENDDATE']='Date fin';
 aLangKeys['en']['EDITEVENT']='edit Event';
 aLangKeys['en']['MyEVENT']='My Event';
 aLangKeys['en']['NoEVENTCreated']='No Event Created';
+aLangKeys['en']['NEXTSTEP']='Next Step';
+aLangKeys['en']['ADDNEWMP']='Add New meeting place';
 //titles des pages
 
 
@@ -135,6 +137,20 @@ aLangKeys['en']['Contact']='Contact';
 aLangKeys['en']['DESCRIPTION']='DESCRIPTION';
 aLangKeys['en']['ATTENDANCE']='ATTENDANCE';
 aLangKeys['en']['Country']='Country';
+aLangKeys['en']['City']='City';
+aLangKeys['en']['ADDRESS']='Address';
+aLangKeys['en']['AREYOUIN']='Are you in the Meeting Place Now?';
+aLangKeys['en']['LONGITUDE']='Longitude';
+aLangKeys['en']['LATITUDE']='Latitude';
+aLangKeys['en']['CHECKADDRESS']='Check the Address';
+aLangKeys['en']['YESJYSUIS']='Yes, I\'m here';
+aLangKeys['en']['NO_PUTADDRESS']='No, I want put an address';
+
+aLangKeys['en']['EditMeetingplace']='Edit Meeting place';
+aLangKeys['en']['AddMeetingplace']='Add Meeting place';
+
+aLangKeys['en']['EditEvent']='Edit Event';
+aLangKeys['en']['AddEvent']='Add Event';
 
 aLangKeys['en']['PositionUpdated']='Position updated';
 aLangKeys['en']['ErrorPositionUpdate']='Error on updating your position';
@@ -241,7 +257,8 @@ aLangKeys['fr']['ENDDATE']='Date fin';
 aLangKeys['fr']['EDITEVENT']='Modifier évènement';
 aLangKeys['fr']['MyEVENT']='My Event';
 aLangKeys['fr']['NoEVENTCreated']='Aucune évènement crée!';
-
+aLangKeys['fr']['NEXTSTEP']='Etape suivante';
+aLangKeys['fr']['ADDNEWMP']='Ajouter nouveau meeting place';
 
 
 
@@ -295,6 +312,20 @@ aLangKeys['fr']['Contact']='Contact';
 aLangKeys['fr']['DESCRIPTION']='DESCRIPTION';
 aLangKeys['fr']['ATTENDANCE']='PRESENCE';
 aLangKeys['fr']['Country']='Pays';
+aLangKeys['fr']['City']='Région';
+aLangKeys['fr']['ADDRESS']='Adresse';
+aLangKeys['fr']['AREYOUIN']='Etes Vous dans la meeting place?';
+aLangKeys['fr']['LONGITUDE']='Longitude';
+aLangKeys['fr']['LATITUDE']='Latitude';
+aLangKeys['fr']['CHECKADDRESS']='Vérification de l\'adresse';
+aLangKeys['fr']['YESJYSUIS']='Oui, J\'y Suis';
+aLangKeys['fr']['NO_PUTADDRESS']='Non, Je veux entrer une adresse';
+
+aLangKeys['fr']['EditMeetingplace']='Modifier Meeting place';
+aLangKeys['fr']['AddMeetingplace']='Ajouter Meeting place';
+
+aLangKeys['fr']['EditEvent']='Modifier un évènement';
+aLangKeys['fr']['AddEvent']='Ajouter un évènement';
 
 aLangKeys['fr']['PositionUpdated']='Position mis-à-jour';
 aLangKeys['fr']['ErrorPositionUpdate']='Erreur est survenue lors de de mise à jour de votre Position';

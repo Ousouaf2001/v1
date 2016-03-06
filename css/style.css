@@ -246,6 +246,7 @@ input:-moz-placeholder { font-size: 10pt; color: #555; }
 .select_event{
     background-color: #965a36;
     color: #fff;
+	display:inline;
 }
 .x{
     color: #592e1d;
@@ -538,10 +539,10 @@ footer{
     display: table;
     position: relative;
     height: 25px;
-    background-color: rgb(245, 245, 245);
-    border-radius: 4px;
+    background-color: #f1d6a1;
+    /*border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);*/
     cursor: pointer;
 }
 
@@ -667,7 +668,8 @@ footer{
 	color: black;
 	font-weight: bold;
 	font-size: 10px;
-	position: absolute;
+	display:inline;
+	/*position: absolute;
 	margin-top: -22px;
-	margin-left: 50px;
+	margin-left: 50px;*/
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title key="PLAYERS" class="TranslationDiv">My Meeting Places</title>
+    <title key="MyMeetingPlaces" class="TranslationDiv">My Meeting Places</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -22,41 +22,46 @@
     <div class="modal-content">
       <div class="modal-header" style="background:#582D1C;color:white;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel" key="PLAYERS" class="TranslationDiv">Edit Meeting place</h4>
+        <h4 class="modal-title" id="myModalLabel" key="EditMeetingplace" class="TranslationDiv">Edit Meeting place</h4>
       </div>
       <div class="modal-body">
         <div class="row">
-         <div class="col-xs-12" style="display:none;" id="affiche_successedit">
-                <div class="alert alert-success text-center" style="border-radius:0px;" key="PLAYERS" class="TranslationDiv">
-                   Meeting edit
-                </div>
-            </div>
+         
             <div class="col-md-12">
                     <div class="champ">
-                      <div class="inscritok" style="display:none;text-align:center;font-weight:bold;color:red;">ajout ok</div>
-                      <div class="info_requis" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">verif info</div>
+                      
                        <form  id="member_add" action="#">
                             
                               
                               <input type="hidden" name="id_meeting_edit" id="id_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name">
                             
                             <div class="form-group">
-                              <label>Name</label>
+                              <label key="LATITUDE" class="TranslationDiv">Name</label>
                               <input type="text" name="name_meeting_edit" id="name_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name" style="width:100%;">
                             </div>
                             <div class="form-group">
-                              <label>Adresse</label>
-                              <input type="text" name="adress_meeting_edit" id="adress_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse" style="width:100%;">
+                              <label key="LATITUDE" class="TranslationDiv">Adresse</label>
+                              <input type="text" name="adress_meeting_edit" id="adress_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse" style="width:100%;" disabled="disabled">
                             </div>
                             <div class="form-group">
-                              <label>Latitude</label>
+                              <label key="LATITUDE" class="TranslationDiv">Latitude</label>
                               <input type="text" name="latitude_meeting_edit" id="latitude_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Latitude" disabled="disabled" style="width:100%;">
                             
-                              <label>Longitude</label>
+                              <label key="LONGITUDE" class="TranslationDiv">Longitude</label>
                               <input type="text" name="longitude_meeting_edit" id="longitude_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Longitude"  disabled="disabled" style="width:100%;">
                             </div>
                             <div class="form-group">
-                              <label>Type du Meeting Place</label>
+                            <label key="Country" class="TranslationDiv">Country</label>
+                            <input type="hidden" id="id_country">
+                            <input type="text" name="country_meeting" id="country_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Country" style="width:100%;" disabled="disabled">
+                          </div>
+                          <div class="form-group">
+                            <label key="City" class="TranslationDiv">City</label>
+                            <input type="hidden" id="id_city">
+                            <input type="text" name="city_meeting" id="city_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="City" style="width:100%;" disabled="disabled">
+                          </div>
+                            <div class="form-group">
+                              <label key="MeetingPlaceType" class="TranslationDiv">Type du Meeting Place</label>
                               <select name="meetingType_edit" id="meetingType_edit" class="form-control select_bloc" style="width:100%;">
                                
                               </select>
@@ -69,10 +74,27 @@
                                 <option value="1">1</option>
                               </select>
                             </div>-->
-
+							 <div class="form-group">
+                              <label key="PHONE" class="TranslationDiv">Phone</label>
+                              <input type="tel" name="phone_number_meeting_edit" id="phone_number_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Phone" style="width:100%;">
+                            </div>
+                            <div class="form-group">
+                              <label key="Email" class="TranslationDiv">Email</label>
+                              <input type="email" name="email_meeting_edit" id="email_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Email" style="width:100%;">
+                            </div>
+                            <div class="form-group">
+                              <label key="WEBSITE" class="TranslationDiv">Web Site</label>
+                              <input type="url" name="website_meeting_edit" id="website_meeting_edit" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Web Site" style="width:100%;">
+                            </div>
                             </div>
                             
-                            
+                            <div class="col-xs-12" style="display:none;" id="affiche_successedit">
+                                <div class="alert alert-success text-center" style="border-radius:0px;" key="Update_OK_msg" class="TranslationDiv">
+                                   Meeting edit
+                                </div>
+                            </div>
+                            <div class="inscritok" style="display:none;text-align:center;font-weight:bold;color:green;">ajout ok</div>
+                      		<div class="info_requis" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">verif info</div>
                            
                             <div class="form-group">
                                <input type="button" id="submit" onclick="editMeetingPlace()" value="Edit meeting Place" class="btn btn-md btn-block btn_index"/></br>
@@ -92,43 +114,40 @@
     <div class="modal-content">
       <div class="modal-header" style="background:#582D1C;color:white;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel" key="PLAYERS" class="TranslationDiv">Add meeting place</h4>
+        <h4 class="modal-title" id="myModalLabel" key="AddMeetingplace" class="TranslationDiv">Add meeting place</h4>
       </div>
       <div class="modal-body">
         <div class="row">
-            <div class="col-xs-12" style="display:none;" id="affiche_success">
-                <div class="alert alert-success text-center" style="border-radius:0px;" key="PLAYERS" class="TranslationDiv">
-                   Meeting added !
-                </div>
-            </div>
+            
             <div class="col-md-12">
 
                     <div class="champ">
                       
                       <form  id="member_add" action="#">
                           <div class="form-group">
-                            <label>Name</label>
+                            <label key="Name" class="TranslationDiv">Name</label>
                             <input type="text" name="name_meeting" id="name_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Name" style="width:100%;">
                           </div>
                           <div class="form-group">
-                          	<label>Vous êtes dans la meeting place?</label>
+                          	<label key="AREYOUIN" class="TranslationDiv">Vous êtes dans la meeting place?</label>
                           	<div class="col-xs-12">
-                                 <button type="button" onClick="memberSetLocation(1)" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1; margin-bottom:10px;">Oui, J'y Suis</button>
+                                 <button type="button" onClick="memberSetLocation(3)" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1; margin-bottom:10px;" key="YESJYSUIS" class="TranslationDiv">Oui, J'y Suis</button>
                                  <img src="image/load.gif" style="margin-top:5%;display:none;" class="load_jySuis center-block">
                             </div>
                             <div class="col-xs-12">
-                                 <button type="button" onClick="showHideAddressBlock(1)" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Non, Je veux entrer une adresse</button>
+                                 <button type="button" onClick="showHideAddressBlock(1)" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1" key="NO_PUTADDRESS" class="TranslationDiv">Non, Je veux entrer une adresse</button>
                             </div>
                           </div>
                           <div class="AddressBlock" style="display:none;">
                               <div class="form-group">
-                                <label>Adresse</label>
+                                <label key="ADDRESS" class="TranslationDiv">Adresse</label>
                                 <input type="hidden" id="champ_adress">
                                 <input type="text" name="adress_meeting" id="adress_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Adresse" style="width:100%;">
+                                <div style="color:#999;">Ex: Rue, City, Country</div>
                               </div>
                               <div class="form-group">
                                   <div class="col-xs-12">
-                                      <button type="button" onClick="GeoAdresse()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Vérification de l'adresse</button>
+                                      <button type="button" onClick="GeoAdresse()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1" key="CHECKADDRESS" class="TranslationDiv">Vérification de l'adresse</button>
                                   </div>
                               </div>
                           </div>
@@ -143,30 +162,43 @@
                               <button type="button" onClick="GeoAdresse()" class="btn btn-default btn-sm btn-block" style="background:#F1D6A1">Vérfication de l'adresse</button>
                           </div>-->
                           <div class="form-group">
-                            <label>Latitude</label>
+                            <label key="LATITUDE" class="TranslationDiv">Latitude</label>
                             <input type="text" name="latitude_meeting" id="latitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Latitude" style="width:100%;" disabled="disabled">
                           </div>
                           <div class="form-group">
-                            <label>Longitude</label>
+                            <label key="LONGITUDE" class="TranslationDiv">Longitude</label>
                             <input type="text" name="longitude_meeting" id="longitude_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Longitude" style="width:100%;" disabled="disabled">
                           </div>
                           <div class="form-group">
-                            <label>Country</label>
+                            <label key="Country" class="TranslationDiv">Country</label>
                             <input type="hidden" id="id_country">
                             <input type="text" name="country_meeting" id="country_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Country" style="width:100%;" disabled="disabled">
                           </div>
-                          <!--<div class="form-group">
-                            <label>City</label>
+                          <div class="form-group">
+                            <label key="City" class="TranslationDiv">City</label>
                             <input type="hidden" id="id_city">
                             <input type="text" name="city_meeting" id="city_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="City" style="width:100%;" disabled="disabled">
-                          </div>-->
+                          </div>
                           <div class="form-group">
                           <input type="hidden" id="champ_meeting">
-                            <label>Type du Meeting</label>
+                            <label key="MeetingPlaceType" class="TranslationDiv">Type du Meeting</label>
                             <select name="meetingType" id="meetingType" class="form-control select_bloc" style="width:100%;">
                              
                             </select>
                           </div>
+                          
+                          <div class="form-group">
+                              <label key="PHONE" class="TranslationDiv">Phone</label>
+                              <input type="tel" name="phone_number_meeting" id="phone_number_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Phone" style="width:100%;">
+                            </div>
+                            <div class="form-group">
+                              <label key="Email" class="TranslationDiv">Email</label>
+                              <input type="email" name="email_meeting" id="email_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Email" style="width:100%;">
+                            </div>
+                            <div class="form-group">
+                              <label key="WEBSITE" class="TranslationDiv">Web Site</label>
+                              <input type="url" name="website_meeting" id="website_meeting" class="form-control input_class input-md" aria-describedby="inputGroupSuccess1Status" placeholder="Web Site" style="width:100%;">
+                            </div>
                           <!--<div class="form-group">
                             <label>Statuts</label>
                             <select name="status_meeting" id="status_meeting" class="form-control select_bloc">
@@ -176,7 +208,7 @@
                           </div>-->
                           </div>
                           
-                          <div class="MeetingPlaceAdded TranslationDiv" key="Ajout_OK_msg" style="display:none;text-align:center;font-weight:bold;color:red;">Ajout effectué avec succes!</div>
+                          <div id="affiche_success" class="MeetingPlaceAdded TranslationDiv" key="Ajout_OK_msg" style="display:none;text-align:center;font-weight:bold;color:green;">Ajout effectué avec succes!</div>
                       <div class="MeetingPlace_info_requis TranslationDiv" key="Ajout_KO_msg" style="display:none;display:none;text-align:center;font-weight:bold;color:red;">Veuillez vérifier les informations ci-dessous</div>
                           
                          
