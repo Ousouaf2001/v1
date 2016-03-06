@@ -1,5 +1,5 @@
 // JavaScript Document
-$(document).ready(function(){
+
 	var current_title = $(document).attr('title');
 	
 	if(current_title=='Profile Details'){
@@ -15,7 +15,7 @@ $(document).ready(function(){
 	}
 
 	var urlWS = "http://api.chessfamily.net/api/query";
-    function PublicationsGetAllById() {
+    var PublicationsGetAllById = function () {
         $.ajax({
 			type:"POST",
             url:urlWS,
@@ -26,18 +26,13 @@ $(document).ready(function(){
 				perpage:10,
 				page:1},
             dataType:"json",
-
-          beforeSend: function(){
-              $('.affiche_detail_publication').hide();
-              $('.load_detail_publication').show();
-          },
           success:function(result){
 			  console.log(result);
 			  if(result.success==1){
 				  var displayVideo = "";
 				  var displayLink = "";
 				  var displayPhoto = "";
-				  
+				  pub = "";
 				  $.each(result.publications, function (index, item) {
 					  	if(item.video_link == null ){ displayVideo = "style='display:none;'";}else{displayVideo = "style='display:none;'";}
 						if(item.web_link == null ){ displayLink = "style='display:none;'";}else{displayLink = "style='display:none;'";}
@@ -51,8 +46,8 @@ $(document).ready(function(){
 							var images = '';
 						}
 						
-				  		var pub = ""+
-				  			"<div class='publication' >"+
+				  		
+				  			pub +="<div class='publication' >"+
 				  			"<div class='row'>"+
 				              "<div class='col-xs-3'>"+
 				                  "<img src='"+item.member_photo+" 'class='img-responsive img-circle center-block' width= '50' height='50'>"+
@@ -79,25 +74,21 @@ $(document).ready(function(){
 				          "</div>"+
 				          "</div>";
 				          
-						$('.publication_list').append(pub);
+						$('.publication_list').html(pub);
 				  });
 			  }else{
 				  $('.publication_list').html("Pas de Publications");
 			  }
 	  
-          },
-          complete: function(){
-              $('.load_detail_publication').hide();
-              $('.affiche_detail_publication').show();
           }
         });
     }
 
 
 
-    PublicationsGetAllById();
+   setInterval(PublicationsGetAllById,2000);
 
-});
+
 
 
 $(document).on('click','.delete_pub', function(){
@@ -119,7 +110,6 @@ $(document).on('click','.delete_pub', function(){
 	        },		
             dataType:"json",
           	success:function(result){
-            location.reload();
           }
         });
     });
