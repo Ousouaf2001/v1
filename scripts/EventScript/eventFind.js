@@ -63,7 +63,7 @@
 
             });
           }else{
-            $('.list-menu-events').html('no events');
+            $('.noevent').show();
           }
           },
           complete: function(){

@@ -87,7 +87,7 @@
                     });
                     
                 }else{
-                    $('.players').html('no players');
+                    $('.noplayer').show();
                 }
               },
               complete: function(){

@@ -1,5 +1,5 @@
 // JavaScript Document
-$(document).ready(function(){
+
 	if(localStorage.getItem("identifiantLocal")!= null){
 		var id_utilisateur = localStorage.getItem("identifiantLocal");//4;
 	}else if(sessionStorage.getItem("identifiant")!= null){
@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 	
 	var urlWS = "http://api.chessfamily.net/api/query";
-    function nbNewNotifications() {
+    var nbNewNotifications = function () {
         
         $.ajax({
 			type:"POST",
@@ -31,9 +31,6 @@ $(document).ready(function(){
         });
     }
 
-	nbNewNotifications();
-	setInterval(function(){
-		 nbNewNotifications();
-	},15000);
+	setInterval(nbNewNotifications,2000);
 
-});
+

@@ -22,7 +22,6 @@ function MessagesSend() {
 		dataType:"json",
 	  success:function(result){
 		   $('#textmessage').val('');
-		   location.reload();
 	  },
 	});
 }
