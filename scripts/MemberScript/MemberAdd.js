@@ -52,21 +52,27 @@ function AddMember() {
 					//alert("DataSuccess : "+data.success);
 					//console.log(data);
 					if(data.success == 1){
+                        console.log(data);
 						  //$('.testlogin').html(' success connexion');
+                            $('.email_existe').fadeOut();
 						  $('.info_requis').fadeOut();
 						  $('.inscritok').fadeIn();
 						  $('.inscritok').fadeOut(4000);
-						  sessionStorage.setItem("identifiant", data.member.id);
-						  alert("Bienvenue à ChessFamily");
-						  window.location.href="home.html";
-					  }else{
+						  //sessionStorage.setItem("identifiant", data.member.id);
+						  //alert("Bienvenue à ChessFamily");
+						  //window.location.href="home.html";
+                        
+					  }else if(data.error_msg == 'erreur_201:Sorry, email exist'){
+                            $('.email_existe').fadeIn();
+                        }else{
 						  $('.info_requis').fadeIn();
+                          console.log(data.error_msg);
 					  }
 					
 				},
 				error:function(e)
 				{
-					alert('error'+e.toSource());
+					console.log(e.toString());
 				}
 			});
 	}
