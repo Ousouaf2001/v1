@@ -41,6 +41,7 @@ $(document).ready(function(){
 			  if(result.member.is_player==1){$('#player').attr("checked",true);}else{$('#player').attr("checked",false);}
 			  if(result.member.is_arbiter==1){$('#arbiter').attr("checked",true);}else{$('#arbiter').attr("checked",false);}
 			  if(result.member.is_titled_player==1){$('#titled').attr("checked",true);}else{$('#titled').attr("checked",false);}
+              if(result.member.title ==""){$('#titleProfile').val('choose');}
 			  if(result.member.is_trainer==1){$('#trainer').attr("checked",true);}else{$('#trainer').attr("checked",false);}
 			  
 			  
