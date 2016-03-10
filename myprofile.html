@@ -181,7 +181,7 @@
               <input type="checkbox" id="trainer"><span key="IsTrainer" class="TranslationDiv">Is Trainer</span>
           </label>
           <select id="TrainerLevelProfile">
-              <option value="choose">-- Choose a Level --</option>
+              <option value="0">-- Choose a Level --</option>
               <option value="Beginners">Beginners</option>
               <option value="Intermediate">Intermediate</option>
               <option value="Advanced">Advanced</option>
@@ -254,6 +254,18 @@
 					$('#titleProfile').show();
 				} else {
 					$('#titleProfile').hide();
+				}
+			});
+        </script>
+
+        <script>
+           
+            $("#trainer").change(function(){
+				if ($(this).is(":checked")){
+                    $('#TrainerLevelProfile').val('0');
+					$('#TrainerLevelProfile').show();
+				} else {
+					$('#TrainerLevelProfile').hide();
 				}
 			});
         </script>

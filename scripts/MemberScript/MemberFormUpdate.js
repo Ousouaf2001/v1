@@ -41,12 +41,22 @@ $(document).ready(function(){
 			  if(result.member.is_player==1){$('#player').attr("checked",true);}else{$('#player').attr("checked",false);}
 			  if(result.member.is_arbiter==1){$('#arbiter').attr("checked",true);}else{$('#arbiter').attr("checked",false);}
 			  
-                if(result.member.is_titled_player==1){
+              if(result.member.is_titled_player==1){
                   $('#titled').attr("checked",true);
+                    $('#titleProfile').val(result.member.title);
               }else{
                   $('#titled').attr("checked",false);
                   $('#titleProfile').val('0');
                   $('#titleProfile').hide();
+              }
+              
+              if(result.member.is_trainer==1){
+                  $('#trainer').attr("checked",true);
+                  $('#TrainerLevelProfile').val(result.member.lesson_level);
+              }else{
+                  $('#trainer').attr("checked",false);
+                  $('#TrainerLevelProfile').val('0');
+                  $('#TrainerLevelProfile').hide();
               }
               
 			  if(result.member.is_trainer==1){$('#trainer').attr("checked",true);}else{$('#trainer').attr("checked",false);}
@@ -54,9 +64,8 @@ $(document).ready(function(){
 			  
 			  $('#image').attr("src",result.member.image);
 			  
-              
-			  //$('#titleProfile').val(result.member.title);
-			  $('#TrainerLevelProfile').val(result.member.lesson_level);
+			  //
+			  //$('#TrainerLevelProfile').val(result.member.lesson_level);
 			  
               
           }

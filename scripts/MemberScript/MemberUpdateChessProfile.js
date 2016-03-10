@@ -20,9 +20,13 @@ function MemberUpdateChessProfile() {
         var titleProfile = document.getElementById("titleProfile").value;
     }
 	
+	if(trainer == 0){
+        var TrainerLevelProfile = "";
+    }else{
+        var TrainerLevelProfile = document.getElementById("TrainerLevelProfile").value;
+    }
 	
 	
-	var TrainerLevelProfile = document.getElementById("TrainerLevelProfile").value;
     
 	
     if(localStorage.getItem("identifiantLocal")!= null){
