@@ -14,7 +14,12 @@ function MemberUpdateChessProfile() {
 	var trainer = document.getElementById("trainer").checked;
     if(trainer == true){var trainer = 1;}else{var trainer = 0;}
 	
-	var titleProfile = document.getElementById("titleProfile").value;
+    if(titled == 0){
+        var titleProfile = "";
+    }else{
+        var titleProfile = document.getElementById("titleProfile").value;
+    }
+	
 	
 	
 	var TrainerLevelProfile = document.getElementById("TrainerLevelProfile").value;

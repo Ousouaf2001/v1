@@ -40,14 +40,22 @@ $(document).ready(function(){
 			  CountryGetAll(result.member.residence_countryid);
 			  if(result.member.is_player==1){$('#player').attr("checked",true);}else{$('#player').attr("checked",false);}
 			  if(result.member.is_arbiter==1){$('#arbiter').attr("checked",true);}else{$('#arbiter').attr("checked",false);}
-			  if(result.member.is_titled_player==1){$('#titled').attr("checked",true);}else{$('#titled').attr("checked",false);}
-              if(result.member.title ==""){$('#titleProfile').val('choose');}
-			  if(result.member.is_trainer==1){$('#trainer').attr("checked",true);}else{$('#trainer').attr("checked",false);}
 			  
+                if(result.member.is_titled_player==1){
+                  $('#titled').attr("checked",true);
+              }else{
+                  $('#titled').attr("checked",false);
+                  $('#titleProfile').val('0');
+                  $('#titleProfile').hide();
+              }
+              
+			  if(result.member.is_trainer==1){$('#trainer').attr("checked",true);}else{$('#trainer').attr("checked",false);}
+			  console.log(result.member.title);
 			  
 			  $('#image').attr("src",result.member.image);
 			  
-			  $('#titleProfile').val(result.member.title);
+              
+			  //$('#titleProfile').val(result.member.title);
 			  $('#TrainerLevelProfile').val(result.member.lesson_level);
 			  
               

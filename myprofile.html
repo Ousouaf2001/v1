@@ -165,7 +165,7 @@
               <input type="checkbox" id="titled"><span key="IsTitledPlayer" class="TranslationDiv">Is titled player</span>
           </label>
            <select id="titleProfile">
-           	  <option value="choose">-- Choose a Title --</option>
+           	  <option value="0">-- Choose a Title --</option>
               <option value="CM">CM</option>
               <option value="WCM">WCM</option>
               <option value="FM">FM</option>
@@ -229,7 +229,7 @@
         </div>     
     	<div id="footer" class="col-xs-12"></div>
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-
+        
 		<script type="text/javascript" src="cordova.js" charset="utf-8"></script>
         <!--<script type="text/javascript" src="js/phonegap-1.0.0.js" charset="utf-8"></script>-->
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -246,7 +246,17 @@
         <script type="text/javascript" src="scripts/MemberScript/MemberSetDisconnected.js"></script>
         <script type="text/javascript" src="scripts/MemberScript/MemberSetPhoto.js"  charset="utf-8"></script>
         
-        
+        <script>
+           
+            $("#titled").change(function(){
+				if ($(this).is(":checked")){
+                    $('#titleProfile').val('0');
+					$('#titleProfile').show();
+				} else {
+					$('#titleProfile').hide();
+				}
+			});
+        </script>
   </body>
 </html>
 
